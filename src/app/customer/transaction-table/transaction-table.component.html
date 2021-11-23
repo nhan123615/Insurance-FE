@@ -1,0 +1,87 @@
+<ng-container *ngIf="loading">
+  <preloader></preloader>
+</ng-container>
+<div class="card card-xl-stretch mb-5 mb-xl-8">
+  <!-- begin::Body -->
+  <div class="card-body py-3">
+    <div class="tab-content">
+      <!-- begin::Tap pane -->
+      <div class="tab-pane fade" class="show active" id="kt_table_widget_6_tab_1">
+        <!-- begin::Table container -->
+        <div class="table-responsive">
+          <!-- begin::Table -->
+          <table class="table align-middle gs-0 gy-3">
+            <!-- begin::Table head -->
+
+            <!-- end::Table head -->
+            <!-- begin::Table body -->
+            <tbody>
+
+              <tr *ngFor="let item of premiumTransactions;let i = index">
+                <td>
+                  <div class="text-dark fw-bolder text-hover-primary mb-1 fs-6">
+                    NO. {{i+1}}
+                  </div>
+
+                </td>
+                <td>
+                  <div class="symbol symbol-50px me-2">
+                    <span class="symbol-label">
+                      <img src="./assets/media/svg/avatars/001-boy.svg" class="h-75 align-self-end" alt="" />
+                    </span>
+                  </div>
+                </td>
+                <td>
+                  <div class="text-dark fw-bolder text-hover-primary mb-1 fs-6">
+                    {{item?.policyName||''}}
+                  </div>
+                  <span class="text-muted fw-bold d-block">Term: {{item?.policyTerm}} {{item?.policyTerm == 1
+                    ?'Year':'Years'}}</span>
+                </td>
+                <td>
+                  <span class="text-muted fw-bold d-block fs-7">Amount</span>
+                  <span class="text-dark fw-bolder d-block fs-5"> {{item?.amount|currency}}</span>
+                </td>
+                <td>
+                  <div style="display: flex;">
+                    <span class="text-muted fw-bold d-block fs-5">Due Date: </span>
+                    <span class="text-dark fw-bolder d-block fs-5" style="margin-left: 10px;">
+                      {{item?.dueDate|date:'dd/MM/yyyy'}}</span>
+                  </div>
+                  <div style="display: flex;">
+                    <span class="text-muted fw-bold d-block fs-5">Paid Date: </span>
+                    <span class="text-dark fw-bolder d-block fs-5" style="margin-left: 10px;"> {{item?.paidDate || 'Not
+                      Paid'}}</span>
+                  </div>
+
+                </td>
+
+                <td>
+                  <button class="btn btn-sm btn-light me-2 cursor-pointer" id="kt_user_follow_button"
+                    [disabled]="!!item?.paidDate" (click)="onShowCheckoutPaypal(item)">
+                    <span class="indicator-label">Paid</span>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="4">
+                  <div class="text-dark fw-bolder text-hover-primary mb-1 fs-6" style="text-align: center;">Total:
+                  </div>
+                </td>
+                <td class="text-end">
+                  <div class="text-dark fw-bolder text-hover-primary mb-1 fs-6" style="text-align: center!important;">
+                    {{total|currency}}</div>
+                </td>
+              </tr>
+
+            </tbody>
+            <!-- end::Table body -->
+          </table>
+        </div>
+        <!-- end::Table -->
+      </div>
+    </div>
+  </div>
+  <!-- end::Body -->
+
+</div>

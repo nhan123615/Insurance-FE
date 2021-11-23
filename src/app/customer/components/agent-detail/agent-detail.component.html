@@ -1,0 +1,122 @@
+<!-- {{customerPolicyDetail|json}}
+<hr>
+<hr>-->
+<!-- {{branchDetail|json}} -->
+<ng-container *ngIf="loading">
+  <preloader></preloader>
+</ng-container>
+
+<div class="card card-xl-stretch mb-xl-8">
+  <!-- begin::Beader -->
+  <div class="card-header border-0 py-5" style="padding-bottom: 0!important;">
+    <div class="d-flex flex-column flex-grow-1 py-2 py-lg-13 me-2">
+      <div class="fw-bolder text-dark fs-4 mb-2 text-hover-primary">
+        {{customerPolicyDetail?.agentName}}
+      </div>
+      <div class="fs-7 text-muted fw-bold">Gender: {{customerPolicyDetail?.agentGender}}</div>
+      <div class="fs-7 text-muted fw-bold">Birthday: {{customerPolicyDetail?.agentBirday|date:'dd/MM/yyyy'}}</div>
+    </div>
+    <div>
+      <ng-container *ngIf="customerPolicyDetail?.agentGender == 'Male';else Female">
+        <img src="./assets/media/svg/avatars/029-boy-11.svg" alt="" class="align-self-end h-100px" />
+      </ng-container>
+      <ng-template #Female>
+        <img src="./assets/media/svg/avatars/014-girl-7.svg" alt="" class="align-self-end h-100px" />
+      </ng-template>
+    </div>
+  </div>
+  <!-- end::Header -->
+
+  <!-- begin::Body -->
+  <div class="card-body p-0 d-flex flex-column">
+    <!-- begin::Stats -->
+    <div class="card-p pt-5 bg-white flex-grow-1">
+      <!-- begin::Row -->
+      <div class="row g-0">
+        <!-- begin::Col -->
+        <div class="col mr-8">
+          <!-- begin::Label -->
+          <div class="fs-7 text-muted fw-bold">Branch Name</div>
+          <!-- end::Label -->
+
+          <!-- begin::Stat -->
+          <div class="d-flex align-items-center">
+            <div class="fs-4 fw-bolder">{{branchDetail?.name}}</div>
+            <span [inlineSVG]="'./assets/media/icons/duotune/arrows/arr066.svg'"
+              class="svg-icon svg-icon-5 svg-icon-success ms-1"></span>
+          </div>
+          <!-- end::Stat -->
+        </div>
+        <!-- end::Col -->
+
+        <!-- begin::Col -->
+        <div class="col">
+          <!-- begin::Label -->
+          <div class="fs-7 text-muted fw-bold">Phone</div>
+          <!-- end::Label -->
+
+          <!-- begin::Stat -->
+          <div class="fs-4 fw-bolder">{{branchDetail?.phone}}</div>
+          <!-- end::Stat -->
+        </div>
+        <!-- end::Col -->
+      </div>
+      <!-- end::Row -->
+
+      <!-- begin::Row -->
+      <div class="row g-0 mt-8">
+        <!-- begin::Col -->
+        <div class="col">
+          <!-- begin::Label -->
+          <div class="fs-7 text-muted fw-bold">State</div>
+          <!-- end::Label -->
+
+          <!-- begin::Stat -->
+          <div class="d-flex align-items-center">
+            <div class="fs-4 fw-bolder">{{branchDetail?.state}}</div>
+            <span [inlineSVG]="'./assets/media/icons/duotune/arrows/arr065.svg'"
+              class="svg-icon svg-icon-5 svg-icon-danger ms-1"></span>
+          </div>
+          <!-- end::Stat -->
+        </div>
+        <!-- end::Col -->
+
+        <!-- begin::Col -->
+        <div class="col">
+          <!-- begin::Label -->
+          <div class="fs-7 text-muted fw-bold">Zip Code</div>
+          <!-- end::Label -->
+
+          <!-- begin::Stat -->
+          <div class="d-flex align-items-center">
+            <div class="fs-4 fw-bolder">{{branchDetail?.zipCode}}</div>
+            <span [inlineSVG]="'./assets/media/icons/duotune/arrows/arr065.svg'"
+              class="svg-icon svg-icon-5 svg-icon-danger ms-1"></span>
+          </div>
+          <!-- end::Stat -->
+        </div>
+        <!-- end::Col -->
+
+
+
+
+      </div>
+      <!-- end::Row -->
+
+      <!-- begin::Col -->
+      <div class="col-12" style="padding-left: 0;margin-top: 16px;">
+        <!-- begin::Label -->
+        <div class="fs-7 text-muted fw-bold">Address</div>
+        <!-- end::Label -->
+
+        <!-- begin::Stat -->
+        <div class="fs-4 fw-bolder">{{branchDetail?.street}}, {{branchDetail?.city}}</div>
+        <!-- end::Stat -->
+      </div>
+      <!-- end::Col -->
+    </div>
+    <!-- end::Stats -->
+
+  </div>
+  <!-- end::Body -->
+</div>

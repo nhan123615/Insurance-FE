@@ -1,0 +1,39 @@
+<ng-container *ngIf="loading">
+  <preloader></preloader>
+</ng-container>
+
+<!-- begin::Header -->
+
+<!-- end::Header -->
+<!-- begin::Body -->
+<div class="card-body py-3">
+  <!-- begin::Table container -->
+  <div class="table-responsive">
+    <!-- begin::Table -->
+    <table class="table table-row-bordered table-row-gray-100 align-middle gs-0 gy-3">
+      <!-- begin::Table head -->
+      <thead>
+        <tr class="fw-bolder text-muted">
+          <th class="min-w-150px">Insurance Type</th>
+          <th class="min-w-140px">Amount</th>
+          <th class="min-w-120px">Claim Date</th>
+        </tr>
+      </thead>
+      <!-- end::Table head -->
+      <!-- begin::Table body -->
+      <tbody>
+        <ng-container *ngFor="let c of claims">
+          <tr>
+            <td>{{c.name}}</td>
+            <td>{{c.amount}}</td>
+            <td>{{c.claimedDate | date :'dd / MM / yyyy'}}</td>
+          </tr>
+        </ng-container>
+      </tbody>
+      <!-- end::Table body -->
+    </table>
+    <!-- end::Table -->
+  </div>
+  <!-- end::Table container -->
+</div>
+<!-- begin::Body -->

@@ -1,0 +1,1317 @@
+<ng-container *ngIf="loading">
+  <preloader></preloader>
+</ng-container>
+<!-- :: Navbar -->
+<nav-bar></nav-bar>
+
+<!-- :: Header -->
+<header>
+  <div class="container">
+    <!-- contain -->
+    <div class="contain text-center">
+      <h1>MOTOR INSURANCE</h1>
+
+      <p>
+        Motor Insurance is a vehicle insurance policy that protects insured car
+        and four wheeler owners from any risks and damages that may lead to
+        financial losses. A car insurance policy is a contract between an
+        insurance company and a car owner that provides on-road protection
+        against any financial losses or damages arising due to a car accident,
+        third party liabilities, theft, man-made calamities, fire, or natural
+        disaster.
+      </p>
+      <button class="btn-fill-green get-link text-uppercase" data-value="section-1">
+        get started
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- :: Pricing Table -->
+<div class="pricing-table p-80" id="section-1">
+  <div class="container">
+    <!-- Table -->
+    <!-- Compare Table -->
+    <div class="c-table d-lg-block d-none">
+      <!-- H Table -->
+      <table class="w-100 h-table">
+        <thead>
+          <tr>
+            <td><span class="ml-1">Insurance Packages</span></td>
+            <td><span class="ml-1">Coverage For</span></td>
+            <td>
+              <span class="ml-1">{{ motorPolicy[3].insuranceTypeName }}</span>
+            </td>
+            <td><span class="ml-1">Interest Rate</span></td>
+            <td><span class="ml-1">Responsible</span></td>
+            <td>
+              <img src="../../../../assets/user/images/pages/servers/vps-page/pricing-table/coin.svg" class="img-fluid"
+                alt="" /><span class="ml-1">price</span>
+            </td>
+          </tr>
+        </thead>
+      </table>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <td class="p-0"></td>
+            <td class="p-0"></td>
+            <td class="p-0"></td>
+            <td class="p-0"></td>
+            <td class="p-0"></td>
+            <td class="p-0"></td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <span class="name">{{ motorPolicy[0].name }}</span>
+            </td>
+            <td>
+              <span class="name">{{ motorPolicy[0].term }} Year</span>
+              <h6>(Long Term)</h6>
+            </td>
+            <td>
+              <span class="hot">Get advice on choosing a reputable insurance provider.
+              </span>
+            </td>
+            <td>
+              <span class="name">{{ motorPolicy[0].interestRate }}</span>
+              <div class="progress" style="height: 10px">
+                <div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="25" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+            </td>
+            <td>
+              <span class="text"><i class="fa fa-check"></i></span>
+            </td>
+            <td class="price">
+              <span class="old"><b>${{ (motorPolicy[0].amount * 36) / 100 }}</b>/mo</span>
+              <span class="new"><b>${{ motorPolicy[0].amount * 12 }}</b>/mo</span>
+              <div class="ribbon"><span>36%</span></div>
+              <span class="cart-btn" title="Buy now">
+                <a href="#">
+                  <i class="fa fa-shopping-cart"></i>
+                </a>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="name">{{ motorPolicy[1].name }}</span>
+            </td>
+            <td>
+              <span class="name">{{ motorPolicy[1].term }} Year</span>
+              <h6>(Long Term)</h6>
+            </td>
+            <td>
+              <span class="hot">Get advice on choosing a reputable insurance provider.
+              </span>
+            </td>
+            <td>
+              <span class="name">{{ motorPolicy[1].interestRate }}</span>
+              <div class="progress" style="height: 10px">
+                <div class="progress-bar" role="progressbar" style="width: 73%" aria-valuenow="25" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+            </td>
+            <td>
+              <span class="text"><i class="fa fa-check"></i></span>
+            </td>
+            <td class="price">
+              <span class="old"><b>${{ (motorPolicy[1].amount * 56) / 100 }}</b>/mo</span>
+              <span class="new"><b>${{ motorPolicy[1].amount * 12 }}</b>/mo</span>
+              <div class="ribbon"><span>56%</span></div>
+              <span class="cart-btn" title="Buy now">
+                <a href="#">
+                  <i class="fa fa-shopping-cart"></i>
+                </a>
+              </span>
+            </td>
+          </tr>
+          <tr class="hot">
+            <td>
+              <span class="name">{{ motorPolicy[2].name }}</span>
+            </td>
+            <td>
+              <span class="name">{{ motorPolicy[2].term }} Year</span>
+              <h6>(Long Term)</h6>
+            </td>
+            <td>
+              <span class="hot">Get advice on choosing a reputable insurance provider.
+              </span>
+            </td>
+            <td>
+              <span class="name">{{ motorPolicy[2].interestRate }}</span>
+              <div class="progress" style="height: 10px">
+                <div class="progress-bar" role="progressbar" style="width: 27%" aria-valuenow="25" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+            </td>
+            <td>
+              <span class="text"><i class="fa fa-check"></i></span>
+            </td>
+            <td class="price">
+              <span class="old"><b>${{ (motorPolicy[2].amount * 66) / 100 }}</b>/mo</span>
+              <span class="new"><b>${{ motorPolicy[2].amount * 12 }}</b>/mo</span>
+              <div class="ribbon"><span>66%</span></div>
+              <span class="cart-btn" title="Buy now">
+                <a href="#">
+                  <i class="fa fa-shopping-cart"></i>
+                </a>
+              </span>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <span class="name">{{ motorPolicy[3].name }}</span>
+            </td>
+            <td>
+              <span class="name">{{ motorPolicy[3].term }} Year</span>
+              <h6>(Long Term)</h6>
+            </td>
+            <td>
+              <span class="hot">Get advice on choosing a reputable insurance provider.
+              </span>
+            </td>
+            <td>
+              <span class="name">{{ motorPolicy[3].interestRate }}</span>
+              <div class="progress" style="height: 10px">
+                <div class="progress-bar" role="progressbar" style="width: 81%" aria-valuenow="25" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+            </td>
+            <td>
+              <span class="text"><i class="fa fa-check"></i></span>
+            </td>
+            <td class="price">
+              <span class="old"><b>${{ (motorPolicy[3].amount * 40) / 100 }}</b>/mo</span>
+              <span class="new"><b>${{ motorPolicy[3].amount * 12 }}</b>/mo</span>
+              <div class="ribbon"><span>40%</span></div>
+              <span class="cart-btn" title="Buy now">
+                <a href="#">
+                  <i class="fa fa-shopping-cart"></i>
+                </a>
+              </span>
+            </td>
+          </tr>
+
+          <tr></tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- Compare table 2 -->
+    <div class="c-table-2 d-lg-none d-block">
+      <!-- Items Contain -->
+      <div class="i-c">
+        <!-- row -->
+        <div class="row">
+          <!-- col -->
+          <div class="col-md-4 col-sm-6 col-12">
+            <!-- Item -->
+            <div class="item">
+              <div class="ribbon">
+                <span>50%</span>
+              </div>
+              <!-- Table -->
+              <table class="w-100">
+                <!-- Table Body -->
+                <tbody>
+                  <!-- Table Row -->
+                  <tr>
+                    <td colspan="12">
+                      <h6>cpu power</h6>
+                      <p class="d-inline-block">2.4 GHz</p>
+                      <span>(1 core)</span>
+                    </td>
+                  </tr>
+                  <!-- Table Row -->
+                  <tr>
+                    <td>
+                      <h6>memory</h6>
+                      <p>1GB</p>
+                    </td>
+                    <td>
+                      <h6>storage</h6>
+                      <p>20 GB</p>
+                    </td>
+                  </tr>
+                  <!-- Table Row -->
+                  <tr>
+                    <td>
+                      <h6>geekbench</h6>
+                      <p>3369</p>
+                    </td>
+                    <td>
+                      <h6>bandwidth</h6>
+                      <p>1000 GB</p>
+                    </td>
+                  </tr>
+                  <!-- Table Row -->
+                  <tr>
+                    <td>
+                      <h6>price</h6>
+                      <p>$5/mo</p>
+                    </td>
+                    <td>
+                      <a href="#">Buy</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- col -->
+          <div class="col-md-4 col-sm-6 col-12">
+            <!-- Item -->
+            <div class="item hot">
+              <div class="ribbon">
+                <span>50%</span>
+              </div>
+              <!-- Table -->
+              <table class="w-100">
+                <!-- Table Body -->
+                <tbody>
+                  <!-- Table Row -->
+                  <tr>
+                    <td colspan="12">
+                      <h6>cpu power</h6>
+                      <p class="d-inline-block">2.4 GHz</p>
+                      <span>(1 core)</span>
+                    </td>
+                  </tr>
+                  <!-- Table Row -->
+                  <tr>
+                    <td>
+                      <h6>memory</h6>
+                      <p>1GB</p>
+                    </td>
+                    <td>
+                      <h6>storage</h6>
+                      <p>20 GB</p>
+                    </td>
+                  </tr>
+                  <!-- Table Row -->
+                  <tr>
+                    <td>
+                      <h6>geekbench</h6>
+                      <p>3369</p>
+                    </td>
+                    <td>
+                      <h6>bandwidth</h6>
+                      <p>1000 GB</p>
+                    </td>
+                  </tr>
+                  <!-- Table Row -->
+                  <tr>
+                    <td>
+                      <h6>price</h6>
+                      <p>$5/mo</p>
+                    </td>
+                    <td>
+                      <a href="#">Buy</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- col -->
+          <div class="col-md-4 col-sm-6 col-12">
+            <!-- Item -->
+            <div class="item">
+              <div class="ribbon">
+                <span>50%</span>
+              </div>
+              <!-- Table -->
+              <table class="w-100">
+                <!-- Table Body -->
+                <tbody>
+                  <!-- Table Row -->
+                  <tr>
+                    <td colspan="12">
+                      <h6>cpu power</h6>
+                      <p class="d-inline-block">2.4 GHz</p>
+                      <span>(1 core)</span>
+                    </td>
+                  </tr>
+                  <!-- Table Row -->
+                  <tr>
+                    <td>
+                      <h6>memory</h6>
+                      <p>1GB</p>
+                    </td>
+                    <td>
+                      <h6>storage</h6>
+                      <p>20 GB</p>
+                    </td>
+                  </tr>
+                  <!-- Table Row -->
+                  <tr>
+                    <td>
+                      <h6>geekbench</h6>
+                      <p>3369</p>
+                    </td>
+                    <td>
+                      <h6>bandwidth</h6>
+                      <p>1000 GB</p>
+                    </td>
+                  </tr>
+                  <!-- Table Row -->
+                  <tr>
+                    <td>
+                      <h6>price</h6>
+                      <p>$5/mo</p>
+                    </td>
+                    <td>
+                      <a href="#">Buy</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- col -->
+          <div class="col-md-4 col-sm-6 col-12">
+            <!-- Item -->
+            <div class="item">
+              <div class="ribbon">
+                <span>50%</span>
+              </div>
+              <!-- Table -->
+              <table class="w-100">
+                <!-- Table Body -->
+                <tbody>
+                  <!-- Table Row -->
+                  <tr>
+                    <td colspan="12">
+                      <h6>cpu power</h6>
+                      <p class="d-inline-block">2.4 GHz</p>
+                      <span>(1 core)</span>
+                    </td>
+                  </tr>
+                  <!-- Table Row -->
+                  <tr>
+                    <td>
+                      <h6>memory</h6>
+                      <p>1GB</p>
+                    </td>
+                    <td>
+                      <h6>storage</h6>
+                      <p>20 GB</p>
+                    </td>
+                  </tr>
+                  <!-- Table Row -->
+                  <tr>
+                    <td>
+                      <h6>geekbench</h6>
+                      <p>3369</p>
+                    </td>
+                    <td>
+                      <h6>bandwidth</h6>
+                      <p>1000 GB</p>
+                    </td>
+                  </tr>
+                  <!-- Table Row -->
+                  <tr>
+                    <td>
+                      <h6>price</h6>
+                      <p>$5/mo</p>
+                    </td>
+                    <td>
+                      <a href="#">Buy</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- col -->
+          <div class="col-md-4 col-sm-6 col-12">
+            <!-- Item -->
+            <div class="item">
+              <div class="ribbon">
+                <span>50%</span>
+              </div>
+              <!-- Table -->
+              <table class="w-100">
+                <!-- Table Body -->
+                <tbody>
+                  <!-- Table Row -->
+                  <tr>
+                    <td colspan="12">
+                      <h6>cpu power</h6>
+                      <p class="d-inline-block">2.4 GHz</p>
+                      <span>(1 core)</span>
+                    </td>
+                  </tr>
+                  <!-- Table Row -->
+                  <tr>
+                    <td>
+                      <h6>memory</h6>
+                      <p>1GB</p>
+                    </td>
+                    <td>
+                      <h6>storage</h6>
+                      <p>20 GB</p>
+                    </td>
+                  </tr>
+                  <!-- Table Row -->
+                  <tr>
+                    <td>
+                      <h6>geekbench</h6>
+                      <p>3369</p>
+                    </td>
+                    <td>
+                      <h6>bandwidth</h6>
+                      <p>1000 GB</p>
+                    </td>
+                  </tr>
+                  <!-- Table Row -->
+                  <tr>
+                    <td>
+                      <h6>price</h6>
+                      <p>$5/mo</p>
+                    </td>
+                    <td>
+                      <a href="#">Buy</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- col -->
+          <div class="col-md-4 col-sm-6 col-12">
+            <!-- Item -->
+            <div class="item">
+              <div class="ribbon">
+                <span>50%</span>
+              </div>
+              <!-- Table -->
+              <table class="w-100">
+                <!-- Table Body -->
+                <tbody>
+                  <!-- Table Row -->
+                  <tr>
+                    <td colspan="12">
+                      <h6>cpu power</h6>
+                      <p class="d-inline-block">2.4 GHz</p>
+                      <span>(1 core)</span>
+                    </td>
+                  </tr>
+                  <!-- Table Row -->
+                  <tr>
+                    <td>
+                      <h6>memory</h6>
+                      <p>1GB</p>
+                    </td>
+                    <td>
+                      <h6>storage</h6>
+                      <p>20 GB</p>
+                    </td>
+                  </tr>
+                  <!-- Table Row -->
+                  <tr>
+                    <td>
+                      <h6>geekbench</h6>
+                      <p>3369</p>
+                    </td>
+                    <td>
+                      <h6>bandwidth</h6>
+                      <p>1000 GB</p>
+                    </td>
+                  </tr>
+                  <!-- Table Row -->
+                  <tr>
+                    <td>
+                      <h6>price</h6>
+                      <p>$5/mo</p>
+                    </td>
+                    <td>
+                      <a href="#">Buy</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- col -->
+          <div class="col-md-4 col-sm-6 col-12">
+            <!-- Item -->
+            <div class="item">
+              <div class="ribbon">
+                <span>50%</span>
+              </div>
+              <!-- Table -->
+              <table class="w-100">
+                <!-- Table Body -->
+                <tbody>
+                  <!-- Table Row -->
+                  <tr>
+                    <td colspan="12">
+                      <h6>cpu power</h6>
+                      <p class="d-inline-block">2.4 GHz</p>
+                      <span>(1 core)</span>
+                    </td>
+                  </tr>
+                  <!-- Table Row -->
+                  <tr>
+                    <td>
+                      <h6>memory</h6>
+                      <p>1GB</p>
+                    </td>
+                    <td>
+                      <h6>storage</h6>
+                      <p>20 GB</p>
+                    </td>
+                  </tr>
+                  <!-- Table Row -->
+                  <tr>
+                    <td>
+                      <h6>geekbench</h6>
+                      <p>3369</p>
+                    </td>
+                    <td>
+                      <h6>bandwidth</h6>
+                      <p>1000 GB</p>
+                    </td>
+                  </tr>
+                  <!-- Table Row -->
+                  <tr>
+                    <td>
+                      <h6>price</h6>
+                      <p>$5/mo</p>
+                    </td>
+                    <td>
+                      <a href="#">Buy</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- col -->
+          <div class="col-md-4 col-sm-6 col-12">
+            <!-- Item -->
+            <div class="item">
+              <div class="ribbon">
+                <span>50%</span>
+              </div>
+              <!-- Table -->
+              <table class="w-100">
+                <!-- Table Body -->
+                <tbody>
+                  <!-- Table Row -->
+                  <tr>
+                    <td colspan="12">
+                      <h6>cpu power</h6>
+                      <p class="d-inline-block">2.4 GHz</p>
+                      <span>(1 core)</span>
+                    </td>
+                  </tr>
+                  <!-- Table Row -->
+                  <tr>
+                    <td>
+                      <h6>memory</h6>
+                      <p>1GB</p>
+                    </td>
+                    <td>
+                      <h6>storage</h6>
+                      <p>20 GB</p>
+                    </td>
+                  </tr>
+                  <!-- Table Row -->
+                  <tr>
+                    <td>
+                      <h6>geekbench</h6>
+                      <p>3369</p>
+                    </td>
+                    <td>
+                      <h6>bandwidth</h6>
+                      <p>1000 GB</p>
+                    </td>
+                  </tr>
+                  <!-- Table Row -->
+                  <tr>
+                    <td>
+                      <h6>price</h6>
+                      <p>$5/mo</p>
+                    </td>
+                    <td>
+                      <a href="#">Buy</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- col -->
+          <div class="col-md-4 col-sm-6 col-12">
+            <!-- Item -->
+            <div class="item">
+              <div class="ribbon">
+                <span>50%</span>
+              </div>
+              <!-- Table -->
+              <table class="w-100">
+                <!-- Table Body -->
+                <tbody>
+                  <!-- Table Row -->
+                  <tr>
+                    <td colspan="12">
+                      <h6>cpu power</h6>
+                      <p class="d-inline-block">2.4 GHz</p>
+                      <span>(1 core)</span>
+                    </td>
+                  </tr>
+                  <!-- Table Row -->
+                  <tr>
+                    <td>
+                      <h6>memory</h6>
+                      <p>1GB</p>
+                    </td>
+                    <td>
+                      <h6>storage</h6>
+                      <p>20 GB</p>
+                    </td>
+                  </tr>
+                  <!-- Table Row -->
+                  <tr>
+                    <td>
+                      <h6>geekbench</h6>
+                      <p>3369</p>
+                    </td>
+                    <td>
+                      <h6>bandwidth</h6>
+                      <p>1000 GB</p>
+                    </td>
+                  </tr>
+                  <!-- Table Row -->
+                  <tr>
+                    <td>
+                      <h6>price</h6>
+                      <p>$5/mo</p>
+                    </td>
+                    <td>
+                      <a href="#">Buy</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- col -->
+          <div class="col-md-4 col-sm-6 col-12">
+            <!-- Item -->
+            <div class="item">
+              <div class="ribbon">
+                <span>50%</span>
+              </div>
+              <!-- Table -->
+              <table class="w-100">
+                <!-- Table Body -->
+                <tbody>
+                  <!-- Table Row -->
+                  <tr>
+                    <td colspan="12">
+                      <h6>cpu power</h6>
+                      <p class="d-inline-block">2.4 GHz</p>
+                      <span>(1 core)</span>
+                    </td>
+                  </tr>
+                  <!-- Table Row -->
+                  <tr>
+                    <td>
+                      <h6>memory</h6>
+                      <p>1GB</p>
+                    </td>
+                    <td>
+                      <h6>storage</h6>
+                      <p>20 GB</p>
+                    </td>
+                  </tr>
+                  <!-- Table Row -->
+                  <tr>
+                    <td>
+                      <h6>geekbench</h6>
+                      <p>3369</p>
+                    </td>
+                    <td>
+                      <h6>bandwidth</h6>
+                      <p>1000 GB</p>
+                    </td>
+                  </tr>
+                  <!-- Table Row -->
+                  <tr>
+                    <td>
+                      <h6>price</h6>
+                      <p>$5/mo</p>
+                    </td>
+                    <td>
+                      <a href="#">Buy</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Cards -->
+    <div class="cards">
+      <ul>
+        <img src="../../../../assets/user/images/logoFile/2560px-PayPal_logo.svg.png" alt="" width="220px" />
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- :: Money Back Section -->
+<div class="m-b p-80 bg-2">
+  <div class="container">
+    <!-- Contain -->
+    <div class="contain">
+      <!-- row -->
+      <div class="row align-items-center">
+        <!-- col -->
+        <div class="col-3 d-lg-block d-none">
+          <img src="../../../../assets/user/images/pages/servers/30-day-guarantee-clipart.png" class="img-fluid"
+            alt="" />
+        </div>
+        <!-- col -->
+        <div class="col-lg-9 col-12">
+          <!-- text contain -->
+          <div class="t-c text-lg-left text-center">
+            <h3 class="mb-lg-2 mb-3">30-day money-back guarantee</h3>
+            <p class="mb-0">
+              If you’re not 100% satisfied with VRocket, we’ll refund your
+              payment. No hassle, no risk.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- :: Section 4 -->
+<div class="section-4 p-80">
+  <div class="container">
+    <!-- Head -->
+    <div class="section-head">
+      <h2>VPS hosting platform with full speed and stability</h2>
+      <p>
+        When purchasing a VPS, it comes with a list of Operating Systems
+        templates, all Linux based, which can be installed in a couple of
+        clicks, saving you the hassle of doing it yourself.
+      </p>
+    </div>
+    <!-- Contain -->
+    <div class="contain">
+      <!-- row -->
+      <div class="row">
+        <!-- col -->
+        <div class="col-lg-4">
+          <!-- List -->
+          <div class="list">
+            <ul class="m-0">
+              <li class="selected" data-show="#debian">
+                <span>debian</span>
+              </li>
+              <li data-show="#open-suse">
+                <span>open suse</span>
+              </li>
+              <li data-show="#fedora">
+                <span>fedora</span>
+              </li>
+              <li data-show="#scientific">
+                <span>scientific</span>
+              </li>
+              <li data-show="#ubuntu">
+                <span>ubuntu</span>
+              </li>
+              <li data-show="#centos">
+                <span>centOS</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- col -->
+        <div class="col-lg-8">
+          <!-- Text Contain -->
+          <div class="t-c">
+            <!-- Item -->
+            <div class="item show" id="debian">
+              <!-- top section -->
+              <div class="t-s">
+                <h2>debian</h2>
+                <p class="mb-0">
+                  Stability and speed - the main advantages of running Debian as
+                  your web server OS. Significant speed benefits, bug tracking
+                  systems, and multiple architectures make it flexible and
+                  reliable. Easy upgrades, strict security, and a top-notch
+                  packaging system. Powered by over a thousand volunteers,
+                  Debian is proudly one of the most significant open-source
+                  community projects in history. Be part of the movement with
+                  Debian OS.
+                </p>
+              </div>
+              <!-- bottom section -->
+              <div class="b-s">
+                <h2>architecture</h2>
+                <!-- ul contain -->
+                <div class="ul-c">
+                  <ul class="m-0 p-0">
+                    <li>Debian 6 32bit with ISPConfig 3</li>
+                    <li>Debian 6 64bit with ISPConfig 3</li>
+                    <li>Debian 7 32bit</li>
+                    <li>Debian 7 32bit minimal</li>
+                    <li>Debian 7 32bit with Webmin</li>
+                    <li>Debian 7 64bit</li>
+                  </ul>
+                  <ul class="m-0 p-0">
+                    <li>Debian 6 32bit with ISPConfig 3</li>
+                    <li>Debian 6 64bit with ISPConfig 3</li>
+                    <li>Debian 7 32bit</li>
+                    <li>Debian 7 32bit minimal</li>
+                    <li>Debian 7 32bit with Webmin</li>
+                    <li>Debian 7 64bit</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- Item -->
+            <div class="item" id="open-suse">
+              <!-- top section -->
+              <div class="t-s">
+                <h2>open suse</h2>
+                <p class="mb-0">
+                  A leading contributor to several large projects, an excellent
+                  open-source OS that provides a phenomenal experience right off
+                  the bat. Rolling releases will keep you on the cutting edge.
+                  Stable, performance oriented and backed up by a large
+                  community. Open Suse is great for projects due to the ability
+                  to make snapshots easily. Pair Open Suse and Hostinger VPS
+                  hosting to get the perfect platform.
+                </p>
+              </div>
+              <!-- bottom section -->
+              <div class="b-s">
+                <h2>architecture</h2>
+                <!-- ul contain -->
+                <div class="ul-c">
+                  <ul class="m-0 p-0">
+                    <li>openSUSE Linux 13.1 32bit</li>
+                    <li>openSUSE Linux 13.1 32bit minimal</li>
+                    <li>openSUSE Linux 13.1 64bit</li>
+                    <li>openSUSE Linux 13.1 64bit minimal</li>
+                    <li>openSUSE Linux 13.2 64bit</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- Item -->
+            <div class="item" id="fedora">
+              <!-- top section -->
+              <div class="t-s">
+                <h2>Fedora</h2>
+                <p class="mb-0">
+                  Fedora is simple, unbloated and highly polished, serving as a
+                  great starting point. Besides that, it is secure, efficient,
+                  and highly customizable. Fedora is based on and supported by
+                  Red Hat, which means you will be using a powerful and well
+                  taken care of tool. Hence, Fedora will feel right at home on
+                  your VPS hosting service.
+                </p>
+              </div>
+              <!-- bottom section -->
+              <div class="b-s">
+                <h2>architecture</h2>
+                <!-- ul contain -->
+                <div class="ul-c">
+                  <ul class="m-0 p-0">
+                    <li>Fedora 23 64bit</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- Item -->
+            <div class="item" id="scientific">
+              <!-- top section -->
+              <div class="t-s">
+                <h2>scientific</h2>
+                <p class="mb-0">
+                  Developed by the University of Bremen, Scientific is the
+                  perfect option for the management of massive volumes of
+                  various complex materials. It shines with the ability to
+                  process highly complex and precise rules. Pair Scientific with
+                  our VPS hosting and easily manage highly technical documents,
+                  databases, and information!
+                </p>
+              </div>
+              <!-- bottom section -->
+              <div class="b-s">
+                <h2>architecture</h2>
+                <!-- ul contain -->
+                <div class="ul-c">
+                  <ul class="m-0 p-0">
+                    <li>Scientific Linux (SL) 6 32bit</li>
+                    <li>Scientific Linux (SL) 6 64bit</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- Item -->
+            <div class="item" id="ubuntu">
+              <!-- top section -->
+              <div class="t-s">
+                <h2>ubuntu</h2>
+                <p class="mb-0">
+                  Ubuntu is one of the top OS picks for web servers on the
+                  planet. The open-source nature of Ubuntu lends itself to be a
+                  perfect tool for users that want a flexible and stable
+                  environment. This OS is ideal for any online project that
+                  demands high security and a customizable stack. Being the 3rd
+                  most common OS Ubuntu naturally boasts about a massive
+                  community. You can be sure, that whatever issues you may run
+                  into, there will be no shortage of help online!
+                </p>
+              </div>
+              <!-- bottom section -->
+              <div class="b-s">
+                <h2>architecture</h2>
+                <!-- ul contain -->
+                <div class="ul-c">
+                  <ul class="m-0 p-0">
+                    <li>Ubuntu 12.04 32bit minimal</li>
+                    <li>Ubuntu 14.04 32bit</li>
+                    <li>Ubuntu 14.04 32bit minimal</li>
+                    <li>Ubuntu 14.04 32bit with Webmin</li>
+                    <li>Ubuntu 12.04 64bit</li>
+                    <li>Ubuntu 12.04 64bit minimal</li>
+                  </ul>
+                  <ul class="m-0 p-0">
+                    <li>Ubuntu 14.04 64bit with Webmin</li>
+                    <li>Ubuntu 14.04 64bit with Webmin/Virtualmin/LAMP</li>
+                    <li>Ubuntu 14.04 64bit with Webuzo control panel</li>
+                    <li>Ubuntu 16.04 64bit</li>
+                    <li>Ubuntu 16.04 64bit with LXDE Desktop</li>
+                    <li>Ubuntu 16.04 64bit with VestaCP control panel</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- Item -->
+            <div class="item" id="centos">
+              <!-- top section -->
+              <div class="t-s">
+                <h2>centOS</h2>
+                <p class="mb-0">
+                  Lightweight, fast and reliable - these are the core tenets of
+                  CentOS. It is one of the best Enterprise-level operating
+                  systems that aims for speed and stability, without cutting out
+                  security. Inspired by Red Hat Enterprise Linux, CentOS is also
+                  a formidable option for VPS hosting. When in doubt, pick the
+                  go-to web server operating system around the world. Power,
+                  robustness, and flexibility guaranteed!
+                </p>
+              </div>
+              <!-- bottom section -->
+              <div class="b-s">
+                <h2>architecture</h2>
+                <!-- ul contain -->
+                <div class="ul-c">
+                  <ul class="m-0 p-0">
+                    <li>CentOS 6 32bit</li>
+                    <li>CentOS 6 32bit minimal</li>
+                    <li>CentOS 6 32bit with Webmin</li>
+                    <li>CentOS 6 64bit</li>
+                    <li>CentOS 64bit minimal</li>
+                    <li>CentOS 6 64bit with cPanel and WHM</li>
+                    <li>CentOS 6 64bit with VestCP control panel</li>
+                    <li>CentOS 6 64bit with Webmin</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- :: Features -->
+<div class="features p-80-50">
+  <div class="container">
+    <!-- Features Head -->
+    <div class="section-head">
+      <h2>Raising the Bar</h2>
+      <div class="lines">
+        <span></span>
+      </div>
+      <p>
+        Leave your system management to the experts so that you can focus your
+        energy on what you do best.
+      </p>
+    </div>
+    <!-- Features Item -->
+    <div class="items-contain">
+      <!-- Row -->
+      <div class="row child-mb-30">
+        <!-- col -->
+        <div class="col-xl-4 col-lg-6 col-12">
+          <!-- box -->
+          <div class="box d-flex align-items-start">
+            <img src="../../../../assets/user/images/icons/blue/rocket.svg" class="img-fluid mr-4" alt="image" />
+            <!-- text contain -->
+            <div class="t-c">
+              <h4 class="mb-3">Level up!</h4>
+              <p class="mb-0">
+                It’s hard to believe anyone would want to harm your website, but
+                they do. Thankfully, our security team is on the job 24/7 to
+                meticulously monitor, thwart suspicious activity and deflect
+                DDoS attacks.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- col -->
+        <div class="col-xl-4 col-lg-6 col-12">
+          <!-- box -->
+          <div class="box d-flex align-items-start">
+            <img src="../../../../assets/user/images/icons/blue/trophy.svg" class="img-fluid mr-4" alt="image" />
+            <!-- text contain -->
+            <div class="t-c">
+              <h4 class="mb-3">Award-winning security</h4>
+              <p class="mb-0">
+                It’s hard to believe anyone would want to harm your website, but
+                they do. Thankfully, our security team is on the job 24/7 to
+                meticulously monitor, thwart suspicious activity and deflect
+                DDoS attacks.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- col -->
+        <div class="col-xl-4 col-lg-6 col-12">
+          <!-- box -->
+          <div class="box d-flex align-items-start">
+            <img src="../../../../assets/user/images/icons/blue/computing-cloud.svg" class="img-fluid mr-4"
+              alt="image" />
+            <!-- text contain -->
+            <div class="t-c">
+              <h4 class="mb-3">What is hosting?</h4>
+              <p class="mb-0">
+                It’s hard to believe anyone would want to harm your website, but
+                they do. Thankfully, our security team is on the job 24/7 to
+                meticulously monitor, thwart suspicious activity and deflect
+                DDoS attacks.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- col -->
+        <div class="col-xl-4 col-lg-6 col-12">
+          <!-- box -->
+          <div class="box d-flex align-items-start">
+            <img src="../../../../assets/user/images/icons/blue/wealth.svg" class="img-fluid mr-4" alt="image" />
+            <!-- text contain -->
+            <div class="t-c">
+              <h4 class="mb-3">Upgrade Management</h4>
+              <p class="mb-0">
+                It’s hard to believe anyone would want to harm your website, but
+                they do. Thankfully, our security team is on the job 24/7 to
+                meticulously monitor, thwart suspicious activity and deflect
+                DDoS attacks.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- col -->
+        <div class="col-xl-4 col-lg-6 col-12">
+          <!-- box -->
+          <div class="box d-flex align-items-start">
+            <img src="../../../../assets/user/images/icons/blue/customer-service.svg" class="img-fluid mr-4"
+              alt="image" />
+            <!-- text contain -->
+            <div class="t-c">
+              <h4 class="mb-3">Priority Support</h4>
+              <p class="mb-0">
+                It’s hard to believe anyone would want to harm your website, but
+                they do. Thankfully, our security team is on the job 24/7 to
+                meticulously monitor, thwart suspicious activity and deflect
+                DDoS attacks.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- col -->
+        <div class="col-xl-4 col-lg-6 col-12">
+          <!-- box -->
+          <div class="box d-flex align-items-start">
+            <img src="../../../../assets/user/images/icons/blue/mail-box.svg" class="img-fluid mr-4" alt="image" />
+            <!-- text contain -->
+            <div class="t-c">
+              <h4 class="mb-3">Email Service</h4>
+              <p class="mb-0">
+                It’s hard to believe anyone would want to harm your website, but
+                they do. Thankfully, our security team is on the job 24/7 to
+                meticulously monitor, thwart suspicious activity and deflect
+                DDoS attacks.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- :: Section 6 -->
+<div class="section-6 p-80 text-center">
+  <div class="container">
+    <h2>VPS hosting that gives you what you want and need</h2>
+    <p class="mb-0">
+      Hostinger gives you the chance to build a project the way you want it. Our
+      VPS hosting allows the use of multiple kernels and offers of a wide range
+      of operating systems ready to install in 1-click. Simple, but powerful
+      management tools will let you maximize the potential of your Virtual
+      Private Server. Serious Hardware, serious Linux Optimization and a team of
+      experts maintaining it around the clock.
+    </p>
+  </div>
+</div>
+
+<!-- :: FAQ Section -->
+<div class="faqs p-80 bg-2">
+  <div class="container">
+    <!-- FAQs Head -->
+    <div class="section-head">
+      <h2>Frequently asked questions</h2>
+      <div class="lines">
+        <span></span>
+      </div>
+      <p>
+        Get the answers to frequently asked questions about our hosting service.
+      </p>
+    </div>
+    <!-- FAQs Content -->
+    <div class="faqs-content">
+      <!-- row -->
+      <div class="row">
+        <!-- col -->
+        <div class="col-md-6">
+          <!-- item -->
+          <div class="item">
+            <h5 class="mb-3">
+              What are the different types of web hosting options VRocket
+              offers?
+            </h5>
+            <p class="mb-0">
+              VRocket offers multiple website hosting options to fit the various
+              needs and budgets of our customers. Shared Hosting, Cloud Hosting,
+              VPS Hosting, and Dedicated Hosting are our standard options,
+              however we also offer specialized hosting for specific website
+              building applications like WordPress and WooCommerce. Each
+              platform is built on reliable, high-performance servers and is
+              supported by our 24/7 expert support teams.<a href="#">All domains</a>
+            </p>
+          </div>
+
+          <!-- item -->
+          <div class="item">
+            <h5 class="mb-3">
+              What type of customer support does VRocket offer with their web
+              hosting?
+            </h5>
+            <p class="mb-0">
+              VRocket offers 24/7 professional customer support with all of our
+              web hosting plans for no additional cost. You can call or chat
+              with us at any time and a dedicated support rep will assist you
+              with any inquiry or concern you may have. Our support is available
+              for all website hosting plan types, so no matter what platform you
+              need, know that we are here to help you every step of the way. For
+              customers looking for WordPress design or functionality support,
+              we offer WP Live. This premium service starts at $29 per month and
+              gives you access to our WordPress technical support team. They can
+              assist with everything from selecting a theme, to design, to even
+              plugin development questions.
+            </p>
+          </div>
+
+          <!-- item -->
+          <div class="item">
+            <h5 class="mb-3">Which domain sould i buy?</h5>
+            <p class="mb-0">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+              cum quis soluta voluptate, nam cupiditate corporis temporibus
+              optio iure alias illum velit officiis accusantium tempora dolores,
+              incidunt itaque maxime. Neque.<a href="#">All domains</a>
+            </p>
+          </div>
+        </div>
+        <!-- col -->
+        <div class="col-md-6">
+          <!-- item -->
+          <div class="item">
+            <h5 class="mb-3">
+              What are the different types of web hosting options VRocket
+              offers?
+            </h5>
+            <p class="mb-0">
+              VRocket offers multiple website hosting options to fit the various
+              needs and budgets of our customers. Shared Hosting, Cloud Hosting,
+              VPS Hosting, and Dedicated Hosting are our standard options,
+              however we also offer specialized hosting for specific website
+              building applications like WordPress and WooCommerce. Each
+              platform is built on reliable, high-performance servers and is
+              supported by our 24/7 expert support teams.<a href="#">All domains</a>
+            </p>
+          </div>
+
+          <!-- item -->
+          <div class="item">
+            <h5 class="mb-3">
+              What type of customer support does VRocket offer with their web
+              hosting?
+            </h5>
+            <p class="mb-0">
+              VRocket offers 24/7 professional customer support with all of our
+              web hosting plans for no additional cost. You can call or chat
+              with us at any time and a dedicated support rep will assist you
+              with any inquiry or concern you may have. Our support is available
+              for all website hosting plan types, so no matter what platform you
+              need, know that we are here to help you every step of the way. For
+              customers looking for WordPress design or functionality support,
+              we offer WP Live. This premium service starts at $29 per month and
+              gives you access to our WordPress technical support team. They can
+              assist with everything from selecting a theme, to design, to even
+              plugin development questions.
+            </p>
+          </div>
+
+          <!-- item -->
+          <div class="item">
+            <h5 class="mb-3">Which domain sould i buy?</h5>
+            <p class="mb-0">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+              cum quis soluta voluptate, nam cupiditate corporis temporibus
+              optio iure alias illum velit officiis accusantium tempora dolores,
+              incidunt itaque maxime. Neque.<a href="#">All domains</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- :: Newsletter Bar -->
+<newsletter-bar></newsletter-bar>
+
+<!-- :: Footer -->
+<app-footer></app-footer>

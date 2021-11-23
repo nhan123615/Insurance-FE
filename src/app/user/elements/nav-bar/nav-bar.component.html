@@ -1,0 +1,156 @@
+<nav class="navbar navbar-expand-lg">
+  <!-- top bar -->
+  <div class="top-bar d-lg-block d-none">
+    <div class="container">
+      <!-- row -->
+      <div class="row">
+
+        <!-- col -->
+        <div class="col-6">
+          <!-- news -->
+          <div class="news">
+            <span class="stat text-uppercase">new</span>
+            <a [routerLink]="['/health-insurance']">Health Insurance</a>
+          </div>
+        </div>
+
+        <!-- col -->
+        <div class="col-6">
+          <!-- links -->
+          <ul class="links list-unstyled mb-0 d-flex align-items-center justify-content-end">
+            <!--<li>
+                <a href="#">Docs</a>
+            </li>-->
+            <!--<li>
+                <a [routerLink]="['/about-us']">About Us</a>
+            </li>-->
+            <!--<li>
+                <a href="#">Sitemap</a>
+            </li>-->
+            <!--<li>
+                <a [routerLink]="['/login']">Login</a>
+            </li>-->
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- navbar content -->
+  <div class="container">
+    <!-- brand -->
+    <a class="navbar-brand" [routerLink]="['/']">
+      <img src="../../../../assets/user/images/logoFile/logo-w.png" class="img-fluid d-lg-block d-none" alt="VRocket">
+
+      <img src="../../../../assets/user/images/logoFile/logo-b.png" class="img-fluid d-lg-none d-block" alt="VRocket">
+    </a>
+    <!-- toggler -->
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- collapse menu -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+
+        <!-- nav item -->
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/about-us']">About Us</a>
+        </li>
+        <!-- nav item -->
+        <ng-container *ngIf="insuranceTypes != null && insuranceTypes.length > 0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-capitalize" href="#" id="navbarDropdown1" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">insurance</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+              <ng-container *ngFor="let insuranceType of insuranceTypes">
+                <a class="dropdown-item text-capitalize" [routerLink]="['/life-insurance',{type:insuranceType.id}]">
+                  <div class="d-flex align-items-center justify-content-start">
+                    <img src="../../../../assets/user/images/icons/blue/server-01.svg"
+                      class="img-fluid d-lg-block d-none" alt="img">
+                    <div>
+                      <span class="name d-block">{{insuranceType.name}}</span>
+                      <span class="des d-lg-block d-none">perfect for hosting.</span>
+                    </div>
+                  </div>
+                </a>
+              </ng-container>
+
+            </div>
+          </li>
+        </ng-container>
+
+        <!-- nav item -->
+        <!--<li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-capitalize" href="#" id="navbarDropdown2" role="button"
+               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">company</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+
+                <a class="dropdown-item text-capitalize" [routerLink]="['/error']">
+                    <div class="d-flex align-items-center justify-content-start">
+                        <img src="../../../../assets/user/images/icons/blue/server-02.svg"
+                             class="img-fluid d-lg-block d-none" alt="img">
+                        <div>
+                            <span class="name d-block">error page</span>
+                            <span class="des d-lg-block d-none">Page not found</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a class="dropdown-item text-capitalize" [routerLink]="['/help']">
+                    <div class="d-flex align-items-center justify-content-start">
+                        <img src="../../../../assets/user/images/icons/blue/server-02.svg"
+                             class="img-fluid d-lg-block d-none" alt="img">
+                        <div>
+                            <span class="name d-block">help</span>
+                            <span class="des d-lg-block d-none">Help &amp; Support</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </li>-->
+
+        <!-- nav item -->
+        <!--<li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+        </li>-->
+
+        <!-- nav item -->
+        <!--<li class="nav-item d-lg-none">
+            <a class="nav-link" href="#">Docs</a>
+        </li>-->
+
+        <!-- nav item -->
+        <!--<li class="nav-item d-lg-none">
+          <a class="nav-link" [routerLink]="['/about-us']">About Us</a>
+        </li>-->
+
+        <!-- nav item -->
+        <!--<li class="nav-item d-lg-none">
+            <a class="nav-link" href="#">Sitemap</a>
+        </li>-->
+
+        <!-- nav item -->
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/contact-us']">Contact Us</a>
+        </li>
+
+        <!-- nav item -->
+        <!--<li class="nav-item ">
+          <a class="nav-link" [routerLink]="['/admin']">Admin Dashboard</a>
+        </li>-->
+
+        <!-- nav item -->
+        <li class="nav-item user-item ml-lg-3">
+          <a class="nav-link" [routerLink]="['/register']">Register</a>
+        </li>
+
+
+      </ul>
+    </div>
+  </div>
+</nav>

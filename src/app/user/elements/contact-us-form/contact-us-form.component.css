@@ -1,0 +1,45 @@
+/* -- :: Contact Form :: -- */
+.contact-form-s {
+    position: relative;
+    z-index: 2;
+    padding: 70px 0;
+}
+.contact-form-s form {
+    padding: 50px 30px;
+    border: 1px solid var(--thBorderColor);
+    border-radius: 4px;
+    box-shadow: 0 0.8px 16px 0 rgba(0, 0, 0, 0.1);
+    background: #fff;
+}
+/* Input Group */
+.contact-form-s form .input-group {
+    margin-bottom: 10px;
+}
+.contact-form-s form .input-group input[type="text"] {
+    text-transform: capitalize;
+}
+.contact-form-s form .input-group input,
+.contact-form-s form .input-group select,
+.contact-form-s form .input-group textarea {
+    color: var(--typeColor);
+    background: #fff;
+    padding: 5px 20px 8px 13px;
+    font-size: 16px;
+}
+.contact-form-s form .input-group textarea {
+    min-height: 46px;
+    height: 150px;
+}
+/* --------------------------------- */
+
+/* -- :: Media Query :: -- */
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+
+    /* -- :: Contact Form :: -- */
+    .contact-form-s {
+        padding: 40px 0;
+        margin-top: 0;
+    }
+}
+

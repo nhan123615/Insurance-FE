@@ -1,0 +1,670 @@
+<ng-container *ngIf="loading">
+  <preloader></preloader>
+</ng-container>
+<!-- :: Navbar -->
+<nav-bar></nav-bar>
+<!-- :: Header -->
+<!-- {{lifePolicy|json}} -->
+<header>
+  <div class="container">
+    <!-- contain -->
+    <div class="contain text-center">
+      <h1>Cloud Hosting</h1>
+      <ul class="p-0">
+        <li>
+          <img src="../../../../assets/user/images/shared-photos/speedometer-o.svg" class="img-fluid"
+            alt="Extreme Performance">
+          <p>extreme performance</p>
+        </li>
+        <li>
+          <img src="../../../../assets/user/images/shared-photos/server-o.svg" class="img-fluid"
+            alt="Extreme Performance">
+          <p>instant provisioning</p>
+        </li>
+        <li>
+          <img src="../../../../assets/user/images/shared-photos/resources-o.svg" class="img-fluid"
+            alt="Extreme Performance">
+          <p>guaranteed resources</p>
+        </li>
+        <li>
+          <img src="../../../../assets/user/images/shared-photos/dynamic-o.svg" class="img-fluid"
+            alt="Extreme Performance">
+          <p>dynamic resources</p>
+        </li>
+        <li>
+          <img src="../../../../assets/user/images/shared-photos/controls-o.svg" class="img-fluid"
+            alt="Extreme Performance">
+          <p>enhanced control panel</p>
+        </li>
+      </ul>
+      <p>Our virtual private servers are built from the ground using all SSD storage. Enjoy increased power,
+        flexibility, and control for your websites.</p>
+      <button class="btn-fill-green get-link text-uppercase" data-value="section-1">get started</button>
+    </div>
+  </div>
+</header>
+
+<!-- :: Pricing Table -->
+<div class="pricing-table-2 p-80" id="section-1">
+  <div class="container">
+    <!-- Table -->
+    <h2 class="table-title text-center">Choose Your Life Insurance Policy</h2>
+    <h2 class="table-subtitle text-center">Every policy comes with an appealing interest rate.</h2>
+    <!-- Contain -->
+    <div class="contain">
+      <ul class="table-body p-0">
+        <ng-container *ngFor="let item of lifePolicy;let i = index">
+          <li [ngClass]="{'first-card': i==0,'second-card hot-card':i==1,'third-card':i==2}">
+            <!-- card name -->
+            <div class="card-name text-center">
+              <h3>{{item?.name||''}} package</h3>
+            </div>
+            <div class="offer">
+              <div class="old-price">{{item?.amount|currency}}</div>
+              <div class="save">save 30%</div>
+            </div>
+            <div class="card-price">
+              <span class="currency">$</span>
+              <span class="amount" style="font-size: 50px;">{{item?.amount|number:'1.2-2'}}</span>
+              <span class="duration">/mo</span>
+            </div>
+            <div class="card-features">
+              <ul class="p-0">
+                <li>
+                  <i class="fa fa-check"></i>
+                  <b>coverage for {{item?.term||''}}</b>
+                  <span> years</span>
+                </li>
+                <li>
+                  <i class="fa fa-check"></i>
+                  <b>{{item?.insuranceTypeName||''}}</b>
+                  <span> (long term)</span>
+                </li>
+                <li>
+                  <i class="fa fa-check"></i>
+                  <b>Total amount:</b>
+                  <span><b> {{item?.amount*12|currency}}</b></span>
+                </li>
+                <li>
+                  <i class="fa fa-check"></i>
+                  <b>Interest rate: </b>
+                  <span><b> {{item?.interestRate||''}}</b>%</span>
+                </li>
+                <li>
+                  <i class="fa fa-check"></i>
+                  <b>Apply down below</b>
+                </li>
+              </ul>
+            </div>
+            <div class="buy-card">
+              <button (click)="onBuy(item)">get started</button>
+            </div>
+          </li>
+        </ng-container>
+
+        <!--         
+        <li class="second-card hot-card">
+          <div class="ribbon">most popular</div>
+          <div class="card-name text-center">
+            <h3>{{lifePolicy[1].name}} package</h3>
+          </div>
+          <div class="offer">
+            <div class="old-price">${{lifePolicy[1].amount*71/100}}</div>
+            <div class="save">save 71%</div>
+          </div>
+          <div class="card-price">
+            <span class="currency">$</span>
+            <span class="amount">{{lifePolicy[1].amount}}</span>
+            <span class="duration">/mo</span>
+          </div>
+          <div class="card-features">
+            <ul class="p-0">
+              <li>
+                <i class="fa fa-check"></i>
+                <b>coverage for {{lifePolicy[1].term}}</b>
+                <span> years</span>
+              </li>
+              <li>
+                <i class="fa fa-check"></i>
+                <b>{{lifePolicy[1].insuranceTypeName}}</b>
+                <span> (long term)</span>
+              </li>
+              <li>
+                <i class="fa fa-check"></i>
+                <b>Total amount:</b>
+                <span><b> {{lifePolicy[1].amount*12}}</b> $</span>
+              </li>
+              <li>
+                <i class="fa fa-check"></i>
+                <b>Interest rate: </b>
+                <span><b> {{lifePolicy[1].interestRate}}</b>%</span>
+              </li>
+              <li>
+                <i class="fa fa-check"></i>
+                <b>Apply down below</b>
+              </li>
+            </ul>
+          </div>
+          <div class="buy-card">
+            <button>get started</button>
+          </div>
+        </li>
+        <li class="third-card">
+        <div class="card-name text-center">
+          <h3>{{lifePolicy[2].name}} package</h3>
+        </div>
+        <div class="offer">
+          <div class="old-price">${{lifePolicy[2].amount*34/100}}</div>
+          <div class="save">save 34%</div>
+        </div>
+        <div class="card-price">
+          <span class="currency">$</span>
+          <span class="amount">{{lifePolicy[2].amount}}</span>
+          <span class="duration">/mo</span>
+        </div>
+        <div class="card-features">
+          <ul class="p-0">
+            <li>
+              <i class="fa fa-check"></i>
+              <b>coverage for {{lifePolicy[2].term}}</b>
+              <span> years</span>
+            </li>
+            <li>
+              <i class="fa fa-check"></i>
+              <b>{{lifePolicy[2].insuranceTypeName}}</b>
+              <span> (long term)</span>
+            </li>
+            <li>
+              <i class="fa fa-check"></i>
+              <b>Total amount:</b>
+              <span><b> {{lifePolicy[2].amount*12}}</b> $</span>
+            </li>
+            <li>
+              <i class="fa fa-check"></i>
+              <b>Interest rate: </b>
+              <span><b> {{lifePolicy[2].interestRate}}</b>%</span>
+            </li>
+            <li>
+              <i class="fa fa-check"></i>
+              <b>Apply down below</b>
+            </li>
+          </ul>
+        </div>
+        <div class="buy-card">
+          <button>get started</button>
+        </div>
+        </li> -->
+
+      </ul>
+    </div>
+    <!-- Cards -->
+    <div class="cards" style="text-align: center;">
+      <img src="../../../../assets/user/images/logoFile/2560px-PayPal_logo.svg.png" alt="" width="220px">
+    </div>
+  </div>
+</div>
+<!-- :: features -->
+<div class="features p-80 bg-2">
+  <div class="container">
+    <!-- Head -->
+    <div class="section-head">
+      <h2>The Perfect Environment For Your Success</h2>
+      <div class="lines">
+        <span></span>
+      </div>
+      <p>Our optimized configuration process saves your team time when running and scaling distributed applications,
+        AI & machine learning workloads, hosted services, client websites, or CI/CD environments.</p>
+    </div>
+    <!-- Contain -->
+    <div class="contain">
+      <!-- row -->
+      <div class="row child-mb-30">
+        <!-- col -->
+        <div class="col-xl-4 col-lg-6 col-12">
+          <!-- box -->
+          <div class="box">
+            <img src="../../../../assets/user/images/icons/blue/rocket.svg" class="img-fluid mb-4" alt="image">
+            <!-- text contain -->
+            <div class="t-c">
+              <h4 class="mb-3">Level up!</h4>
+              <p class="mb-0">It’s hard to believe anyone would want to harm your website, but they do. Thankfully,
+                our
+                security team is on the job 24/7 to meticulously monitor, thwart suspicious activity and deflect DDoS
+                attacks.</p>
+            </div>
+          </div>
+        </div>
+        <!-- col -->
+        <div class="col-xl-4 col-lg-6 col-12">
+          <!-- box -->
+          <div class="box">
+            <img src="../../../../assets/user/images/icons/blue/trophy.svg" class="img-fluid mb-4" alt="image">
+            <!-- text contain -->
+            <div class="t-c">
+              <h4 class="mb-3">Award-winning security</h4>
+              <p class="mb-0">It’s hard to believe anyone would want to harm your website, but they do.
+                Thankfully, our security team is on the job 24/7 to meticulously monitor, thwart suspicious activity
+                and deflect DDoS attacks.</p>
+            </div>
+          </div>
+        </div>
+        <!-- col -->
+        <div class="col-xl-4 col-lg-6 col-12">
+          <!-- box -->
+          <div class="box">
+            <img src="../../../../assets/user/images/icons/blue/computing-cloud.svg" class="img-fluid mb-4" alt="image">
+            <!-- text contain -->
+            <div class="t-c">
+              <h4 class="mb-3">What is hosting?</h4>
+              <p class="mb-0">It’s hard to believe anyone would want to harm your website, but they do.
+                Thankfully, our security team is on the job 24/7 to meticulously monitor, thwart suspicious activity
+                and deflect DDoS attacks.</p>
+            </div>
+          </div>
+        </div>
+        <!-- col -->
+        <div class="col-12 mb-0">
+          <!-- button contain -->
+          <div class="btn-c w-100 text-center">
+            <button class="btn-fill-green get-link text-uppercase" data-value="section-1">get started now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- :: Compare Section -->
+<div class="compare p-80">
+  <div class="container">
+    <!-- Hosting Head -->
+    <div class="section-head">
+      <h2>Compare All Cloud Hosting Plans</h2>
+      <div class="lines">
+        <span></span>
+      </div>
+      <p>Our optimized configuration process saves your team time when running and scaling distributed applications,
+        AI & machine learning workloads, hosted services, client websites, or CI/CD environments.</p>
+    </div>
+    <!-- Compare Table -->
+    <div class="c-table table-responsive-md">
+      <!-- H Table -->
+      <table class="w-100 h-table">
+        <thead>
+          <tr>
+            <th class="d-lg-table d-none"></th>
+            <td>
+              <span class="name">Bronze</span>
+              <div class="card-price">
+                <span class="currency">$</span>
+                <span class="amount">10</span>
+                <span class="duration">/mo</span>
+              </div>
+              <button>get started</button>
+            </td>
+            <td class="hot">
+              <span class="name">Gold</span>
+              <div class="card-price">
+                <span class="currency">$</span>
+                <span class="amount">14</span>
+                <span class="duration">/mo</span>
+              </div>
+              <button>get started</button>
+            </td>
+            <td>
+              <span class="name">Platinum</span>
+              <div class="card-price">
+                <span class="currency">$</span>
+                <span class="amount">26</span>
+                <span class="duration">/mo</span>
+              </div>
+              <button>get started</button>
+            </td>
+          </tr>
+        </thead>
+      </table>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th class="p-0 d-lg-table d-none"></th>
+            <td class="p-0"></td>
+            <td class="p-0"></td>
+            <td class="p-0"></td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="bg-gray d-lg-none">
+            <td class="title" colspan="4">Free domain with annual plan</td>
+          </tr>
+          <tr class="bg-gray">
+            <th class="d-lg-table-cell d-none">Free domain with annual plan</th>
+            <td><i class="fa fa-check"></i></td>
+            <td><i class="fa fa-check"></i></td>
+            <td><i class="fa fa-check"></i></td>
+          </tr>
+          <tr class="d-lg-none">
+            <td class="title" colspan="4">Websites</td>
+          </tr>
+          <tr>
+            <th class="d-lg-table-cell d-none">Websites</th>
+            <td>1</td>
+            <td>Unlimited</td>
+            <td>Unlimited</td>
+          </tr>
+          <tr class="bg-gray d-lg-none">
+            <td class="title" colspan="4">Disk space</td>
+          </tr>
+          <tr class="bg-gray">
+            <th class="d-lg-table-cell d-none">Disk space</th>
+            <td>100 GB</td>
+            <td>Unlimited</td>
+            <td>Unlimited</td>
+          </tr>
+          <tr class="d-lg-none">
+            <td class="title" colspan="4">Monthly bandwidth</td>
+          </tr>
+          <tr>
+            <th class="d-lg-table-cell d-none">Monthly bandwidth</th>
+            <td>Unlimited</td>
+            <td>Unlimited</td>
+            <td>Unlimited</td>
+          </tr>
+          <tr class="bg-gray d-lg-none">
+            <td class="title" colspan="4">Input/output (I/O)</td>
+          </tr>
+          <tr class="bg-gray">
+            <th class="d-lg-table-cell d-none">Input/output (I/O)</th>
+            <td>1024</td>
+            <td>2048</td>
+            <td>2048</td>
+          </tr>
+          <tr class="d-lg-none">
+            <td class="title" colspan="4">FTP users</td>
+          </tr>
+          <tr>
+            <th class="d-lg-table-cell d-none">FTP users</th>
+            <td>60</td>
+            <td>60</td>
+            <td>60</td>
+          </tr>
+          <tr class="bg-gray d-lg-none">
+            <td class="title" colspan="4">MySQL databases</td>
+          </tr>
+          <tr class="bg-gray">
+            <th class="d-lg-table-cell d-none">MySQL databases</th>
+            <td>10 x 1 GB</td>
+            <td>25 x 1 GB</td>
+            <td>Unlimited<br> x 2 GB</td>
+          </tr>
+          <tr class="d-lg-none">
+            <td class="title" colspan="4">Database backup/restore</td>
+          </tr>
+          <tr>
+            <th class="d-lg-table-cell d-none">Database backup/restore</th>
+            <td><i class="fa fa-check"></i></td>
+            <td><i class="fa fa-check"></i></td>
+            <td><i class="fa fa-check"></i></td>
+          </tr>
+          <tr class="bg-gray d-lg-none">
+            <td class="title" colspan="4">Direct database access</td>
+          </tr>
+          <tr class="bg-gray">
+            <th class="d-lg-table-cell d-none">Direct database access</th>
+            <td><i class="fa fa-check"></i></td>
+            <td><i class="fa fa-check"></i></td>
+            <td><i class="fa fa-check"></i></td>
+          </tr>
+          <tr class="d-lg-none">
+            <td class="title" colspan="4">DNS management</td>
+          </tr>
+          <tr>
+            <th class="d-lg-table-cell d-none">DNS management</th>
+            <td><i class="fa fa-check"></i></td>
+            <td><i class="fa fa-check"></i></td>
+            <td>Unlimited</td>
+          </tr>
+          <tr class="bg-gray d-lg-none">
+            <td class="title" colspan="4">Auto-responder</td>
+          </tr>
+          <tr class="bg-gray">
+            <th class="d-lg-table-cell d-none">Auto-responder</th>
+            <td><i class="fa fa-check"></i></td>
+            <td><i class="fa fa-check"></i></td>
+            <td><i class="fa fa-check"></i></td>
+          </tr>
+          <tr class="d-lg-none">
+            <td class="title" colspan="4">Total email storage</td>
+          </tr>
+          <tr>
+            <th class="d-lg-table-cell d-none">Total email storage</th>
+            <td>5 GB</td>
+            <td>5 GB</td>
+            <td>Unlimited</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- :: Features 2 -->
+<div class="features bg-2 p-80">
+  <div class="container">
+    <!-- section head -->
+    <div class="section-head">
+      <h2>Simplicity Meets Performance</h2>
+      <div class="lines">
+        <span></span>
+      </div>
+      <p>Our optimized configuration process saves your team time when running and scaling distributed applications,
+        AI & machine learning workloads, hosted services, client websites, or CI/CD environments.</p>
+    </div>
+    <!-- Features Item -->
+    <div class="items-contain">
+      <!-- Row -->
+      <div class="row child-mb-30">
+        <!-- col -->
+        <div class="col-xl-4 col-lg-6 col-12">
+          <!-- box -->
+          <div class="box d-flex align-items-start">
+            <img src="../../../../assets/user/images/icons/blue/rocket.svg" class="img-fluid mr-4" alt="image">
+            <!-- text contain -->
+            <div class="t-c">
+              <h4 class="mb-3">Level up!</h4>
+              <p class="mb-0">It’s hard to believe anyone would want to harm your website, but they do. Thankfully,
+                our
+                security team is on the job 24/7 to meticulously monitor, thwart suspicious activity and deflect DDoS
+                attacks.</p>
+            </div>
+          </div>
+        </div>
+        <!-- col -->
+        <div class="col-xl-4 col-lg-6 col-12">
+          <!-- box -->
+          <div class="box d-flex align-items-start">
+            <img src="../../../../assets/user/images/icons/blue/trophy.svg" class="img-fluid mr-4" alt="image">
+            <!-- text contain -->
+            <div class="t-c">
+              <h4 class="mb-3">Award-winning security</h4>
+              <p class="mb-0">It’s hard to believe anyone would want to harm your website, but they do.
+                Thankfully, our security team is on the job 24/7 to meticulously monitor, thwart suspicious activity
+                and deflect DDoS attacks.</p>
+            </div>
+          </div>
+        </div>
+        <!-- col -->
+        <div class="col-xl-4 col-lg-6 col-12">
+          <!-- box -->
+          <div class="box d-flex align-items-start">
+            <img src="../../../../assets/user/images/icons/blue/computing-cloud.svg" class="img-fluid mr-4" alt="image">
+            <!-- text contain -->
+            <div class="t-c">
+              <h4 class="mb-3">What is hosting?</h4>
+              <p class="mb-0">It’s hard to believe anyone would want to harm your website, but they do.
+                Thankfully, our security team is on the job 24/7 to meticulously monitor, thwart suspicious activity
+                and deflect DDoS attacks.</p>
+            </div>
+          </div>
+        </div>
+        <!-- col -->
+        <div class="col-xl-4 col-lg-6 col-12 mb-xl-0">
+          <!-- box -->
+          <div class="box d-flex align-items-start">
+            <img src="../../../../assets/user/images/icons/blue/wealth.svg" class="img-fluid mr-4" alt="image">
+            <!-- text contain -->
+            <div class="t-c">
+              <h4 class="mb-3">Upgrade Management</h4>
+              <p class="mb-0">It’s hard to believe anyone would want to harm your website, but they do.
+                Thankfully, our security team is on the job 24/7 to meticulously monitor, thwart suspicious activity
+                and deflect DDoS attacks.</p>
+            </div>
+          </div>
+        </div>
+        <!-- col -->
+        <div class="col-xl-4 col-lg-6 col-12 mb-lg-0">
+          <!-- box -->
+          <div class="box d-flex align-items-start">
+            <img src="../../../../assets/user/images/icons/blue/customer-service.svg" class="img-fluid mr-4"
+              alt="image">
+            <!-- text contain -->
+            <div class="t-c">
+              <h4 class="mb-3">Priority Support</h4>
+              <p class="mb-0">It’s hard to believe anyone would want to harm your website, but they do.
+                Thankfully, our security team is on the job 24/7 to meticulously monitor, thwart suspicious activity
+                and deflect DDoS attacks.</p>
+            </div>
+          </div>
+        </div>
+        <!-- col -->
+        <div class="col-xl-4 col-lg-6 col-12 mb-0">
+          <!-- box -->
+          <div class="box d-flex align-items-start">
+            <img src="../../../../assets/user/images/icons/blue/mail-box.svg" class="img-fluid mr-4" alt="image">
+            <!-- text contain -->
+            <div class="t-c">
+              <h4 class="mb-3">Email Service</h4>
+              <p class="mb-0">It’s hard to believe anyone would want to harm your website, but they do.
+                Thankfully, our security team is on the job 24/7 to meticulously monitor, thwart suspicious activity
+                and deflect DDoS attacks.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- :: Money Back Section -->
+<div class="m-b p-80">
+  <div class="container">
+    <!-- Contain -->
+    <div class="contain">
+      <!-- row -->
+      <div class="row align-items-center">
+        <!-- col -->
+        <div class="col-3 d-lg-block d-none">
+          <img src="../../../../assets/user/images/pages/servers/30-day-guarantee-clipart.png" class="img-fluid" alt="">
+        </div>
+        <!-- col -->
+        <div class="col-lg-9 col-12">
+          <!-- text contain -->
+          <div class="t-c text-lg-left text-center">
+            <h3 class="mb-lg-2 mb-3">30-day money-back guarantee</h3>
+            <p class="mb-0">If you’re not 100% satisfied with VRocket, we’ll refund your payment. No hassle, no risk.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- :: FAQ Section -->
+<div class="faqs p-80 bg-2">
+  <div class="container">
+    <!-- FAQs Head -->
+    <div class="section-head">
+      <h2>Frequently asked questions</h2>
+      <div class="lines">
+        <span></span>
+      </div>
+      <p>Get the answers to frequently asked questions about our hosting service.</p>
+    </div>
+    <!-- FAQs Content -->
+    <div class="faqs-content">
+      <!-- row -->
+      <div class="row">
+        <!-- col -->
+        <div class="col-md-6">
+          <!-- item -->
+          <div class="item">
+            <h5 class="mb-3">What are the different types of web hosting options VRocket offers?</h5>
+            <p class="mb-0">VRocket offers multiple website hosting options to fit the various needs and budgets of our
+              customers. Shared Hosting, Cloud Hosting, VPS Hosting, and Dedicated Hosting are our standard options,
+              however we also offer specialized hosting for specific website building applications like WordPress and
+              WooCommerce. Each platform is built on reliable, high-performance servers and is supported by our 24/7
+              expert support teams.<a href="#">All domains</a></p>
+          </div>
+
+          <!-- item -->
+          <div class="item">
+            <h5 class="mb-3">What type of customer support does VRocket offer with their web hosting?</h5>
+            <p class="mb-0">VRocket offers 24/7 professional customer support with all of our web hosting plans for no
+              additional cost. You can call or chat with us at any time and a dedicated support rep will assist you with
+              any inquiry or concern you may have. Our support is available for all website hosting plan types, so no
+              matter what platform you need, know that we are here to help you every step of the way. For customers
+              looking for WordPress design or functionality support, we offer WP Live. This premium service starts at
+              $29 per month and gives you access to our WordPress technical support team. They can assist with
+              everything from selecting a theme, to design, to even plugin development questions.</p>
+          </div>
+
+          <!-- item -->
+          <div class="item">
+            <h5 class="mb-3">Which domain sould i buy?</h5>
+            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda cum quis soluta
+              voluptate, nam cupiditate corporis temporibus optio iure alias illum velit officiis accusantium tempora
+              dolores, incidunt itaque maxime. Neque.<a href="#">All domains</a></p>
+          </div>
+        </div>
+        <!-- col -->
+        <div class="col-md-6">
+          <!-- item -->
+          <div class="item">
+            <h5 class="mb-3">What are the different types of web hosting options VRocket offers?</h5>
+            <p class="mb-0">VRocket offers multiple website hosting options to fit the various needs and budgets of our
+              customers. Shared Hosting, Cloud Hosting, VPS Hosting, and Dedicated Hosting are our standard options,
+              however we also offer specialized hosting for specific website building applications like WordPress and
+              WooCommerce. Each platform is built on reliable, high-performance servers and is supported by our 24/7
+              expert support teams.<a href="#">All domains</a></p>
+          </div>
+
+          <!-- item -->
+          <div class="item">
+            <h5 class="mb-3">What type of customer support does VRocket offer with their web hosting?</h5>
+            <p class="mb-0">VRocket offers 24/7 professional customer support with all of our web hosting plans for no
+              additional cost. You can call or chat with us at any time and a dedicated support rep will assist you with
+              any inquiry or concern you may have. Our support is available for all website hosting plan types, so no
+              matter what platform you need, know that we are here to help you every step of the way. For customers
+              looking for WordPress design or functionality support, we offer WP Live. This premium service starts at
+              $29 per month and gives you access to our WordPress technical support team. They can assist with
+              everything from selecting a theme, to design, to even plugin development questions.</p>
+          </div>
+
+          <!-- item -->
+          <div class="item">
+            <h5 class="mb-3">Which domain sould i buy?</h5>
+            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda cum quis soluta
+              voluptate, nam cupiditate corporis temporibus optio iure alias illum velit officiis accusantium tempora
+              dolores, incidunt itaque maxime. Neque.<a href="#">All domains</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- :: Newsletter Bar -->
+<newsletter-bar></newsletter-bar>
+
+<!-- :: Footer -->
+<app-footer></app-footer>

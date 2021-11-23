@@ -1,0 +1,87 @@
+<!-- {{customerPolicyDetail|json}}
+<hr>
+<hr>-->
+<!-- {{claimDetail|json}} -->
+<ng-container *ngIf="loading">
+  <preloader></preloader>
+</ng-container>
+<div class="card card-xl-stretch mb-xl-8">
+  <!-- begin::Beader -->
+  <div class="card-header border-0 py-5" style="padding-bottom: 0!important;">
+    <div class="d-flex flex-column flex-grow-1 py-2 py-lg-13 me-2">
+      <div class="fw-bolder text-dark fs-4 mb-2 text-hover-primary">
+      </div>
+      <div>
+        <span class="fs-4 text-muted  fw-bold">Insurance Type: </span>
+        <span class="fs-4 fw-bolder">{{claimDetail?.name}}</span>
+      </div>
+      <div>
+        <span class="fs-4 text-muted  fw-bold">Total Amount: </span>
+        <span class="fs-4 fw-bolder">{{claimDetail?.amount|currency}}</span>
+      </div>
+    </div>
+
+  </div>
+  <!-- end::Header -->
+
+  <!-- begin::Body -->
+  <div class="card-body p-0 d-flex flex-column">
+    <!-- begin::Stats -->
+    <div class="card-p pt-5 bg-white flex-grow-1">
+      <!-- begin::Row -->
+      <div class="row g-0">
+        <!-- begin::Col -->
+        <div class="col mr-8">
+          <!-- begin::Label -->
+          <div class="fs-7 text-muted fw-bold">Start date</div>
+          <!-- end::Label -->
+
+          <!-- begin::Stat -->
+          <div class="d-flex align-items-center">
+            <div class="fs-4 fw-bolder">{{claimDetail?.startDate | date:'dd/MM/yyyy'}}</div>
+            <span [inlineSVG]="'./assets/media/icons/duotune/arrows/arr066.svg'"
+              class="svg-icon svg-icon-5 svg-icon-success ms-1"></span>
+          </div>
+          <!-- end::Stat -->
+        </div>
+        <!-- end::Col -->
+
+        <!-- begin::Col -->
+        <div class="col">
+          <!-- begin::Label -->
+          <div class="fs-7 text-muted fw-bold">End date</div>
+          <!-- end::Label -->
+
+          <!-- begin::Stat -->
+          <div class="fs-4 fw-bolder">{{claimDetail?.endDate | date:'dd/MM/yyyy'}}
+            <span [inlineSVG]="'./assets/media/icons/duotune/arrows/arr065.svg'"
+              class="svg-icon svg-icon-5 svg-icon-danger ms-1"></span>
+          </div>
+
+          <!-- end::Stat -->
+        </div>
+        <!-- end::Col -->
+      </div>
+      <!-- end::Row -->
+
+      <!-- begin::Row -->
+      <div class="row g-0 mt-8">
+        <!-- begin::Col -->
+        <div class="col">
+          <!-- begin::Label -->
+          <div class="fs-7 text-muted fw-bold">Claim date</div>
+          <!-- end::Label -->
+
+          <!-- begin::Stat -->
+          <div class="d-flex align-items-center">
+            <div class="fs-4 fw-bolder">{{claimDetail?.claimedDate || 'Not Yet'}}</div>
+
+          </div>
+        </div>
+        <div class="col">
+          <button type="button" class="btn btn-primary btn-sm" [disabled]="!claimDetail?.claimedDate">Claim</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

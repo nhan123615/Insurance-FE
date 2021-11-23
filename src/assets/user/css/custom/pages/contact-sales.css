@@ -1,0 +1,107 @@
+/* -- :: Main Contain :: -- */
+.main-contain {
+  position: relative;
+}
+.main-contain span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 900px;
+  width: 100%;
+  z-index: 1;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 40%, 0 70%);
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+  background: #3b71de;
+  background: -webkit-gradient(linear,left top, left bottom,color-stop(40%, #003eaa),color-stop(60%, #004ec2),color-stop(80%, #0060df),color-stop(90%, #0080ff),to(#00c7ff));
+  background: linear-gradient(to bottom,#003eaa 40%,#004ec2 60%,#0060df 80%,#0080ff 90%,#00c7ff 100%);
+  opacity: .6;
+}
+/* --------------------------------- */
+
+/* -- :: Header :: -- */
+header {
+  position: relative;
+  z-index: 2;
+  padding-top: 180px;
+  color: #fff;
+}
+header h1 {
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+header p {
+  font-size: 22px;
+  max-width: 700px;
+}
+/* --------------------------------- */
+
+/* -- :: Contact Form :: -- */
+.contact-form-s {
+  position: relative;
+  z-index: 2;
+  padding: 70px 0;
+}
+.contact-form-s form {
+  padding: 50px 30px;
+  border: 1px solid var(--thBorderColor);
+  border-radius: 4px;
+  box-shadow: 0 0.8px 16px 0 rgba(0, 0, 0, 0.1);
+  background: #fff;
+}
+/* Input Group */
+.contact-form-s form .input-group {
+  margin-bottom: 10px;
+}
+.contact-form-s form .input-group input[type="text"] {
+  text-transform: capitalize;
+}
+.contact-form-s form .input-group input,
+.contact-form-s form .input-group select,
+.contact-form-s form .input-group textarea {
+  color: var(--typeColor);
+  background: #fff;
+  padding: 5px 20px 8px 13px;
+  font-size: 16px;
+}
+.contact-form-s form .input-group textarea {
+  min-height: 46px;
+  height: 150px;
+}
+/* --------------------------------- */
+
+/* -- :: Media Query :: -- */
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+  /* -- :: Main Contain :: -- */
+  .main-contain span{
+    display: none;
+  }
+  /* -- :: Header :: -- */
+  header {
+    padding: 120px 0 40px;
+    background: #f9fbfc;
+  }
+  header h1 {
+    color: var(--typeColor);
+  }
+  header p {
+    color: var(--pColor)
+  }
+  /* -- :: Contact Form :: -- */
+  .contact-form-s {
+    padding: 40px 0;
+    margin-top: 0;
+  }
+}
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  /* -- :: Header :: -- */
+  header h1 {
+    font-size: 28px;
+    margin-bottom: 16px;
+    margin-top: 0;
+  }
+  header p {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,177 @@
+<ng-container *ngIf="loading">
+  <preloader></preloader>
+</ng-container>
+<div class="card card-xl-stretch mb5 mb-xl-8">
+  <!-- begin::Header -->
+  <div class="card-header align-items-center border-0 mt-4">
+    <h3 class="card-title align-items-start flex-column">
+      <span class="fw-bolder text-dark">Latest Products</span>
+      <span class="text-muted mt-1 fw-bold fs-7">Gifts and more</span>
+    </h3>
+    <div class="card-toolbar">
+      <!-- begin::Menu -->
+      <button type="button" class="btn btn-sm btn-icon btn-color-primary btn-active-light-primary"
+        data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end" data-kt-menu-flip="top-end">
+        <span [inlineSVG]="'./assets/media/icons/duotune/general/gen024.svg'" class="svg-icon svg-icon-2"></span>
+      </button>
+      <app-dropdown-menu1></app-dropdown-menu1>
+      <!-- end::Menu -->
+    </div>
+  </div>
+  <!-- end::Header -->
+  <ng-container *ngIf="policyItem.length>0;else noDataDisplay">
+    <!-- begin::Body -->
+    <div class="card-body pt-3">
+      <ng-container *ngFor="let item of policyItem">
+        <!-- begin::Item -->
+        <div class="d-flex align-items-sm-center mb-7">
+          <!-- begin::Symbol -->
+          <div class="symbol symbol-60px symbol-2by3 me-4">
+            <div class="symbol-label" [style.background-image]="
+        'url(./assets/media/stock/600x400/img-17.jpg)'
+      "></div>
+          </div>
+          <!-- end::Symbol -->
+          <!-- begin::Content -->
+          <div class="d-flex flex-row-fluid align-items-center flex-wrap my-lg-0 me-2">
+            <!-- begin::Title -->
+            <div class="flex-grow-1 my-lg-0 my-2 me-2 custom-hover">
+              <div class="text-gray-800 fw-bolder text-hover-primary fs-6" (click)="openPolicyDialog(item)">
+                {{item?.name||''}}
+              </div>
+              <span class="text-muted fw-bold d-block pt-1"> {{item?.insuranceTypeName||''}}</span>
+            </div>
+            <!-- end::Title -->
+
+
+
+            <div class="col-lg-8 fv-row">
+              <select class="form-select form-select-solid form-select-lg" name="premiumType" style="width:300px"
+                #mySelect (change)='onSelectPremiumType(mySelect.value)'>
+                <ng-container *ngFor="let item of premiumType">
+                  <option [value]="item?.id">{{item?.name}}</option>
+                </ng-container>
+              </select>
+            </div>
+
+            <!-- begin::Section -->
+            <div class="d-flex align-items-center">
+              <div class="me-6">
+                <span class="text-gray-800 fw-bolder">{{item?.amount|currency}} </span>
+              </div>
+              <div class="btn btn-icon btn-light btn-sm border-0" (click)="onDeletePolicyItem(item)">
+                <span [inlineSVG]="'./assets/media/icons/duotune/arrows/arr064.svg'"
+                  class="svg-icon svg-icon-2 svg-icon-primary"></span>
+              </div>
+            </div>
+            <!-- end::Section -->
+          </div>
+          <!-- end::Content -->
+        </div>
+        <!-- end::Item -->
+      </ng-container>
+
+    </div>
+    <!-- end::Body -->
+  </ng-container>
+  <ng-template #noDataDisplay>
+    <h3 style="text-align:center;padding:20px;">No Data Display</h3>
+  </ng-template>
+</div>
+
+
+<!-- profile detail -->
+<div class="card mb-5 mb-xl-10">
+  <div class="card-header border-0 cursor-pointer" role="button" data-bs-toggle="collapse"
+    data-bs-target="#kt_account_profile_details" aria-expanded="true" aria-controls="kt_account_profile_details">
+    <div class="card-title m-0">
+      <h3 class="fw-bolder m-0">Profile Details</h3>
+    </div>
+  </div>
+  <div id="kt_account_profile_details" class="collapse show">
+    <form novalidate="" [formGroup]="updateProfile" (ngSubmit)="buyPolicy()" class="form">
+      <div class="card-body border-top p-9">
+        <div class="row mb-6">
+          <label class="col-lg-4 col-form-label fw-bold fs-6">Avatar</label>
+          <div class="col-lg-8">
+            <div class="image-input image-input-outline" data-kt-image-input="true"
+              [style.background-image]="'url(./assets/media/avatars/blank.png'">
+              <div class="image-input-wrapper w-125px h-125px" [style.background-image]="
+                  'url(./assets/media/avatars/150-2.jpg'
+                "></div>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-6">
+          <label class="col-lg-4 col-form-label required fw-bold fs-6">Full Name</label>
+          <div class="col-lg-8 fv-row">
+            <input type="text" class="form-control form-control-lg form-control-solid" required formControlName="name" />
+          </div>
+        </div>
+        <div class="row mb-6">
+          <label class="col-lg-4 col-form-label fw-bold fs-6">Gender</label>
+          <div class="col-lg-8 fv-row">
+            <div class="d-flex align-items-center mt-3">
+              <label class="form-check form-check-inline form-check-solid me-5"><input required class="form-check-input"
+                  name="gender" type="radio" value="Male" formControlName="gender" /><span
+                  class="fw-bold ps-2 fs-6">Male</span></label><label
+                class="form-check form-check-inline form-check-solid"><input required class="form-check-input" name="gender"
+                  type="radio" value="Female" formControlName="gender" /><span
+                  class="fw-bold ps-2 fs-6">Female</span></label>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-6">
+          <label class="col-lg-4 col-form-label required fw-bold fs-6">Birthday</label>
+          <div class="col-lg-8 fv-row">
+            <input required type="datetime" class="form-control form-control-lg form-control-solid" formControlName="birthday" />
+
+          </div>
+        </div>
+        <div class="row mb-6">
+          <label class="col-lg-4 col-form-label fw-bold fs-6"><span class="required">Citizen ID</span></label>
+          <div class="col-lg-8 fv-row">
+            <input required type="tel" class="form-control form-control-lg form-control-solid" formControlName="citizenId" />
+          </div>
+        </div>
+        <div class="row mb-6">
+          <label class="col-lg-4 col-form-label fw-bold fs-6"><span class="required">Occupation</span></label>
+          <div class="col-lg-8 fv-row">
+            <input required type="text" class="form-control form-control-lg form-control-solid" formControlName="occupation" />
+          </div>
+        </div>
+        <div class="row mb-6">
+          <label class="col-lg-4 col-form-label fw-bold fs-6"><span class="required">Zipcode</span></label>
+          <div class="col-lg-8 fv-row">
+            <input required type="text" class="form-control form-control-lg form-control-solid" formControlName="zipCode" />
+          </div>
+        </div>
+        <div class="row mb-6">
+          <label class="col-lg-4 col-form-label fw-bold fs-6"><span class="required">Street</span></label>
+          <div class="col-lg-8 fv-row">
+            <input required type="tel" class="form-control form-control-lg form-control-solid" formControlName="street" />
+          </div>
+        </div>
+        <div class="row mb-6">
+          <label class="col-lg-4 col-form-label fw-bold fs-6"><span class="required">City</span></label>
+          <div class="col-lg-8 fv-row">
+            <input required type="tel" class="form-control form-control-lg form-control-solid" formControlName="city" />
+          </div>
+        </div>
+        <div class="row mb-6">
+          <label class="col-lg-4 col-form-label fw-bold fs-6"><span class="required">State</span></label>
+          <div class="col-lg-8 fv-row">
+            <input required type="tel" class="form-control form-control-lg form-control-solid" formControlName="state" />
+          </div>
+        </div>
+      </div>
+      <div class="card-footer d-flex justify-content-end py-6 px-9">
+        <button type="submit" [disabled]="!updateProfile.valid" class="btn btn-primary">
+          <ng-container>Save Changes</ng-container>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- profile detail -->

@@ -1,0 +1,223 @@
+<!-- {{policyDetail|json}} -->
+<ng-container *ngIf="loading">
+  <preloader></preloader>
+</ng-container>
+<div class="card card-xl-stretch mb-xl-8">
+  <div class="card-body p-0">
+    <!-- begin::Header -->
+    <div class="px-9 pt-7 card-rounded h-275px w-100" [ngClass]="'bg-' + color">
+      <!-- begin::Heading -->
+      <div class="d-flex flex-stack">
+        <h3 class="m-0 text-white fw-bolder fs-3">{{policyDetail?.insuranceTypeName||''}}</h3>
+        <div class="ms-1">
+          <!-- begin::Menu -->
+          <button type="button" class="
+              btn btn-sm btn-icon btn-color-white btn-active-white
+              border-0
+              me-n3
+            " [ngClass]="'btn-active-color-' + color" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end"
+            data-kt-menu-flip="top-end">
+            <span [inlineSVG]="'./assets/media/icons/duotune/general/gen024.svg'" class="svg-icon svg-icon-2"></span>
+          </button>
+          <app-dropdown-menu1></app-dropdown-menu1>
+          <!-- end::Menu -->
+        </div>
+      </div>
+      <!-- end::Heading -->
+      <!-- begin::Balance -->
+      <div class="d-flex text-center flex-column text-white pt-8">
+        <span class="fw-bold fs-7">{{policyDetail?.name||''}} - {{policyDetail?.interestRate ||''}}%</span>
+        <span class="fw-bolder fs-2x pt-1">{{policyDetail?.amount| currency}}</span>
+      </div>
+      <!-- end::Balance -->
+    </div>
+    <!-- end::Header -->
+    <!-- begin::Items -->
+    <div class="
+        shadow-xs
+        card-rounded
+        mx-9
+        mb-9
+        px-6
+        py-9
+        position-relative
+        z-index-1
+        bg-white
+      " [style.margin-top]="'-100px'">
+      <!-- begin::Item -->
+      <div class="d-flex align-items-center mb-6">
+        <!-- begin::Symbol -->
+        <div class="symbol symbol-45px w-40px me-5">
+          <span class="symbol-label bg-lighten">
+            <span [inlineSVG]="'./assets/media/icons/duotune/general/gen005.svg'" class="svg-icon svg-icon-1"></span>
+          </span>
+        </div>
+        <!-- end::Symbol -->
+        <!-- begin::Description -->
+        <div class="d-flex align-items-center flex-wrap w-100">
+          <!-- begin::Title -->
+          <div class="mb-1 pe-3 flex-grow-1">
+            <a href="#" class="fs-5 text-gray-800 text-hover-primary fw-bolder">
+              {{policyDetail?.name||''}}
+            </a>
+            <div class="text-gray-400 fw-bold fs-7">
+              <span>Term: {{policyDetail?.term||''}} {{policyDetail?.term==1?'Year':'Years'}}</span> -
+              <span>Interest Rate: {{policyDetail?.interestRate||''}}%</span>
+
+            </div>
+          </div>
+          <!-- end::Title -->
+          <!-- begin::Label -->
+          <div class="d-flex align-items-center">
+            <div class="fw-bolder fs-5 text-gray-800 pe-1"> {{policyDetail?.amount| currency}}</div>
+            <span [inlineSVG]="'./assets/media/icons/duotune/arrows/arr066.svg'"
+              class="svg-icon svg-icon-5 svg-icon-success ms-1"></span>
+          </div>
+          <!-- end::Label -->
+        </div>
+        <!-- end::Description -->
+      </div>
+      <!-- end::Item -->
+
+
+
+      <!--feed back  -->
+      <!-- begin::Body -->
+      <div class="card-body pb-0">
+        <!-- begin::Header -->
+        <div class="d-flex align-items-center mb-5">
+          <!-- begin::User -->
+          <div class="d-flex align-items-center flex-grow-1">
+            <!-- begin::Avatar -->
+            <div class="symbol symbol-45px me-5">
+              <img src="./assets/media/avatars/150-6.jpg" alt="" />
+            </div>
+            <!-- end::Avatar -->
+            <!-- begin::Info -->
+            <div class="d-flex flex-column">
+              <a href="#" class="text-gray-800 text-hover-primary fs-6 fw-bolder">
+                Policy Detail Description
+              </a>
+              <!-- <span class="text-gray-400 fw-bold">PHP, SQLite, Artisan CLI</span> -->
+            </div>
+            <!-- end::Info -->
+          </div>
+          <!-- end::User -->
+
+          <!-- begin::Menu -->
+          <div class="my-0">
+            <button type="button" class="btn btn-sm btn-icon btn-color-primary btn-active-light-primary"
+              data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end" data-kt-menu-flip="top-end">
+              <span [inlineSVG]="'./assets/media/icons/duotune/general/gen024.svg'" class="svg-icon svg-icon-2"></span>
+            </button>
+            <app-dropdown-menu1></app-dropdown-menu1>
+          </div>
+          <!-- end::Menu -->
+        </div>
+        <!-- end::Header -->
+
+        <!-- begin::Post -->
+        <div class="mb-5">
+          <!-- begin::Text -->
+          <p class="text-gray-800 fw-normal mb-5">
+            {{policyDetail?.description||''}}
+          </p>
+          <!-- end::Text -->
+
+        </div>
+        <!-- end::Post -->
+
+      </div>
+      <!-- end::Body -->
+
+      <!--feed back  -->
+
+
+
+      <!-- begin::Item -->
+      <div class="d-flex align-items-center mb-6">
+        <!-- begin::Symbol -->
+        <div class="symbol symbol-45px w-40px me-5">
+          <span class="symbol-label bg-lighten">
+            <span [inlineSVG]="'./assets/media/icons/duotune/general/gen024.svg'" class="svg-icon svg-icon-1"></span>
+          </span>
+        </div>
+        <!-- end::Symbol -->
+        <!-- begin::Description -->
+        <div class="d-flex align-items-center flex-wrap w-100">
+          <!-- begin::Title -->
+          <div class="mb-1 pe-3 flex-grow-1">
+            <a href="#" class="fs-5 text-gray-800 text-hover-primary fw-bolder">
+              {{policyDetail?.insuranceTypeName||''}}
+            </a>
+            <!-- <div class="text-gray-400 fw-bold fs-7">Quarter 2/3</div> -->
+          </div>
+          <!-- end::Title -->
+          <!-- begin::Label -->
+          <!-- <div class="d-flex align-items-center">
+            <div class="fw-bolder fs-5 text-gray-800 pe-1">$1,7b</div>
+            <span [inlineSVG]="'./assets/media/icons/duotune/general/gen024.svg'"
+              class="svg-icon svg-icon-5 svg-icon-danger ms-1"></span>
+          </div> -->
+          <!-- end::Label -->
+        </div>
+        <!-- end::Description -->
+      </div>
+      <!-- end::Item -->
+
+
+
+      <!--feed back  -->
+      <!-- begin::Body -->
+      <div class="card-body pb-0">
+        <!-- begin::Header -->
+        <div class="d-flex align-items-center mb-5">
+          <!-- begin::User -->
+          <div class="d-flex align-items-center flex-grow-1">
+            <!-- begin::Avatar -->
+            <div class="symbol symbol-45px me-5">
+              <img src="./assets/media/avatars/150-6.jpg" alt="" />
+            </div>
+            <!-- end::Avatar -->
+            <!-- begin::Info -->
+            <div class="d-flex flex-column">
+              <a href="#" class="text-gray-800 text-hover-primary fs-6 fw-bolder">
+                Insurance Type Description
+              </a>
+              <!-- <span class="text-gray-400 fw-bold">PHP, SQLite, Artisan CLI</span> -->
+            </div>
+            <!-- end::Info -->
+          </div>
+          <!-- end::User -->
+
+          <!-- begin::Menu -->
+          <div class="my-0">
+            <button type="button" class="btn btn-sm btn-icon btn-color-primary btn-active-light-primary"
+              data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end" data-kt-menu-flip="top-end">
+              <span [inlineSVG]="'./assets/media/icons/duotune/general/gen024.svg'" class="svg-icon svg-icon-2"></span>
+            </button>
+            <app-dropdown-menu1></app-dropdown-menu1>
+          </div>
+          <!-- end::Menu -->
+        </div>
+        <!-- end::Header -->
+
+        <!-- begin::Post -->
+        <div class="mb-5">
+          <!-- begin::Text -->
+          <p class="text-gray-800 fw-normal mb-5">
+            {{policyDetail?.insuranceTypeDesc||''}}
+          </p>
+          <!-- end::Text -->
+
+        </div>
+        <!-- end::Post -->
+
+      </div>
+      <!-- end::Body -->
+
+      <!--feed back  -->
+
+
+
+    </div>

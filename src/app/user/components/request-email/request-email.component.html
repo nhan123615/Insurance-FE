@@ -1,0 +1,44 @@
+<ng-container *ngIf="loading">
+  <preloader></preloader>
+</ng-container>
+<div id="request-email-page">
+  <!-- :: Preloader -->
+  <!--<preloader></preloader>-->
+
+  <!-- :: NavBar -->
+  <!--<nav-bar></nav-bar>-->
+
+  <!-- :: Main Contain -->
+  <div class="main-contain text-center">
+    <div class="container">
+      <!-- Logo Contain -->
+      <logo-container></logo-container>
+      <!-- Login Card -->
+      <div class="login-card text-center mx-auto">
+        <!-- Name -->
+        <h5 class="name">{{requestType ==='forgot-password'?'Reset Password Request':'Activate Account Request'}}</h5>
+        <!-- Login Form -->
+        <form id="login-form" [formGroup]="formRequest" (ngSubmit)="onRequest()">
+          <!-- Input Group -->
+          <div class="input-group">
+            <input class="th-input w-100" type="email" aria-label="email-input" placeholder="Email address" required
+              formControlName="email">
+          </div>
+          <div class="input-group">
+            <p-captcha siteKey="6LdTvB4dAAAAABHTynXJoMAQcQ6JBrMYIb9Nud4L" (onResponse)="showResponse($event)">
+            </p-captcha>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" [disabled]="isDisabled" [ngClass]="isDisabled ? 'disabled sub-btn':'sub-btn'">
+            Request</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- :: Footer -->
+  <!--<app-footer></app-footer>-->
+</div>
+
+<!-- :: Footer -->
+<!--<app-footer></app-footer>-->

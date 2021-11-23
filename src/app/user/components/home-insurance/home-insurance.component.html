@@ -1,0 +1,593 @@
+<ng-container *ngIf="loading">
+  <preloader></preloader>
+</ng-container>
+
+<nav-bar></nav-bar>
+<!-- :: Header -->
+<header>
+  <div class="container">
+    <div class="contain text-center">
+      <h1>THE IMPORTANCE OF Home Insurance</h1>
+      <ul>
+        <h2 class="text-center">Choose Your Home Insurance Policy</h2>
+        <b class="text-a">Home Insurance provides cover against unforeseen incidents such as natural calamities
+          (storms,floods, landslides) and man-made disasters such as burglary, riots, theft, etc. Be it your own house,
+          a rented one, an apartment, or a luxury mansion, this insurance policy will provide cover for any kind of loss
+          or damage.</b>
+      </ul>
+
+      <button class="btn-fill-green get-link text-uppercase" data-value="section-1">get started</button>
+    </div>
+  </div>
+</header>
+<div id="shared-page">
+  <!-- Pricing -->
+  <div class="pricing p-80 bg-2">
+    <div class="container">
+      <!-- row -->
+
+      <div class="row align-items-end child-mb-30">
+        <!-- col -->
+        <div class="col-lg-3 col-sm-6 order-lg-1 order-2 mb-lg-0">
+          <!-- pricing card -->
+          <div class="pricing-card">
+            <!-- card head -->
+            <div class="card-head text-center">
+              <h4 class="mb-2">{{homePolicy[0].name}}</h4>
+
+              <h6 class="mb-0">${{homePolicy[0].amount}}/mo*</h6>
+            </div>
+
+            <!-- card features -->
+            <ul class="card-features mb-0 list-unstyled">
+              <li>
+                <span class="old-price">${{homePolicy[0].amount*30/100}}</span>
+                <span class="save">save 30%</span>
+              </li>
+              <li>
+                <span class="title d-block">Coverage for</span>
+                <span class="gray">{{homePolicy[0].term}}</span>
+                <span class="dark">Years</span>
+              </li>
+              <li>
+                <span class="title d-block">{{homePolicy[0].insuranceTypeName}}</span>
+                <span class="gray">You are the owner of a house that is a large, high-value asset. Home insurance is a
+                  type of property insurance that protects your property against loss and damage.</span>
+              </li>
+              <li>
+                <span class="title d-block">Total Amount</span>
+                <span class="gray">{{homePolicy[0].amount*12}}$</span>
+              </li>
+              <li>
+                <span class="title d-block">Interest Rate</span>
+                <span class="gray">{{homePolicy[0].interestRate}}%</span>
+              </li>
+              <li>
+                <span class="title d-block">Why is it important ?</span>
+                <span class="gray">More than just a home, it is also a valuable asset that takes years of hard work and
+                  savings to achieve. Since you have worked so hard to build a comfortable home, it is worth it to
+                  protect it properly, especially in the situations below.</span>
+
+              </li>
+
+            </ul>
+            <!-- card footer -->
+            <div class="card-footer text-center">
+              <a href="#" class="th-btn btn-fill-blue w-100">Order Now</a>
+            </div>
+          </div>
+        </div>
+        <!-- col -->
+        <div class="col-lg-3 col-sm-6 order-lg-2 order-3 mb-sm-0">
+          <!-- pricing card -->
+          <div class="pricing-card">
+            <!-- card head -->
+            <div class="card-head text-center">
+              <h4 class="mb-2">{{homePolicy[1].name}}</h4>
+              <h6 class="mb-0">${{homePolicy[1].amount}}/mo*</h6>
+            </div>
+            <!-- card features -->
+            <ul class="card-features mb-0 list-unstyled">
+              <li>
+                <span class="old-price">${{homePolicy[1].amount*51/100}}</span>
+                <span class="save-f">save 51%</span>
+              </li>
+              <li>
+                <span class="title d-block">Coverage for</span>
+                <span class="gray">{{homePolicy[1].term}}</span>
+                <span class="dark">Years</span>
+              </li>
+              <li>
+                <span class="title d-block">{{homePolicy[1].insuranceTypeName}}</span>
+                <span class="gray">You are the owner of a house that is a large, high-value asset. Home insurance is a
+                  type of property insurance that protects your property against loss and damage.</span>
+              </li>
+              <li>
+                <span class="title d-block">Total Amount</span>
+                <span class="gray">{{homePolicy[1].amount*12}}$</span>
+              </li>
+              <li>
+                <span class="title d-block">Interest Rate</span>
+                <span class="gray">{{homePolicy[1].interestRate}}%</span>
+              </li>
+              <li>
+                <span class="title d-block">Why is it important ?</span>
+                <span class="gray">More than just a home, it is also a valuable asset that takes years of hard work and
+                  savings to achieve. Since you have worked so hard to build a comfortable home, it is worth it to
+                  protect it properly, especially in the situations below.</span>
+              </li>
+
+            </ul>
+            <!-- card footer -->
+            <div class="card-footer text-center">
+              <a href="#" class="th-btn btn-fill-blue w-100">Order Now</a>
+            </div>
+          </div>
+        </div>
+        <!-- col -->
+        <div class="col-lg-3 col-sm-6 order-lg-3 order-1 mb-lg-0">
+          <!-- pricing card -->
+          <div class="pricing-card recommended">
+            <!-- card head -->
+            <div class="card-head text-center">
+              <h4 class="mb-2">{{homePolicy[2].name}}</h4>
+              <h6 class="mb-0">${{homePolicy[2].amount}}/mo*</h6>
+            </div>
+            <!-- card features -->
+            <ul class="card-features mb-0 list-unstyled">
+              <li>
+                <span class="old-price">${{homePolicy[2].amount*77/100}}</span>
+                <span class="save-r">save 77%</span>
+              </li>
+              <li>
+                <span class="title d-block">Coverage for</span>
+                <span class="gray">{{homePolicy[2].term}}</span>
+                <span class="dark">Years</span>
+              </li>
+              <li>
+                <span class="title d-block">{{homePolicy[2].insuranceTypeName}}</span>
+                <span class="gray">You are the owner of a house that is a large, high-value asset. Home insurance is a
+                  type of property insurance that protects your property against loss and damage.</span>
+              </li>
+              <li>
+                <span class="title d-block">Total Amount</span>
+                <span class="gray">{{homePolicy[2].amount*12}}$</span>
+              </li>
+              <li>
+                <span class="title d-block">Interest Rate</span>
+                <span class="gray">{{homePolicy[2].interestRate}}%</span>
+              </li>
+              <li>
+                <span class="title d-block">Why is it important ?</span>
+                <span class="gray">More than just a home, it is also a valuable asset that takes years of hard work and
+                  savings to achieve. Since you have worked so hard to build a comfortable home, it is worth it to
+                  protect it properly, especially in the situations below.</span>
+              </li>
+
+            </ul>
+            <!-- card footer -->
+            <div class="card-footer text-center">
+              <a href="#" class="th-btn btn-fill-blue w-100">Order Now</a>
+            </div>
+          </div>
+        </div>
+        <!-- col -->
+        <div class="col-lg-3 col-sm-6 order-lg-4 order-4 mb-0">
+          <!-- pricing card -->
+          <div class="pricing-card">
+            <!-- card head -->
+            <div class="card-head text-center">
+              <h4 class="mb-2">{{homePolicy[3].name}}</h4>
+              <h6 class="mb-0">${{homePolicy[3].amount}}/mo*</h6>
+            </div>
+            <!-- card features -->
+            <ul class="card-features mb-0 list-unstyled">
+              <li>
+                <span class="old-price">${{homePolicy[3].amount*35/100}}</span>
+                <span class="save">save 35%</span>
+              </li>
+              <li>
+                <span class="title d-block">Coverage for</span>
+                <span class="gray">{{homePolicy[3].term}}</span>
+                <span class="dark">Years</span>
+              </li>
+              <li>
+                <span class="title d-block">{{homePolicy[3].insuranceTypeName}}</span>
+                <span class="gray">You are the owner of a house that is a large, high-value asset. Home insurance is a
+                  type of property insurance that protects your property against loss and damage.</span>
+              </li>
+              <li>
+                <span class="title d-block">Total Amount</span>
+                <span class="gray">{{homePolicy[3].amount*12}}$</span>
+              </li>
+              <li>
+                <span class="title d-block">Interest Rate</span>
+                <span class="gray">{{homePolicy[3].interestRate}}%</span>
+              </li>
+              <li>
+                <span class="title d-block">Why is it important ?</span>
+                <span class="gray">More than just a home, it is also a valuable asset that takes years of hard work and
+                  savings to achieve. Since you have worked so hard to build a comfortable home, it is worth it to
+                  protect it properly, especially in the situations below.</span>
+              </li>
+
+            </ul>
+            <!-- card footer -->
+            <div class="card-footer text-center">
+              <a href="#" class="th-btn btn-fill-blue w-100">Order Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- :: About -->
+  <div class="about p-80">
+    <div class="container">
+      <!-- row -->
+      <div class="row align-items-center text-lg-left text-center">
+        <!-- col -->
+        <div class="col-lg-6 mb-lg-0 mb-4">
+          <!-- text contain -->
+          <div class="t-c">
+            <h3 class="mb-3">Start your website with VRocket today!</h3>
+            <p class="mb-0">VRocket web hosting provides a vast array of tools to take your idea or business online
+              today. From site building tools and templates, to our one-click application installer, you'll find
+              everything you need to launch your new website. Got questions? Our 24/7 Live Support team is here to help!
+            </p>
+          </div>
+        </div>
+        <!-- col -->
+        <div class="col-lg-6 text-lg-right">
+          <!-- image contain -->
+          <div class="i-c">
+            <img src="../../../../assets/user/images/pages/servers/shared-page/vectors/tabs.svg" class="img-fluid"
+              alt="img">
+          </div>
+        </div>
+      </div>
+      <!-- row -->
+      <div class="row align-items-center text-lg-left text-center">
+        <!-- col -->
+        <div class="col-lg-6 order-lg-2 mb-lg-0 mb-4">
+          <!-- text contain -->
+          <div class="t-c">
+            <h3 class="mb-3">Get started quickly and easily</h3>
+            <p class="mb-0">For example, our own Website Builder provides an incredibly convenient drag-and-drop
+              building experience. You can choose from a wide selection of themes, and even pre-built sections, to craft
+              your own amazing website and publish it in no time!</p>
+          </div>
+        </div>
+        <!-- col -->
+        <div class="col-lg-6 order-lg-1">
+          <!-- image contain -->
+          <div class="i-c">
+            <img src="../../../../assets/user/images/pages/servers/shared-page/vectors/fast.svg" class="img-fluid"
+              alt="img">
+          </div>
+        </div>
+      </div>
+      <!-- row -->
+      <div class="row align-items-center text-lg-left text-center">
+        <!-- col -->
+        <div class="col-lg-6 mb-lg-0 mb-4">
+          <!-- text contain -->
+          <div class="t-c">
+            <h3 class="mb-3">One click installation!</h3>
+            <p class="mb-0">With our QuickInstall tool, available on all Web Hosting plans, you can create any type of
+              website: blog, forum, CMS, wiki, photo gallery, E-commerce store, and so much more! Since VRocket runs on
+              Linux, Apache, MySQL, and PHP, thousands of existing applications and software are compatible.</p>
+          </div>
+        </div>
+        <!-- col -->
+        <div class="col-lg-6 text-lg-right">
+          <!-- image contain -->
+          <div class="i-c">
+            <img src="../../../../assets/user/images/pages/servers/shared-page/vectors/install.svg" class="img-fluid"
+              alt="img">
+          </div>
+        </div>
+      </div>
+      <!-- row -->
+      <div class="row align-items-center text-lg-left text-center">
+        <!-- col -->
+        <div class="col-lg-6 order-lg-2 mb-lg-0 mb-4">
+          <!-- text contain -->
+          <div class="t-c">
+            <h3 class="mb-3">Content delivery network</h3>
+            <p class="mb-0">CloudFlare is built directly into your account. An advanced content delivery network, it
+              automatically increases the performance of your site.</p>
+          </div>
+        </div>
+        <!-- col -->
+        <div class="col-lg-6 order-lg-1">
+          <!-- image contain -->
+          <div class="i-c">
+            <img src="../../../../assets/user/images/pages/servers/shared-page/vectors/delivery.svg" class="img-fluid"
+              alt="img">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- :: Wrapper -->
+  <div class="wrapper text-center bg-2">
+    <!-- boxes -->
+    <div class="boxes">
+      <!-- row -->
+      <div class="row mx-0">
+        <!-- col -->
+        <div class="col-xl-2 col-lg-4 col-6 px-0">
+          <!-- box -->
+          <div class="box border-left-0">
+            <img src="../../../../assets/user/images/icons/blue/speedometer.svg" class="img-fluid mb-3" alt="image">
+            <h6 class="mb-2">Quick activation</h6>
+            <p class="mb-0">Almost instant activation after payment confirmation</p>
+          </div>
+        </div>
+        <!-- col -->
+        <div class="col-xl-2 col-lg-4 col-6 px-0">
+          <!-- box -->
+          <div class="box">
+            <img src="../../../../assets/user/images/icons/blue/service.svg" class="img-fluid mb-3" alt="image">
+            <h6 class="mb-2">30 Days money back</h6>
+            <p class="mb-0">Almost instant activation after payment confirmation</p>
+          </div>
+        </div>
+        <!-- col -->
+        <div class="col-xl-2 col-lg-4 col-6 px-0">
+          <!-- box -->
+          <div class="box">
+            <img src="../../../../assets/user/images/icons/blue/task-list.svg" class="img-fluid mb-3" alt="image">
+            <h6 class="mb-2">Access cPanel</h6>
+            <p class="mb-0">Almost instant activation after payment confirmation</p>
+          </div>
+        </div>
+        <!-- col -->
+        <div class="col-xl-2 col-lg-4 col-6 px-0">
+          <!-- box -->
+          <div class="box">
+            <img src="../../../../assets/user/images/icons/blue/inbox.svg" class="img-fluid mb-3" alt="image">
+            <h6 class="mb-2">SSD Storage</h6>
+            <p class="mb-0">Almost instant activation after payment confirmation</p>
+          </div>
+        </div>
+        <!-- col -->
+        <div class="col-xl-2 col-lg-4 col-6 px-0">
+          <!-- box -->
+          <div class="box">
+            <img src="../../../../assets/user/images/icons/blue/web.svg" class="img-fluid mb-3" alt="image">
+            <h6 class="mb-2">DDoS Protection</h6>
+            <p class="mb-0">Almost instant activation after payment confirmation</p>
+          </div>
+        </div>
+        <!-- col -->
+        <div class="col-xl-2 col-lg-4 col-6 px-0">
+          <!-- box -->
+          <div class="box">
+            <img src="../../../../assets/user/images/icons/blue/badge.svg" class="img-fluid mb-3" alt="image">
+            <h6 class="mb-2">Uptime 99.99%</h6>
+            <p class="mb-0">Almost instant activation after payment confirmation</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- :: Features -->
+  <div class="features p-80">
+    <div class="container">
+      <!-- Head -->
+      <div class="section-head">
+        <h2>Advanced Plans and Add-Ons</h2>
+        <div class="lines">
+          <span></span>
+        </div>
+        <p>Upgrade your plan for advanced features or enhance your account with optional add-ons</p>
+      </div>
+      <!-- row -->
+      <div class="row child-mb-30">
+        <!-- col -->
+        <div class="col-xl-4 col-lg-6 col-12">
+          <!-- box -->
+          <div class="box d-flex align-items-start">
+            <img src="../../../../assets/user/images/icons/blue/server.svg" class="img-fluid mr-4" alt="image">
+            <!-- text contain -->
+            <div class="t-c">
+              <h4 class="mb-3">Multi-Server Managment</h4>
+              <p class="mb-0">Need more than one account? Add shared, VPS, or even dedicated services to your account
+                with ease. Simply log in once.</p>
+            </div>
+          </div>
+        </div>
+        <!-- col -->
+        <div class="col-xl-4 col-lg-6 col-12">
+          <!-- box -->
+          <div class="box d-flex align-items-start">
+            <img src="../../../../assets/user/images/icons/blue/controls.svg" class="img-fluid mr-4" alt="image">
+            <!-- text contain -->
+            <div class="t-c">
+              <h4 class="mb-3">Access Control</h4>
+              <p class="mb-0">Create unique passwords restricting access to different areas of your account. Generate
+                one for billing and ownership information.</p>
+            </div>
+          </div>
+        </div>
+        <!-- col -->
+        <div class="col-xl-4 col-lg-6 col-12">
+          <!-- box -->
+          <div class="box d-flex align-items-start">
+            <img src="../../../../assets/user/images/icons/blue/delivery.svg" class="img-fluid mr-4" alt="image">
+            <!-- text contain -->
+            <div class="t-c">
+              <h4 class="mb-3">Content Delivery Network</h4>
+              <p class="mb-0">CloudFlare is built directly into your account. An advanced content delivery network, it
+                automatically increases the performance of your site.</p>
+            </div>
+          </div>
+        </div>
+        <!-- col -->
+        <div class="col-xl-4 col-lg-6 col-12">
+          <!-- box -->
+          <div class="box d-flex align-items-start">
+            <img src="../../../../assets/user/images/icons/blue/security.svg" class="img-fluid mr-4" alt="image">
+            <!-- text contain -->
+            <div class="t-c">
+              <h4 class="mb-3">Domain Privacy + Protection</h4>
+              <p class="mb-0">CloudFlare is built directly into your account. An advanced content delivery network, it
+                automatically increases the performance of your site.</p>
+            </div>
+          </div>
+        </div>
+        <!-- col -->
+        <div class="col-xl-4 col-lg-6 col-12">
+          <!-- box -->
+          <div class="box d-flex align-items-start">
+            <img src="../../../../assets/user/images/icons/blue/code.svg" class="img-fluid mr-4" alt="image">
+            <!-- text contain -->
+            <div class="t-c">
+              <h4 class="mb-3">CodeGuard</h4>
+              <p class="mb-0">Create unique passwords restricting access to different areas of your account. Generate
+                one for billing and ownership information.</p>
+            </div>
+          </div>
+        </div>
+        <!-- col -->
+        <div class="col-xl-4 col-lg-6 col-12">
+          <!-- box -->
+          <div class="box d-flex align-items-start">
+            <img src="../../../../assets/user/images/icons/blue/mail.svg" class="img-fluid mr-4" alt="image">
+            <!-- text contain -->
+            <div class="t-c">
+              <h4 class="mb-3">Spam Protection</h4>
+              <p class="mb-0">CloudFlare is built directly into your account. An advanced content delivery network, it
+                automatically increases the performance of your site.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="collapse-items collapse" id="collapse-items">
+        <!-- row -->
+        <div class="row child-mb-30">
+          <!-- col -->
+          <div class="col-xl-4 col-lg-6 col-12">
+            <!-- box -->
+            <div class="box d-flex align-items-start">
+              <img src="../../../../assets/user/images/icons/blue/folder.svg" class="img-fluid mr-4" alt="image">
+              <!-- text contain -->
+              <div class="t-c">
+                <h4 class="mb-3">Advanced Capabilities</h4>
+                <p class="mb-0">Need more than one account? Add shared, VPS, or even dedicated services to your account
+                  with ease. Simply log in once.</p>
+              </div>
+            </div>
+          </div>
+          <!-- col -->
+          <div class="col-xl-4 col-lg-6 col-12">
+            <!-- box -->
+            <div class="box d-flex align-items-start">
+              <img src="../../../../assets/user/images/icons/blue/brain-process.svg" class="img-fluid mr-4" alt="image">
+              <!-- text contain -->
+              <div class="t-c">
+                <h4 class="mb-3">Unique IPs</h4>
+                <p class="mb-0">Create unique passwords restricting access to different areas of your account. Generate
+                  one for billing and ownership information.</p>
+              </div>
+            </div>
+          </div>
+          <!-- col -->
+          <div class="col-xl-4 col-lg-6 col-12">
+            <!-- box -->
+            <div class="box d-flex align-items-start">
+              <img src="../../../../assets/user/images/icons/blue/security.svg" class="img-fluid mr-4" alt="image">
+              <!-- text contain -->
+              <div class="t-c">
+                <h4 class="mb-3">Domain Privacy + Protection</h4>
+                <p class="mb-0">CloudFlare is built directly into your account. An advanced content delivery network, it
+                  automatically increases the performance of your site.</p>
+              </div>
+            </div>
+          </div>
+          <!-- col -->
+          <div class="col-xl-4 col-lg-6 col-12">
+            <!-- box -->
+            <div class="box d-flex align-items-start">
+              <img src="../../../../assets/user/images/icons/blue/lock.svg" class="img-fluid mr-4" alt="image">
+              <!-- text contain -->
+              <div class="t-c">
+                <h4 class="mb-3">SiteLock</h4>
+                <p class="mb-0">Need more than one account? Add shared, VPS, or even dedicated services to your account
+                  with ease. Simply log in once.</p>
+              </div>
+            </div>
+          </div>
+          <!-- col -->
+          <div class="col-xl-4 col-lg-6 col-12">
+            <!-- box -->
+            <div class="box d-flex align-items-start">
+              <img src="../../../../assets/user/images/icons/blue/code.svg" class="img-fluid mr-4" alt="image">
+              <!-- text contain -->
+              <div class="t-c">
+                <h4 class="mb-3">CodeGuard</h4>
+                <p class="mb-0">Create unique passwords restricting access to different areas of your account. Generate
+                  one for billing and ownership information.</p>
+              </div>
+            </div>
+          </div>
+          <!-- col -->
+          <div class="col-xl-4 col-lg-6 col-12">
+            <!-- box -->
+            <div class="box d-flex align-items-start">
+              <img src="../../../../assets/user/images/icons/blue/mail.svg" class="img-fluid mr-4" alt="image">
+              <!-- text contain -->
+              <div class="t-c">
+                <h4 class="mb-3">Spam Protection</h4>
+                <p class="mb-0">CloudFlare is built directly into your account. An advanced content delivery network, it
+                  automatically increases the performance of your site.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- button contain -->
+      <div class="btn-c text-center">
+        <button class="btn-outline" data-toggle="collapse" data-target="#collapse-items">See All Features</button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- :: Wrapper 2 -->
+  <div class="wrapper-2 p-80">
+    <div class="container">
+      <!-- row -->
+      <div class="row align-items-center text-lg-left text-center">
+        <!-- col -->
+        <div class="col-lg-6 mb-lg-0 mb-4">
+          <img src="../../../../assets/user/images/pages/servers/shared-page/vectors/upload.svg" class="img-fluid"
+            alt="image">
+        </div>
+        <!-- col -->
+        <div class="col-lg-6">
+          <!-- text contain -->
+          <div class="t-c">
+            <h3 class="mb-3">Build It For Me</h3>
+            <p class="mb-4">Let our professional services team help design, build and market your website so you can
+              stay focused on running your business.</p>
+            <a href="#" class="th-btn btn-fill-blue">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- :: FAQ Section -->
+  <faq></faq>
+
+  <!-- :: Newsletter Bar -->
+  <newsletter-bar></newsletter-bar>
+</div>

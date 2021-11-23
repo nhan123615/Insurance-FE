@@ -1,0 +1,37 @@
+/* -- :: History :: -- */
+.history .content .item {
+    margin-bottom: 30px;
+}
+.history .content .item .img-c {
+    margin-bottom: 25px;
+    padding: 20px;
+    border: 1px dashed var(--thDarBorderColor);
+    border-radius: 50%
+}
+.history .content .item img {
+    width: 60px;
+}
+.history .content .item h4 {
+    color: var(--typeColor);
+    font-size: 24px;
+}
+.history .content .item p {
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--pColor);
+}
+/* --------------------------------- */
+
+/* -- :: Media Query :: -- */
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+
+    /* -- :: History :: -- */
+    .history .content .item .img-c {
+        margin-bottom: 20px;
+    }
+    .history .content .item img {
+        width: 50px;
+    }
+}

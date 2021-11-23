@@ -1,0 +1,169 @@
+/* -- :: Header */
+header {
+  padding: 210px 0 100px;
+  background: #fff;
+  border-bottom: 1px solid var(--thBorderColor);
+}
+header h1 {
+  font-size: 46px;
+  font-weight: bold;
+  color: var(--typeColor);
+}
+/* ------------------------------- */
+
+/* -- :: Sections */
+.sections {
+  margin-top: 40px;
+}
+/* content */
+.sections .content {
+  background: #fff;
+  padding: 30px;
+  border: 1px solid var(--thBorderColor);
+  border-radius: 4px;
+}
+/* search form */
+.sections form {
+  position: relative;
+  margin-bottom: 40px;
+}
+.sections form input {
+  padding: 15px 44px 15px 20px;
+  background: #fff;
+  color: var(--typeColor);
+  position: relative;
+  font-size: 18px;
+}
+.sections form input::-webkit-input-placeholder {
+  font-size: 18px;
+  color: var(--thDarBorderColor);
+}
+.sections form input::-moz-placeholder {
+  font-size: 18px;
+  color: var(--thDarBorderColor);
+}
+.sections form input:-ms-input-placeholder {
+  font-size: 18px;
+  color: var(--thDarBorderColor);
+}
+.sections form input::-ms-input-placeholder {
+  font-size: 18px;
+  color: var(--thDarBorderColor);
+}
+.sections form input::placeholder {
+  font-size: 18px;
+  color: var(--thDarBorderColor);
+}
+.sections form button {
+  position: absolute;
+  right: 20px;
+  background: transparent;
+  border: 0;
+  color: var(--pColor);
+  cursor: pointer;
+  -webkit-transition: color .2s ease;
+  transition: color .2s ease;
+}
+.sections form button:hover {
+  color: var(--thBlue);
+}
+/* box */
+.sections .boxes .box {
+  position: relative;
+  border: 1px solid var(--thBorderColor);
+  padding: 25px;
+  height: 100%;
+  border-radius: 4px;
+  background: #fff;
+  -webkit-transition: all .25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all .25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.sections .boxes .box img {
+  min-width: 80px;
+  width: 80px;
+}
+.sections .boxes .box:hover {
+  box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+  border-color: var(--thDarBorderColor);
+}
+.sections .boxes .box h5.name {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--typeColor);
+}
+/* ------------------------------- */
+
+/* -- :: Contact */
+.contact {
+  margin: 40px auto;
+}
+/* content */
+.contact .content {
+  background: #fff;
+  padding: 30px;
+  border: 1px solid var(--thBorderColor);
+  border-radius: 4px;
+}
+.contact .content h4 {
+  font-size: 28px;
+  color: var(--typeColor);
+  font-weight: 500;
+}
+.contact .content p {
+  font-size: 17px;
+  color: var(--pColor);
+}
+.contact .content p.com {
+  font-weight: 500;
+}
+.contact .content p.com b {
+  color: var(--thGreen);
+}
+/* ------------------------------- */
+
+/* -- :: Media Query */
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+  /* -- :: Header */
+  header {
+    padding: 140px 0 80px;
+  }
+  header h1 {
+    font-size: 36px;
+  }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+  /* -- :: Contact */
+  .contact .content h4 {
+    font-size: 22px;
+  }
+  .contact .content p {
+    font-size: 16px;
+  }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  /* -- :: Header */
+  header {
+    padding: 60px 0;
+  }
+  header h1 {
+    font-size: 28px;
+  }
+  /* -- :: Sections */
+  .sections form input {
+    padding: 11px 44px 11px 20px;
+  }
+  /* box */
+  .sections .boxes .box img {
+    width: 60px;
+  }
+  .sections .boxes .box h5.name {
+    font-size: 16px;
+  }
+}
+/* ------------------------------- */

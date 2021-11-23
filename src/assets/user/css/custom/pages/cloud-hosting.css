@@ -1,0 +1,573 @@
+/* -- :: Header :: -- */
+header {
+  padding: 180px 0 80px;
+  overflow: hidden;
+  background: url(./../../../../assets/images/pages/servers/cloud-page/header/background-circles.png),-webkit-gradient(linear, left top, left bottom, color-stop(0, #0047c6), to(#001d99));
+  background: url(./../../../../assets/images/pages/servers/cloud-page/header/background-circles.png),linear-gradient(180deg, #0047c6 0, #001d99);
+  background-position: bottom,50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+header h1 {
+  font-family: "Poppins", sans-serif !important;
+  font-size: 60px;
+  font-weight: bold;
+  color: #fff;
+}
+header .contain > p {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #fff;
+  opacity: 0.8;
+  margin-bottom: 50px;
+}
+header ul {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  justify-content: space-around;
+  margin: 50px auto;
+}
+header ul li {
+  list-style: none;
+}
+header ul img {
+  width: 44px;
+  margin-bottom: 20px;
+}
+header ul p {
+  text-transform: capitalize;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 400;
+  opacity: 0.8;
+}
+b {
+  font-weight: 700 !important;
+}
+/* --------------------------------- */
+
+/* -- :: Pricing Table 2 :: -- */
+.pricing-table-2 .table-title {
+  margin-bottom: 20px;
+  font-size: 48px;
+  font-weight: bold;
+  color: var(--typeColor);
+}
+.pricing-table-2 .table-subtitle {
+  margin-bottom: 60px;
+  font-weight: bold;
+  font-size: 28px;
+  color: var(--pColor);
+}
+/* contain */
+.pricing-table-2 .table-body {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+.pricing-table-2 .table-body > li {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  padding: 35px 20px 50px 20px;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: rgba(1,2,2,.08) 0 1px 1.96px 0.5px;
+  -webkit-transition: all .2s ease-in-out 0s;
+  transition: all .2s ease-in-out 0s;
+  min-width: 340px;
+}
+.pricing-table-2 .table-body .ribbon {
+  position: absolute;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  text-align: center;
+  color: #fff;
+  font-size: 13px;
+  text-transform: capitalize;
+  height: 70px;
+  width: 70px;
+  top: -35px;
+  right: 15px;
+  background: var(--hotColor);
+  border-radius: 50%;
+}
+/* card name */
+.pricing-table-2 .table-body > li .card-name h3 {
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: capitalize;
+  height: 50px;
+  margin-bottom: 25px;
+  color: var(--typeColor)
+}
+/* offer */
+.pricing-table-2 .table-body > li .offer {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  margin-bottom: 25px;
+}
+.pricing-table-2 .table-body > li .offer .old-price {
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 400;
+  color: #6c757d;
+  text-decoration: line-through;
+  margin-right: 5px;
+}
+.pricing-table-2 .table-body > li .offer .save {
+  font-size: 14px;
+  font-weight: 600;
+  line-break: 21px;
+  color: #fff;
+  background: var(--thBlue);
+  text-transform: uppercase;
+  border-radius: 40px;
+  padding: 6px 10px;
+  opacity: .5;
+}
+/* card price */
+.pricing-table-2 .table-body > li .card-price {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+          align-items: flex-start;
+  margin-bottom: 30px;
+}
+.pricing-table-2 .table-body > li .card-price .currency {
+  font-size: 35px;
+  line-height: 53px;
+  font-weight: 700;
+  margin-top: 7px;
+  color: var(--typeColor);
+}
+.pricing-table-2 .table-body > li .card-price .amount {
+  font-size: 105px;
+  line-height: 84px;
+  font-weight: 700;
+  color: var(--typeColor)
+}
+.pricing-table-2 .table-body > li .card-price .duration {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+  align-self: flex-end;
+  color: var(--typeColor)
+}
+/* card features */
+.pricing-table-2 .table-body > li .card-features {
+  margin-bottom: 25px;
+}
+.pricing-table-2 .table-body > li .card-features li {
+  list-style: none;
+  font-size: 16px;
+  line-height: 38px;
+}
+.pricing-table-2 .table-body > li .card-features li i {
+  margin-right: 5px;
+  color: #91dc5a;
+  font-size: 20px;
+}
+.pricing-table-2 .table-body > li .card-features li b {
+  text-transform: capitalize;
+}
+.pricing-table-2 .table-body > li .card-features li span {
+  text-transform: capitalize;
+}
+/* buy card */
+.pricing-table-2 .table-body > li .buy-card {
+  width: 100%;
+  text-align: center;
+}
+.pricing-table-2 .table-body > li .buy-card button {
+  width: 250px;
+  height: auto;
+  color: #fff;
+  background-color: var(--thBlue);
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 700;
+  padding: 15px;
+  border: 0;
+  outline: none;
+  box-shadow: 0px 3px 0px 0px var(--thDarBlue);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.pricing-table-2 .table-body > li .buy-card button:hover {
+  -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+    box-shadow: 0px 40px 29px -19px rgba(0, 105, 255, 0.9);
+}
+.pricing-table-2 .table-body > li .buy-card button:active {
+  box-shadow: inset 0 0 10px 1px var(--thBlue), 0px 40px 29px -19px rgba(0, 105, 255, 0.95);
+  -webkit-transform: scale(0.95) translateY(-9px);
+  transform: scale(0.95) translateY(-9px)
+}
+/* hot card */
+.pricing-table-2 .table-body .hot-card {
+  padding: 55px 20px 70px 20px;
+  border: 2px solid var(--darHotColor);
+}
+.pricing-table-2 .table-body > li.hot-card .offer .save {
+  background: var(--hotColor);
+}
+.pricing-table-2 .table-body > li.hot-card .buy-card button {
+  background-color: var(--hotColor);
+  box-shadow: 0px 3px 0px 0px var(--darHotColor);
+}
+.pricing-table-2 .table-body > li.hot-card .buy-card button:hover {
+  -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+    box-shadow: 0px 40px 29px -19px rgba(255, 18, 19, 0.9);
+}
+.pricing-table-2 .table-body > li.hot-card .buy-card button:active {
+  box-shadow: inset 0 0 10px 1px var(--hotColor), 0px 40px 29px -19px rgba(255, 18, 19, 0.95);
+  -webkit-transform: scale(0.95) translateY(-9px);
+  transform: scale(0.95) translateY(-9px)
+}
+/* Cards */
+.pricing-table-2 .cards {
+  margin-top: 50px;
+}
+.pricing-table-2 .cards ul {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  margin-bottom: 0;
+}
+.pricing-table-2 .cards ul li {
+  list-style: none;
+  border: 1px solid var(--thBorderColor);
+  border-radius: 5px;
+  margin: 2px;
+}
+/* --------------------------------- */
+
+/* -- :: Compare Section :: -- */
+.compare .c-table table {
+  border: none;
+}
+/* H Table */
+.compare .h-table {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 110px;
+  background: #fff;
+}
+.compare .h-table thead tr td {
+  padding: 15px 20px;
+}
+/* Table Head */
+.compare .c-table thead tr th {
+  width: 35%;
+  text-align: left;
+  border: none;
+}
+.compare .c-table .h-table thead tr td {
+  border-top: 1px solid var(--thBorderColor);
+  min-width: 135px;
+}
+.compare .c-table thead tr td:last-child {
+  border-right: 1px solid var(--thBorderColor);
+}
+.compare .c-table thead tr td {
+  width: 18.25%;
+  font-weight: bold;
+  font-size: 20px;
+  color: #2c2f3e;
+  border: none;
+  border-left: 1px solid var(--thBorderColor);
+  border-bottom: 1px solid var(--thBorderColor);
+}
+.compare .c-table thead tr td .name {
+  margin-bottom: 5px;
+  display: block;
+  line-height: normal;
+  font-size: 20px;
+}
+.compare .c-table thead tr td button {
+  border-radius: 4px;
+  background: var(--thBlue);
+  padding: 10px;
+  margin-top: 18px;
+  text-transform: capitalize;
+  border: 0;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #fff;
+  letter-spacing: 1px;
+  -webkit-transition: background .2s ease;
+  transition: background .2s ease;
+}
+.compare .c-table thead tr td button:hover {
+  background: var(--thDarBlue)
+}
+.compare .c-table thead tr td.hot button {
+  background: var(--hotColor);
+}
+.compare .c-table thead tr td.hot button:hover {
+  background: var(--darHotColor);
+}
+.compare .c-table .card-price {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+          align-items: flex-start;
+}
+.compare .c-table .card-price .currency {
+  font-size: 15px;
+  line-height: 12px;
+  font-weight: 700;
+  margin-top: 7px;
+  color: var(--typeColor);
+}
+.compare .c-table .card-price .amount {
+  font-size: 45px;
+  line-height: 36px;
+  font-weight: 700;
+  color: var(--typeColor)
+}
+.compare .c-table .card-price .duration {
+  font-size: 14px;
+  line-height: 11px;
+  font-weight: 600;
+  align-self: flex-end;
+  color: var(--typeColor)
+}
+.compare .c-table th,
+.compare .c-table td {
+  padding: 25px;
+  vertical-align: middle;
+  text-align: center;
+  color: #2c2f3e;
+}
+.compare .c-table th i {
+  font-size: 10px;
+  color: #5d1e99;
+  opacity: 0.4;
+  cursor: help;
+}
+.compare .c-table td i {
+  font-size: 20px;
+  color: var(--thBlue);
+}
+/* Table Body */
+.compare .c-table tbody tr th {
+  text-align: left;
+  border-left: none;
+  font-size: 15px;
+  color: #2c2f3e;
+  border-color: var(--thBorderColor);
+}
+.compare .c-table tbody tr td {
+  border-right: none;
+  min-width: 135px;
+  font-size: 16px;
+  color: #2c2f3e;
+  border-color: var(--thBorderColor);
+}
+.compare .c-table tbody tr td:last-child {
+  border-right: 1px solid var(--thBorderColor);
+}
+/* --------------------------------- */
+
+/* -- :: Media Query :: -- */
+/* Extra Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+  /* -- :: Header --::  */
+  header h1 {
+    font-size: 54px;
+  }
+  header ul img {
+    width: 40px;
+  }
+  /* -- :: Pricing Table 2 :: -- */
+  .pricing-table-2 .table-title {
+    font-size: 40px;
+    margin-bottom: 15px;
+  }
+  .pricing-table-2 .table-subtitle {
+    font-size: 24px;
+  }
+  .pricing-table-2 .table-body > li {
+    padding: 25px 10px 40px 10px;
+    min-width: 33.333%;
+  }
+  .pricing-table-2 .table-body > li .card-name h3 {
+    height: 20px;
+  }
+  .pricing-table-2 .table-body > li .offer {
+    margin-bottom: 20px;
+  }
+  .pricing-table-2 .table-body > li .card-price .amount {
+    font-size: 86px;
+    line-height: 76px;
+  }
+  .pricing-table-2 .table-body > li .card-price {
+    margin-bottom: 20px;
+  }
+  .pricing-table-2 .table-body > li .buy-card button {
+    width: 220px;
+    padding: 10px;
+    font-size: 16px;
+  }
+}
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+  /* -- :: Header :: -- */
+  header {
+    padding: 120px 0 70px;
+  }
+  header ul {
+    margin-bottom: 25px;
+  }
+  /* -- :: Pricing Table 2 :: -- */
+  .pricing-table-2 .table-body {
+    display: block;
+  }
+  .pricing-table-2 .table-body > li {
+    display: inline-block;
+    min-width: calc(50% - 15px);
+    margin-bottom: 30px;
+  }
+  .pricing-table-2 .table-body .hot-card {
+    float: right;
+    padding: 25px 10px 40px 10px;
+  }
+  .pricing-table-2 .table-body > li .card-features {
+    text-align: center;
+  }
+  /* -- :: Compare Section :: -- */
+  .compare .h-table {
+    top: 59px;
+  }
+  .compare .h-table {
+    top: 59px;
+  }
+  .compare .c-table thead tr td {
+    width: 33.333%;
+  }
+  .compare .c-table tbody tr.bg-gray {
+    background: #f9fbfc;
+  }
+}
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+  /* -- :: Header :: -- */
+  header h1 {
+    font-size: 52px;
+    margin-bottom: 25px;
+  }
+  header .contain > p {
+    margin-bottom: 30px;
+  }
+  header ul {
+    display: none;
+  }
+  /* -- :: Pricing Table 2 :: -- */
+  .pricing-table-2 .table-title {
+    font-size: 24px;
+  }
+  .pricing-table-2 .table-subtitle {
+    font-size: 18px;
+  }
+  .pricing-table-2 .table-body > li {
+    display: block;
+    width: 350px;
+    margin: 0 auto 30px;
+    float: none !important;
+  }
+  .pricing-table-2 .table-body .ribbon {
+    top: 15px;
+  }
+  .pricing-table-2 .cards {
+    margin-top: 30px;
+  }
+  .pricing-table-2 .cards ul {
+    display: block;
+    text-align: center;
+  }
+  .pricing-table-2 .cards ul li {
+    display: inline-block;
+    margin: 2px 2px 5px;
+  }
+  .pricing-table-2 .table-body > li .card-name h3 {
+    font-size: 20px
+  }
+  .pricing-table-2 .cards ul li img {
+    width: 64px;
+  }
+  /* -- :: Compare Section :: -- */
+  .compare .h-table {
+    top: 0;
+  }
+  .compare .c-table thead tr td .name {
+    font-size: 18px;
+  }
+  .compare .c-table .card-price .amount {
+    font-size: 36px;
+    line-height: 30px;
+  }
+  .compare .c-table thead tr td button {
+    font-weight: normal;
+    letter-spacing: 0;
+    margin-top: 18px;
+    padding: 8px
+  }
+  .compare .h-table thead tr td {
+    padding: 10px 10px 15px;
+  }
+}
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  /* -- :: Header :: -- */
+  header {
+    padding: 120px 0 60px;
+  }
+  header h1 {
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
+  header .contain > p {
+    font-size: 16px;
+  }
+  /* -- :: Pricing Table 2 :: -- */
+  .pricing-table-2 .table-body > li {
+    width: 100%;
+  }
+  /* -- :: Compare Section :: -- */
+  .compare .c-table tbody tr td {
+    padding: 15px 0;
+  }
+}

@@ -1,0 +1,313 @@
+/* -- :: Header */
+header {
+  position: relative;
+  padding: 180px 0 80px;
+  overflow: hidden;
+  background: url(./../../../images/pages/servers/shared-page/bg-01.jpg) center no-repeat;
+  background-size: cover;
+}
+header::before {
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #0047c6), to(#001d99));
+  background: linear-gradient(180deg, #0047c6 0, #001d99);
+  opacity: .9;
+}
+header .contain {
+  position: relative;
+}
+header h1 {
+  font-family: "Poppins", sans-serif !important;
+  font-size: 46px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+}
+header .contain > p {
+  font-size: 20px;
+  font-weight: normal;
+  font-weight: 400;
+  color: #fff;
+  opacity: 0.8;
+  max-width: 500px;
+}
+/* ------------------------------- */
+
+/* -- :: Pricing */
+/* pricing card */
+.pricing .pricing-card {
+  position: relative;
+  border: 1px solid var(--thBorderColor);
+  background: #fff;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.1);
+  border-radius: 4px;
+}
+/* recommended */
+.pricing .pricing-card.recommended::before {
+  position: relative;
+  content: 'Recommended';
+  display: block;
+  text-align: center;
+  padding: 10px;
+  color: #fff;
+  font-size: 20px;
+  width: 100%;
+  background: var(--thBlue);
+}
+.pricing .pricing-card.recommended {
+  border-color: var(--thBlue);
+}
+/* card head */
+.pricing .pricing-card .card-head {
+  padding: 25px;
+  border-bottom: 1px solid var(--thBorderColor);
+}
+.pricing .pricing-card .card-head h4 {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--typeColor);
+  text-transform: uppercase;
+}
+.pricing .pricing-card .card-head h6 {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--thBlue);
+}
+/* card features */
+.pricing .pricing-card ul.card-features {
+  padding: 25px;
+}
+.pricing .pricing-card ul.card-features li:not(:last-child) {
+  margin-bottom: 5px;
+}
+.pricing .pricing-card ul.card-features li span.title {
+  font-size: 14px;
+  color: #2c2f3e;
+  font-weight: 700;
+}
+.pricing .pricing-card ul.card-features li span.gray {
+  font-size: 14px;
+  color: #777;
+}
+.pricing .pricing-card ul.card-features li span.dark {
+  font-size: 14px;
+  color: #2c2f3e;
+  font-weight: 500;
+}
+/* card footer */
+.pricing .pricing-card .card-footer {
+  border-top: 1px solid var(--thBorderColor);
+  background: #fff;
+  padding: 25px;
+}
+/* ------------------------------- */
+
+/* -- :: About */
+.about .row:not(:last-child) {
+  margin-bottom: 60px;
+}
+/* text contain */
+.about .t-c h3 {
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--typeColor);
+  text-transform: capitalize;
+}
+.about .t-c p {
+  font-size: 17px;
+  color: var(--pColor);
+}
+/* image contain */
+.about .i-c img {
+  width: 400px;
+}
+/* ------------------------------- */
+
+/* -- :: Features */
+/* text contain */
+.features .t-c h4 {
+  font-size: 22px;
+  color: var(--typeColor);
+  font-weight: 600;
+}
+.features .t-c p {
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 1.5 !important;
+  color: var(--pColor);
+  font-weight: 400;
+}
+/* ------------------------------- */
+
+/* -- :: Compare */
+
+/* table contain */
+.compare .table-contain {
+  box-shadow: 0 0 0 1px rgba(255,255,255,.1), 0 2px 4px 0 rgba(14,30,37,.12);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.compare table {
+  background: #fff;
+}
+/* table head */
+.compare table thead {
+  background: #e3ebed;
+}
+.compare table thead tr th {
+  padding: 17px 20px;
+}
+.compare table thead tr th:nth-child(3) {
+  border: 2px solid var(--thBlue);
+  border-bottom: 0;
+}
+.compare table thead tr th img {
+  min-width: 130px;
+  width: 130px;
+}
+.compare table thead tr th span.header {
+  font-size: 24px;
+  color: var(--typeColor);
+}
+.compare table thead tr th span.th-title {
+  font-size: 24px;
+}
+/* table body */
+.compare table tbody tr:nth-child(odd) {
+  background: rgba(14,30,37,.02);
+}
+.compare table tbody tr td:nth-child(even) {
+  background: rgba(14,30,37,.02);
+}
+.compare table tbody tr th,
+.compare table tbody tr td {
+  position: relative;
+  padding: 17px 20px;
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--typeColor);
+  min-width: 200px;
+}
+.compare table tbody tr td:nth-child(3) {
+  border-right: 2px solid var(--thBlue);
+  border-left: 2px solid var(--thBlue);
+}
+.compare table tbody tr:last-child td:nth-child(3) {
+  border-bottom: 2px solid var(--thBlue);
+}
+.compare table tbody tr td span.text {
+  z-index: 1;
+  position: relative;
+}
+.compare table tbody tr td span.text i.fa-check {
+  color: var(--thGreen);
+}
+.compare table tbody tr td span.text i.fa-times {
+  color: var(--hotColor);
+}
+/* ------------------------------- */
+
+/* -- :: Wrapper 2 */
+.wrapper-2 img {
+  width: 400px;
+}
+/* text contain */
+.wrapper-2 .t-c h3 {
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--typeColor);
+  text-transform: capitalize;
+}
+.wrapper-2 .t-c p {
+  font-size: 17px;
+  color: var(--pColor);
+}
+/* ------------------------------- */
+
+/* -- :: Media Query */
+
+/* Extra Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+  /* -- :: Wrapper */
+  .wrapper .boxes .row > div:nth-child(1) .box,
+  .wrapper .boxes .row > div:nth-child(2) .box,
+  .wrapper .boxes .row > div:nth-child(3) .box {
+    border-bottom-width: 0;
+  }
+  .wrapper .boxes .row > div:nth-child(4) .box {
+    border-left-width: 0;
+  }
+}
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+  /* -- :: Header */
+  header {
+    padding: 120px 0 70px;
+  }
+  header h1 {
+    font-size: 36px;
+  }
+  /* -- :: Wrapper */
+  .wrapper .boxes .row > div:nth-child(3) .box {
+    border-left-width: 0;
+  }
+  .wrapper .boxes .row > div:nth-child(4) .box {
+    border-left-width: 1px;
+    border-bottom-width: 0;
+  }
+}
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+  /* -- :: About */
+  .about .t-c h3 {
+    font-size: 28px;
+  }
+  .about .t-c p {
+    font-size: 17px;
+  }
+  /* -- :: Compare */
+  .compare table thead tr th span.header {
+    font-size: 18px;
+  }
+  .compare table tbody tr th, .compare table tbody tr td {
+    font-size: 14px;
+  }
+}
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  /* -- :: Header */
+  header {
+    padding: 120px 0 60px;
+  }
+  header h1 {
+    font-size: 28px;
+  }
+  header p {
+    font-size: 18px;
+  }
+  /* -- :: About */
+  .about .t-c h3 {
+    font-size: 24px;
+  }
+  .about .t-c p {
+    font-size: 16px;
+  }
+  .about .i-c img {
+    width: 240px;
+  }
+  /* -- :: Wrapper 2 */
+  .wrapper-2 img {
+    width: 240px;
+  }
+  .wrapper-2 .t-c h3 {
+    font-size: 24px;
+  }
+  .wrapper-2 .t-c p {
+    font-size: 16px;
+  }
+}
+/* ------------------------------- */
