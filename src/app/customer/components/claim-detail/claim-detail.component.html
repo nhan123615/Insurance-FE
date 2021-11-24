@@ -74,7 +74,13 @@
 
           <!-- begin::Stat -->
           <div class="d-flex align-items-center">
-            <div class="fs-4 fw-bolder">{{claimDetail?.claimedDate || 'Not Yet'}}</div>
+            <ng-container *ngIf="claimDetail?.claimedDate;else nodata">
+              <div class="fs-4 fw-bolder">{{claimDetail?.claimedDate |date:'dd/MM/yyyy'}}</div>
+            </ng-container>
+            <ng-template #nodata>
+              <div class="fs-4 fw-bolder"> 'Not Yet'</div>
+
+            </ng-template>
 
           </div>
         </div>

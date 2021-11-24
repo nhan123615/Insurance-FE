@@ -31,16 +31,17 @@ export class CustomerService {
     return this.httpMethod.getUrl(this.BASE_URL + 'customer-details-by-credential-id/' + id);
   }
 
-  updateProfile(id: number, customerToUpdate: Customer) {
-    return this.httpClient
-      .put(this.BASE_URL + 'customer-update/' + id, customerToUpdate)
-      .toPromise()
-      .then((res) => res as Customer);
+  updateProfile(id: number, customerToUpdate) {
+    // return this.httpClient
+    //   .put(this.BASE_URL + 'customer-update/' + id, customerToUpdate)
+    //   .toPromise()
+    //   .then((res) => res as Customer);
+    return this.httpMethod.puttUrl(this.BASE_URL + 'customer-update/' + id, customerToUpdate);
   }
 
-  sendContact(contactForm : any) {
+  sendContact(contactForm: any) {
     return this.httpClient
-      .post(this.BASE_URL + 'send-contact',contactForm)
+      .post(this.BASE_URL + 'send-contact', contactForm)
       .toPromise()
       .then((res) => res as any);
   }

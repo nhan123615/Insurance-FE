@@ -19,17 +19,17 @@
 
   <div class="separator my-2"></div>
   <!-- user dropdown -->
-  <ng-container *ngIf="user.roleName =='Customer';else adminDropdown">
+  <!-- <ng-container *ngIf="user.roleName =='Customer';else adminDropdown">
     <div class="menu-item px-5">
       <a routerLink="/customer/profile" routerLinkActive="active" class="menu-link px-5">
         My Profile
       </a>
     </div>
-  </ng-container>
+  </ng-container> -->
   <!-- user dropdown -->
 
   <!-- admin dropdonw -->
-  <ng-template #adminDropdown>
+  <!-- <ng-template #adminDropdown>
 
     <div class="menu-item px-5">
       <a routerLink="/admin/crafted/pages/profile" class="menu-link px-5">
@@ -133,7 +133,7 @@
       </a>
     </div>
 
-  </ng-template>
+  </ng-template> -->
   <!-- admin dropdonw -->
   <div class="menu-item px-5">
     <a (click)="logout()" class="menu-link px-5 cursor-pointer"> Sign Out </a>
