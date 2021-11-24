@@ -50,8 +50,15 @@
                   </div>
                   <div style="display: flex;">
                     <span class="text-muted fw-bold d-block fs-5">Paid Date: </span>
-                    <span class="text-dark fw-bolder d-block fs-5" style="margin-left: 10px;"> {{item?.paidDate || 'Not
-                      Paid'}}</span>
+                    <ng-container *ngIf="item?.paidDate;else nodata">
+                      <span class="text-dark fw-bolder d-block fs-5" style="margin-left: 10px;">
+                        {{item?.paidDate|date:'dd/MM/yyyy'}}</span>
+                    </ng-container>
+                    <ng-template #nodata>
+                      <span class="text-dark fw-bolder d-block fs-5" style="margin-left: 10px;">Not
+                        Paid</span>
+                    </ng-template>
+
                   </div>
 
                 </td>

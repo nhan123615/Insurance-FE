@@ -21,7 +21,8 @@ export class ProfileDetailsComponent implements OnInit {
     private customerService: CustomerService,
     private formBuilder: FormBuilder,
     private toastr: ToastrService,
-    private datePipe: DatePipe
+    private datePipe: DatePipe,
+
   ) {
   }
 
@@ -49,15 +50,19 @@ export class ProfileDetailsComponent implements OnInit {
     //   this.loading = false
     //   this.cdr.detectChanges();
     // }, 1500);
-    let customerUpdate: Customer = this.updateProfile.value;
+    let customerUpdate = this.updateProfile.value;
+    let splitBirthday = customerUpdate.birthday.split('/');
+    customerUpdate.birthday = `${splitBirthday[2]}-${splitBirthday[1]}-${splitBirthday[0]}`
     this.customerService.updateProfile(this.customerId, customerUpdate).then(
       res => {
         this.loading = false
+        this.cdr.detectChanges();
         this.toastr.success("Succeed")
         this.loadProfile();
       },
       error => {
         this.loading = false
+        this.cdr.detectChanges();
         console.log(error);
         this.toastr.error("Failed")
       }

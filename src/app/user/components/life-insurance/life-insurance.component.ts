@@ -12,12 +12,14 @@ export class LifeInsuranceComponent implements OnInit {
 
   loading = false;
   lifePolicy: any = [];
+  type: any = '';
+  desc: any = '';
   constructor(
     private activatedRoute: ActivatedRoute,
     private policyDetailService: PolicyDetailService,
     private router: Router,
     private toastr: ToastrService,
-    private cd : ChangeDetectorRef
+    private cd: ChangeDetectorRef
   ) { }
 
 
@@ -28,9 +30,19 @@ export class LifeInsuranceComponent implements OnInit {
   initPolicyInsurance() {
     this.loading = true;
     this.activatedRoute.params.subscribe(param => {
-      this.loading = false;
+
       let typeId = param['type'];
-      (typeId) && this.policyDetailService.findByInsuranceType(typeId).then(data => this.lifePolicy = data)
+      (typeId) && this.policyDetailService.findByInsuranceType(typeId).then(
+        data => {
+          this.loading = false;
+          this.cd.detectChanges();
+          this.lifePolicy = data
+          if (this.lifePolicy) {
+            this.type = this.lifePolicy[0].insuranceTypeName;
+            this.desc = this.lifePolicy[0].description;
+          }
+        })
+
     })
   }
 

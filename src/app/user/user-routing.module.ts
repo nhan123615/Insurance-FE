@@ -19,10 +19,13 @@ const routes: Routes = [
   {
     path: '',
     component: UserComponent,
+
     children: [
       {
         path: '',
+        // redirectTo: 'life-insurance;type=1',
         component: HomeComponent,
+        pathMatch: 'full'
       },
       {
         path: 'about-us',

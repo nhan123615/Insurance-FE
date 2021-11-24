@@ -40,12 +40,6 @@
           <div class="col-xl-8 col-12 mb-xl-0 mb-4">
             <input type="search" name="domain_name" class="th-input w-100 mb-3" id="domain_name"
               placeholder="Enter the insurance type you're looking for" autocomplete="off">
-            <!--<ul class="w-100 list-unstyled d-flex flex-wrap align-items-center justify-content-center mb-0">
-              <li>life insurance<span>($5.99)</span></li>
-              <li>health insurance<span>($5.99)</span></li>
-              <li>motor insurance<span>($5.99)</span></li>
-              <li>home insurance<span>($5.99)</span></li>
-            </ul>-->
           </div>
           <!-- col -->
           <div class="col-xl-2">
@@ -210,58 +204,15 @@
   <!-- :: Hosting -->
   <div class="hosting p-80-50">
     <div class="container">
-      <!-- Hosting Head -->
-      <div class="section-head">
-        <h2>Get More Power with Our Web Hosting Products</h2>
-        <div class="lines">
-          <span></span>
-        </div>
-        <p>Our custom-built servers and 24/7 team of experts deliver breakthrough performance that grows with
-          you.</p>
-      </div>
-      <!-- Host Taps -->
-      <div class="host-taps w-100 text-center">
-        <!-- Section Toggler -->
-        <div class="s-toggler d-inline-flex align-items-center">
-          <label class="toggler toggler--is-active mr-3 mb-0" data-show="#monthly-s">Monthly</label>
-          <div class="toggle">
-            <input type="checkbox" id="switcher" class="check">
-            <b class="b switch"></b>
-          </div>
-          <label class="toggler ml-3 mb-0" data-show="#yearly-s">Yearly</label>
-        </div>
-        <!-- Cards Togglers -->
-        <div>
-          <ul class="pl-0 mx-auto mb-0">
-            <li class="active" data-show="#shared, #shared-y">
-              <img src="../../../../assets/user/images/icons/blue/server-01.svg" class="img-fluid mr-3" alt="shared">
-              <span>Shared</span>
-            </li>
-            <li data-show="#vps, #vps-y">
-              <img src="../../../../assets/user/images/icons/blue/server-02.svg" class="img-fluid mr-3" alt="shared">
-              <span>VPS</span>
-            </li>
-            <li data-show="#dedicated, #dedicated-y">
-              <img src="../../../../assets/user/images/icons/blue/server-03.svg" class="img-fluid mr-3" alt="shared">
-              <span>Dedicated</span>
-            </li>
-            <li data-show="#cloud, #cloud-y">
-              <img src="../../../../assets/user/images/icons/blue/server-04.svg" class="img-fluid mr-3" alt="shared">
-              <span>Cloud</span>
-            </li>
-          </ul>
-        </div>
-      </div>
       <!-- Host Item -->
       <div class="host-items-contain active--section" id="monthly-s">
         <!-- Shared -->
         <div class="host-item" id="shared">
           <!-- Host Item Head -->
           <div class="item-head text-center">
-            <h3>Shared Web Hosting Done Right</h3>
-            <p class="mb-0"> Our shared service delivers a powerful, proven platform that's perfect for
-              hosting your
-              websites.</p>
+            <h3>Three ways to keep
+              more of your hard-earned dollars</h3>
+            <p class="mb-0"> Our shared service delivers a powerful, proven platform</p>
           </div>
           <!-- Cards -->
           <div class="cards">
@@ -269,43 +220,25 @@
             <div class="content">
               <div class="row justify-content-center">
                 <!-- Card Properties -->
-                <div class="col-lg-3 col-md-6 pr-0 d-lg-block d-none">
-                  <div class="card main-card">
-                    <div class="card-body">
-                      <ul class="fa-ul text-right">
-                        <li><span>HARD DRIVE</span></li>
-                        <li><span>RAM</span></li>
-                        <li><span>OS</span></li>
-                        <li><span>IP'S</span></li>
-                        <li><span>IP'S</span></li>
-                        <li><span>BANDWIDTH</span></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
                 <!-- Card -->
                 <div class="col-lg-3 col-md-6 p-lg-0">
                   <!-- Left Card -->
                   <div class="card l-card">
                     <!-- Card Body -->
                     <div class="card-body">
-                      <!-- Title -->
-                      <h5 class="card-title text-muted text-uppercase text-center">GOLD</h5>
+
                       <!-- Price -->
-                      <h6 class="card-price text-center">$50.00<span class="period">/mo</span>
+                      <h6 class="card-price  text-center">Life Insurance
                       </h6>
                       <hr>
                       <!-- Properties -->
-                      <ul>
-                        <li><span class="d-lg-none">HARD DRIVE :</span>160 GB SATA</li>
-                        <li><span class="d-lg-none">RAM :</span>4 GB DDR-3</li>
-                        <li><span class="d-lg-none">OS :</span>Windows/Linux</li>
-                        <li><span class="d-lg-none">IP'S :</span>1 DEDICATED IP</li>
-                        <li><span class="d-lg-none">IP'S :</span>1 USABLE IP</li>
-                        <li><span class="d-lg-none">BANDWIDTH :</span>300GB</li>
+                      <ul class="fa-ul">
+                        <li><span class="d-lg-none"></span>Coverage For 2 Years</li>
+                        <li><span class="d-lg-none"></span>Life Insurance (Long Term)</li>
+                        <li><span class="d-lg-none"></span>Auto discounts & savings</li>
                       </ul>
                       <!-- Order Button -->
-                      <a href="#" class="th-btn btn-fill-blue w-100">Order now</a>
+                      <a [routerLink]="['/life-insurance',{type:1}]" class="th-btn btn-fill-blue w-100">Order now</a>
                     </div>
                   </div>
                 </div>
@@ -317,23 +250,19 @@
                     <div class="card-head text-center">Recommended</div>
                     <!-- Card Body -->
                     <div class="card-body">
-                      <!-- Title -->
-                      <h5 class="card-title text-muted text-uppercase text-center">DIAMOND</h5>
+
                       <!-- Price -->
-                      <h6 class="card-price text-center">$80.00<span class="period">/mo</span>
+                      <h6 class="card-price  text-center">Medical Insurance
                       </h6>
                       <hr>
                       <!-- Properties -->
                       <ul class="fa-ul">
-                        <li><span class="d-lg-none">HARD DRIVE :</span>160 GB SATA</li>
-                        <li><span class="d-lg-none">RAM :</span>4 GB DDR-3</li>
-                        <li><span class="d-lg-none">OS :</span>Windows/Linux</li>
-                        <li><span class="d-lg-none">IP'S :</span>1 DEDICATED IP</li>
-                        <li><span class="d-lg-none">IP'S :</span>1 USABLE IP</li>
-                        <li><span class="d-lg-none">BANDWIDTH :</span>300GB</li>
+                        <li><span class="d-lg-none"></span>Coverage For 3 Years</li>
+                        <li><span class="d-lg-none"></span>Medical Insurance (Long Term)</li>
+                        <li><span class="d-lg-none"></span>Auto discounts & savings</li>
                       </ul>
                       <!-- Order Button -->
-                      <a href="#" class="th-btn btn-fill-blue w-100">Order now</a>
+                      <a [routerLink]="['/life-insurance',{type:2}]" class="th-btn btn-fill-blue w-100">Order now</a>
                     </div>
                   </div>
                 </div>
@@ -343,898 +272,69 @@
                   <div class="card r-card">
                     <!-- Card Body -->
                     <div class="card-body">
-                      <!-- Title -->
-                      <h5 class="card-title text-muted text-uppercase text-center">DIAMOND</h5>
+
                       <!-- Price -->
-                      <h6 class="card-price text-center">$80.00<span class="period">/mo</span>
+                      <h6 class="card-price  text-center">Motor Insurance
                       </h6>
                       <hr>
                       <!-- Properties -->
                       <ul class="fa-ul">
-                        <li><span class="d-lg-none">HARD DRIVE :</span>160 GB SATA</li>
-                        <li><span class="d-lg-none">RAM :</span>4 GB DDR-3</li>
-                        <li><span class="d-lg-none">OS :</span>Windows/Linux</li>
-                        <li><span class="d-lg-none">IP'S :</span>1 DEDICATED IP</li>
-                        <li><span class="d-lg-none">IP'S :</span>1 USABLE IP</li>
-                        <li><span class="d-lg-none">BANDWIDTH :</span>300GB</li>
+                        <li><span class="d-lg-none"></span>Coverage For 5 Years</li>
+                        <li><span class="d-lg-none"></span>Motor Insurance (Long Term)</li>
+                        <li><span class="d-lg-none"></span>Auto discounts & savings</li>
                       </ul>
                       <!-- Order Button -->
-                      <a href="#" class="th-btn btn-fill-blue w-100">Order now</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- VPS -->
-        <div class="host-item" id="vps">
-          <!-- Host Item Head -->
-          <div class="item-head text-center">
-            <h3 class="mb-3">Next-Gen VPS Hosting</h3>
-            <p class="mb-0">Our virtual private servers are built from the ground using all SSD storage.
-              Enjoy increased
-              power, flexibility, and control for your websites.</p>
-          </div>
-          <!-- Cards -->
-          <div class="cards">
-            <!-- Content -->
-            <div class="content">
-              <div class="row justify-content-center">
-                <!-- Card Properties -->
-                <div class="col-lg-3 col-md-6 pr-0 d-lg-block d-none">
-                  <div class="card main-card">
-                    <div class="card-body">
-                      <ul class="fa-ul text-right">
-                        <li><span>HARD DRIVE</span></li>
-                        <li><span>RAM</span></li>
-                        <li><span>OS</span></li>
-                        <li><span>IP'S</span></li>
-                        <li><span>IP'S</span></li>
-                        <li><span>BANDWIDTH</span></li>
-                      </ul>
+                      <a [routerLink]="['/life-insurance',{type:3}]" class="th-btn btn-fill-blue w-100">Order now</a>
                     </div>
                   </div>
                 </div>
                 <!-- Card -->
-                <div class="col-lg-3 col-md-6 p-lg-0">
-                  <!-- Left Card -->
-                  <div class="card l-card">
-                    <!-- Card Body -->
-                    <div class="card-body">
-                      <!-- Title -->
-                      <h5 class="card-title text-muted text-uppercase text-center">GOLD</h5>
-                      <!-- Price -->
-                      <h6 class="card-price text-center">$60.00<span class="period">/mo</span>
-                      </h6>
-                      <hr>
-                      <!-- Properties -->
-                      <ul>
-                        <li><span class="d-lg-none">HARD DRIVE :</span>200 GB SATA</li>
-                        <li><span class="d-lg-none">RAM :</span>5 GB DDR-3</li>
-                        <li><span class="d-lg-none">OS :</span>Windows/Linux</li>
-                        <li><span class="d-lg-none">IP'S :</span>1 DEDICATED IP</li>
-                        <li><span class="d-lg-none">IP'S :</span>1 USABLE IP</li>
-                        <li><span class="d-lg-none">BANDWIDTH :</span>300GB</li>
-                      </ul>
-                      <!-- Order Button -->
-                      <a href="#" class="th-btn btn-fill-blue w-100">Order now</a>
-                    </div>
-                  </div>
-                </div>
-                <!-- Card -->
-                <div class="col-lg-3 col-md-6 p-lg-0">
-                  <!-- Recommend Card -->
+                <div class="col-lg-3 col-md-6 pl-lg-0  ">
+                  <!-- Right Card -->
                   <div class="card c-card recommend">
                     <!-- Card Head -->
                     <div class="card-head text-center">Recommended</div>
                     <!-- Card Body -->
                     <div class="card-body">
-                      <!-- Title -->
-                      <h5 class="card-title text-muted text-uppercase text-center">DIAMOND</h5>
+
                       <!-- Price -->
-                      <h6 class="card-price text-center">$90.00<span class="period">/mo</span>
+                      <h6 class="card-price  text-center">Home Insurance
                       </h6>
                       <hr>
                       <!-- Properties -->
                       <ul class="fa-ul">
-                        <li><span class="d-lg-none">HARD DRIVE :</span>250 GB SATA</li>
-                        <li><span class="d-lg-none">RAM :</span>5 GB DDR-3</li>
-                        <li><span class="d-lg-none">OS :</span>Windows/Linux</li>
-                        <li><span class="d-lg-none">IP'S :</span>1 DEDICATED IP</li>
-                        <li><span class="d-lg-none">IP'S :</span>1 USABLE IP</li>
-                        <li><span class="d-lg-none">BANDWIDTH :</span>300GB</li>
+                        <li><span class="d-lg-none"></span>Coverage For 4 Years</li>
+                        <li><span class="d-lg-none"></span>Home Insurance (Long Term)</li>
+                        <li><span class="d-lg-none"></span>Auto discounts & savings</li>
                       </ul>
                       <!-- Order Button -->
-                      <a href="#" class="th-btn btn-fill-blue w-100">Order now</a>
+                      <a [routerLink]="['/life-insurance',{type:4}]" class="th-btn btn-fill-blue w-100">Order now</a>
                     </div>
                   </div>
                 </div>
-                <!-- Card -->
-                <div class="col-lg-3 col-md-6 pl-lg-0">
-                  <!-- Right Card -->
-                  <div class="card r-card">
-                    <!-- Card Body -->
-                    <div class="card-body">
-                      <!-- Title -->
-                      <h5 class="card-title text-muted text-uppercase text-center">DIAMOND</h5>
-                      <!-- Price -->
-                      <h6 class="card-price text-center">$190.00<span class="period">/mo</span>
-                      </h6>
-                      <hr>
-                      <!-- Properties -->
-                      <ul class="fa-ul">
-                        <li><span class="d-lg-none">HARD DRIVE :</span>500 GB SATA</li>
-                        <li><span class="d-lg-none">RAM :</span>6 GB DDR-3</li>
-                        <li><span class="d-lg-none">OS :</span>Windows/Linux</li>
-                        <li><span class="d-lg-none">IP'S :</span>1 DEDICATED IP</li>
-                        <li><span class="d-lg-none">IP'S :</span>1 USABLE IP</li>
-                        <li><span class="d-lg-none">BANDWIDTH :</span>300GB</li>
-                      </ul>
-                      <!-- Order Button -->
-                      <a href="#" class="th-btn btn-fill-blue w-100">Order now</a>
-                    </div>
-                  </div>
-                </div>
+
               </div>
             </div>
           </div>
         </div>
-        <!-- VPS -->
-        <div class="host-item" id="dedicated">
-          <!-- Host Item Head -->
-          <div class="item-head text-center">
-            <h3 class="mb-3">Dedicated Hosting</h3>
-            <p class="mb-0">When you want the ultimate in website performance, security, and control, this
-              is it.</p>
-          </div>
-          <!-- Cards -->
-          <div class="cards">
-            <!-- Content -->
-            <div class="content">
-              <div class="row justify-content-center">
-                <!-- Card Properties -->
-                <div class="col-lg-3 col-md-6 pr-0 d-lg-block d-none">
-                  <div class="card main-card">
-                    <div class="card-body">
-                      <ul class="fa-ul text-right">
-                        <li><span>HARD DRIVE</span></li>
-                        <li><span>RAM</span></li>
-                        <li><span>OS</span></li>
-                        <li><span>IP'S</span></li>
-                        <li><span>IP'S</span></li>
-                        <li><span>BANDWIDTH</span></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <!-- Card -->
-                <div class="col-lg-3 col-md-6 p-lg-0">
-                  <!-- Left Card -->
-                  <div class="card l-card">
-                    <!-- Card Body -->
-                    <div class="card-body">
-                      <!-- Title -->
-                      <h5 class="card-title text-muted text-uppercase text-center">GOLD</h5>
-                      <!-- Price -->
-                      <h6 class="card-price text-center">$70.00<span class="period">/mo</span>
-                      </h6>
-                      <hr>
-                      <!-- Properties -->
-                      <ul>
-                        <li><span class="d-lg-none">HARD DRIVE :</span>100 GB SATA</li>
-                        <li><span class="d-lg-none">RAM :</span>3 GB DDR-3</li>
-                        <li><span class="d-lg-none">OS :</span>Windows/Linux</li>
-                        <li><span class="d-lg-none">IP'S :</span>1 DEDICATED IP</li>
-                        <li><span class="d-lg-none">IP'S :</span>1 USABLE IP</li>
-                        <li><span class="d-lg-none">BANDWIDTH :</span>300GB</li>
-                      </ul>
-                      <!-- Order Button -->
-                      <a href="#" class="th-btn btn-fill-blue w-100">Order now</a>
-                    </div>
-                  </div>
-                </div>
-                <!-- Card -->
-                <div class="col-lg-3 col-md-6 p-lg-0">
-                  <!-- Recommend Card -->
-                  <div class="card c-card recommend">
-                    <!-- Card Head -->
-                    <div class="card-head text-center">Recommended</div>
-                    <!-- Card Body -->
-                    <div class="card-body">
-                      <!-- Title -->
-                      <h5 class="card-title text-muted text-uppercase text-center">DIAMOND</h5>
-                      <!-- Price -->
-                      <h6 class="card-price text-center">$130.00<span class="period">/mo</span>
-                      </h6>
-                      <hr>
-                      <!-- Properties -->
-                      <ul class="fa-ul">
-                        <li><span class="d-lg-none">HARD DRIVE :</span>270 GB SATA</li>
-                        <li><span class="d-lg-none">RAM :</span>6 GB DDR-3</li>
-                        <li><span class="d-lg-none">OS :</span>Windows/Linux</li>
-                        <li><span class="d-lg-none">IP'S :</span>1 DEDICATED IP</li>
-                        <li><span class="d-lg-none">IP'S :</span>1 USABLE IP</li>
-                        <li><span class="d-lg-none">BANDWIDTH :</span>300GB</li>
-                      </ul>
-                      <!-- Order Button -->
-                      <a href="#" class="th-btn btn-fill-blue w-100">Order now</a>
-                    </div>
-                  </div>
-                </div>
-                <!-- Card -->
-                <div class="col-lg-3 col-md-6 pl-lg-0">
-                  <!-- Right Card -->
-                  <div class="card r-card">
-                    <!-- Card Body -->
-                    <div class="card-body">
-                      <!-- Title -->
-                      <h5 class="card-title text-muted text-uppercase text-center">DIAMOND</h5>
-                      <!-- Price -->
-                      <h6 class="card-price text-center">$220.00<span class="period">/mo</span>
-                      </h6>
-                      <hr>
-                      <!-- Properties -->
-                      <ul class="fa-ul">
-                        <li><span class="d-lg-none">HARD DRIVE :</span>1000 GB SATA</li>
-                        <li><span class="d-lg-none">RAM :</span>8 GB DDR-3</li>
-                        <li><span class="d-lg-none">OS :</span>Windows/Linux</li>
-                        <li><span class="d-lg-none">IP'S :</span>1 DEDICATED IP</li>
-                        <li><span class="d-lg-none">IP'S :</span>1 USABLE IP</li>
-                        <li><span class="d-lg-none">BANDWIDTH :</span>300GB</li>
-                      </ul>
-                      <!-- Order Button -->
-                      <a href="#" class="th-btn btn-fill-blue w-100">Order now</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- VPS -->
-        <div class="host-item" id="cloud">
-          <!-- Host Item Head -->
-          <div class="item-head text-center">
-            <h3 class="mb-3">Cloud Hosting</h3>
-            <p class="mb-0">Our new Cloud hosting solution is powerful, affordable, and easier than
-              ever.</p>
-          </div>
-          <!-- Cards -->
-          <div class="cards">
-            <!-- Content -->
-            <div class="content">
-              <div class="row justify-content-center">
-                <!-- Card Properties -->
-                <div class="col-lg-3 col-md-6 pr-0 d-lg-block d-none">
-                  <div class="card main-card">
-                    <div class="card-body">
-                      <ul class="fa-ul text-right">
-                        <li><span>HARD DRIVE</span></li>
-                        <li><span>RAM</span></li>
-                        <li><span>OS</span></li>
-                        <li><span>IP'S</span></li>
-                        <li><span>IP'S</span></li>
-                        <li><span>BANDWIDTH</span></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <!-- Card -->
-                <div class="col-lg-3 col-md-6 p-lg-0">
-                  <!-- Left Card -->
-                  <div class="card l-card">
-                    <!-- Card Body -->
-                    <div class="card-body">
-                      <!-- Title -->
-                      <h5 class="card-title text-muted text-uppercase text-center">GOLD</h5>
-                      <!-- Price -->
-                      <h6 class="card-price text-center">$110.00<span class="period">/mo</span>
-                      </h6>
-                      <hr>
-                      <!-- Properties -->
-                      <ul>
-                        <li><span class="d-lg-none">HARD DRIVE :</span>500 GB SATA</li>
-                        <li><span class="d-lg-none">RAM :</span>12 GB DDR-3</li>
-                        <li><span class="d-lg-none">OS :</span>Windows/Linux</li>
-                        <li><span class="d-lg-none">IP'S :</span>1 DEDICATED IP</li>
-                        <li><span class="d-lg-none">IP'S :</span>1 USABLE IP</li>
-                        <li><span class="d-lg-none">BANDWIDTH :</span>300GB</li>
-                      </ul>
-                      <!-- Order Button -->
-                      <a href="#" class="th-btn btn-fill-blue w-100">Order now</a>
-                    </div>
-                  </div>
-                </div>
-                <!-- Card -->
-                <div class="col-lg-3 col-md-6 p-lg-0">
-                  <!-- Recommend Card -->
-                  <div class="card c-card recommend">
-                    <!-- Card Head -->
-                    <div class="card-head text-center">Recommended</div>
-                    <!-- Card Body -->
-                    <div class="card-body">
-                      <!-- Title -->
-                      <h5 class="card-title text-muted text-uppercase text-center">DIAMOND</h5>
-                      <!-- Price -->
-                      <h6 class="card-price text-center">$150.00<span class="period">/mo</span>
-                      </h6>
-                      <hr>
-                      <!-- Properties -->
-                      <ul class="fa-ul">
-                        <li><span class="d-lg-none">HARD DRIVE :</span>270 GB SATA</li>
-                        <li><span class="d-lg-none">RAM :</span>8 GB DDR-3</li>
-                        <li><span class="d-lg-none">OS :</span>Windows/Linux</li>
-                        <li><span class="d-lg-none">IP'S :</span>1 DEDICATED IP</li>
-                        <li><span class="d-lg-none">IP'S :</span>1 USABLE IP</li>
-                        <li><span class="d-lg-none">BANDWIDTH :</span>300GB</li>
-                      </ul>
-                      <!-- Order Button -->
-                      <a href="#" class="th-btn btn-fill-blue w-100">Order now</a>
-                    </div>
-                  </div>
-                </div>
-                <!-- Card -->
-                <div class="col-lg-3 col-md-6 pl-lg-0">
-                  <!-- Right Card -->
-                  <div class="card r-card">
-                    <!-- Card Body -->
-                    <div class="card-body">
-                      <!-- Title -->
-                      <h5 class="card-title text-muted text-uppercase text-center">DIAMOND</h5>
-                      <!-- Price -->
-                      <h6 class="card-price text-center">$230.00<span class="period">/mo</span>
-                      </h6>
-                      <hr>
-                      <!-- Properties -->
-                      <ul class="fa-ul">
-                        <li><span class="d-lg-none">HARD DRIVE :</span>1500 GB SATA</li>
-                        <li><span class="d-lg-none">RAM :</span>8 GB DDR-3</li>
-                        <li><span class="d-lg-none">OS :</span>Windows/Linux</li>
-                        <li><span class="d-lg-none">IP'S :</span>1 DEDICATED IP</li>
-                        <li><span class="d-lg-none">IP'S :</span>1 USABLE IP</li>
-                        <li><span class="d-lg-none">BANDWIDTH :</span>300GB</li>
-                      </ul>
-                      <!-- Order Button -->
-                      <a href="#" class="th-btn btn-fill-blue w-100">Order now</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+
+
       </div>
-      <!-- Host Item -->
-      <div class="host-items-contain" id="yearly-s">
-        <!-- Shared -->
-        <div class="host-item" id="shared-y">
-          <!-- Host Item Head -->
-          <div class="item-head text-center">
-            <h3>Shared Web Hosting Done Right</h3>
-            <p class="mb-0"> Our shared service delivers a powerful, proven platform that's perfect for
-              hosting your
-              websites.</p>
-          </div>
-          <!-- Cards -->
-          <div class="cards">
-            <!-- Content -->
-            <div class="content">
-              <div class="row justify-content-center">
-                <!-- Card Properties -->
-                <div class="col-lg-3 col-md-6 pr-0 d-lg-block d-none">
-                  <div class="card main-card">
-                    <div class="card-body">
-                      <ul class="fa-ul text-right">
-                        <li><span>HARD DRIVE</span></li>
-                        <li><span>RAM</span></li>
-                        <li><span>OS</span></li>
-                        <li><span>IP'S</span></li>
-                        <li><span>IP'S</span></li>
-                        <li><span>BANDWIDTH</span></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <!-- Card -->
-                <div class="col-lg-3 col-md-6 p-lg-0">
-                  <!-- Left Card -->
-                  <div class="card l-card">
-                    <!-- Card Body -->
-                    <div class="card-body">
-                      <!-- Title -->
-                      <h5 class="card-title text-muted text-uppercase text-center">GOLD</h5>
-                      <!-- Price -->
-                      <h6 class="card-price text-center">$150.00<span class="period">/year</span>
-                      </h6>
-                      <hr>
-                      <!-- Properties -->
-                      <ul>
-                        <li><span class="d-lg-none">HARD DRIVE :</span>160 GB SATA</li>
-                        <li><span class="d-lg-none">RAM :</span>4 GB DDR-3</li>
-                        <li><span class="d-lg-none">OS :</span>Windows/Linux</li>
-                        <li><span class="d-lg-none">IP'S :</span>1 DEDICATED IP</li>
-                        <li><span class="d-lg-none">IP'S :</span>1 USABLE IP</li>
-                        <li><span class="d-lg-none">BANDWIDTH :</span>300GB</li>
-                      </ul>
-                      <!-- Order Button -->
-                      <a href="#" class="th-btn btn-fill-blue w-100">Order now</a>
-                    </div>
-                  </div>
-                </div>
-                <!-- Card -->
-                <div class="col-lg-3 col-md-6 p-lg-0">
-                  <!-- Recommend Card -->
-                  <div class="card c-card recommend">
-                    <!-- Card Head -->
-                    <div class="card-head text-center">Recommended</div>
-                    <!-- Card Body -->
-                    <div class="card-body">
-                      <!-- Title -->
-                      <h5 class="card-title text-muted text-uppercase text-center">DIAMOND</h5>
-                      <!-- Price -->
-                      <h6 class="card-price text-center">$180.00<span class="period">/year</span>
-                      </h6>
-                      <hr>
-                      <!-- Properties -->
-                      <ul class="fa-ul">
-                        <li><span class="d-lg-none">HARD DRIVE :</span>160 GB SATA</li>
-                        <li><span class="d-lg-none">RAM :</span>4 GB DDR-3</li>
-                        <li><span class="d-lg-none">OS :</span>Windows/Linux</li>
-                        <li><span class="d-lg-none">IP'S :</span>1 DEDICATED IP</li>
-                        <li><span class="d-lg-none">IP'S :</span>1 USABLE IP</li>
-                        <li><span class="d-lg-none">BANDWIDTH :</span>300GB</li>
-                      </ul>
-                      <!-- Order Button -->
-                      <a href="#" class="th-btn btn-fill-blue w-100">Order now</a>
-                    </div>
-                  </div>
-                </div>
-                <!-- Card -->
-                <div class="col-lg-3 col-md-6 pl-lg-0">
-                  <!-- Right Card -->
-                  <div class="card r-card">
-                    <!-- Card Body -->
-                    <div class="card-body">
-                      <!-- Title -->
-                      <h5 class="card-title text-muted text-uppercase text-center">DIAMOND</h5>
-                      <!-- Price -->
-                      <h6 class="card-price text-center">$180.00<span class="period">/year</span>
-                      </h6>
-                      <hr>
-                      <!-- Properties -->
-                      <ul class="fa-ul">
-                        <li><span class="d-lg-none">HARD DRIVE :</span>160 GB SATA</li>
-                        <li><span class="d-lg-none">RAM :</span>4 GB DDR-3</li>
-                        <li><span class="d-lg-none">OS :</span>Windows/Linux</li>
-                        <li><span class="d-lg-none">IP'S :</span>1 DEDICATED IP</li>
-                        <li><span class="d-lg-none">IP'S :</span>1 USABLE IP</li>
-                        <li><span class="d-lg-none">BANDWIDTH :</span>300GB</li>
-                      </ul>
-                      <!-- Order Button -->
-                      <a href="#" class="th-btn btn-fill-blue w-100">Order now</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- VPS -->
-        <div class="host-item" id="vps-y">
-          <!-- Host Item Head -->
-          <div class="item-head text-center">
-            <h3 class="mb-3">Next-Gen VPS Hosting</h3>
-            <p class="mb-0">Our virtual private servers are built from the ground using all SSD storage.
-              Enjoy increased
-              power, flexibility, and control for your websites.</p>
-          </div>
-          <!-- Cards -->
-          <div class="cards">
-            <!-- Content -->
-            <div class="content">
-              <div class="row justify-content-center">
-                <!-- Card Properties -->
-                <div class="col-lg-3 col-md-6 pr-0 d-lg-block d-none">
-                  <div class="card main-card">
-                    <div class="card-body">
-                      <ul class="fa-ul text-right">
-                        <li><span>HARD DRIVE</span></li>
-                        <li><span>RAM</span></li>
-                        <li><span>OS</span></li>
-                        <li><span>IP'S</span></li>
-                        <li><span>IP'S</span></li>
-                        <li><span>BANDWIDTH</span></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <!-- Card -->
-                <div class="col-lg-3 col-md-6 p-lg-0">
-                  <!-- Left Card -->
-                  <div class="card l-card">
-                    <!-- Card Body -->
-                    <div class="card-body">
-                      <!-- Title -->
-                      <h5 class="card-title text-muted text-uppercase text-center">GOLD</h5>
-                      <!-- Price -->
-                      <h6 class="card-price text-center">$160.00<span class="period">/year</span>
-                      </h6>
-                      <hr>
-                      <!-- Properties -->
-                      <ul>
-                        <li><span class="d-lg-none">HARD DRIVE :</span>200 GB SATA</li>
-                        <li><span class="d-lg-none">RAM :</span>5 GB DDR-3</li>
-                        <li><span class="d-lg-none">OS :</span>Windows/Linux</li>
-                        <li><span class="d-lg-none">IP'S :</span>1 DEDICATED IP</li>
-                        <li><span class="d-lg-none">IP'S :</span>1 USABLE IP</li>
-                        <li><span class="d-lg-none">BANDWIDTH :</span>300GB</li>
-                      </ul>
-                      <!-- Order Button -->
-                      <a href="#" class="th-btn btn-fill-blue w-100">Order now</a>
-                    </div>
-                  </div>
-                </div>
-                <!-- Card -->
-                <div class="col-lg-3 col-md-6 p-lg-0">
-                  <!-- Recommend Card -->
-                  <div class="card c-card recommend">
-                    <!-- Card Head -->
-                    <div class="card-head text-center">Recommended</div>
-                    <!-- Card Body -->
-                    <div class="card-body">
-                      <!-- Title -->
-                      <h5 class="card-title text-muted text-uppercase text-center">DIAMOND</h5>
-                      <!-- Price -->
-                      <h6 class="card-price text-center">$190.00<span class="period">/year</span>
-                      </h6>
-                      <hr>
-                      <!-- Properties -->
-                      <ul class="fa-ul">
-                        <li><span class="d-lg-none">HARD DRIVE :</span>250 GB SATA</li>
-                        <li><span class="d-lg-none">RAM :</span>5 GB DDR-3</li>
-                        <li><span class="d-lg-none">OS :</span>Windows/Linux</li>
-                        <li><span class="d-lg-none">IP'S :</span>1 DEDICATED IP</li>
-                        <li><span class="d-lg-none">IP'S :</span>1 USABLE IP</li>
-                        <li><span class="d-lg-none">BANDWIDTH :</span>300GB</li>
-                      </ul>
-                      <!-- Order Button -->
-                      <a href="#" class="th-btn btn-fill-blue w-100">Order now</a>
-                    </div>
-                  </div>
-                </div>
-                <!-- Card -->
-                <div class="col-lg-3 col-md-6 pl-lg-0">
-                  <!-- Right Card -->
-                  <div class="card r-card">
-                    <!-- Card Body -->
-                    <div class="card-body">
-                      <!-- Title -->
-                      <h5 class="card-title text-muted text-uppercase text-center">DIAMOND</h5>
-                      <!-- Price -->
-                      <h6 class="card-price text-center">$800.00<span class="period">/year</span>
-                      </h6>
-                      <hr>
-                      <!-- Properties -->
-                      <ul class="fa-ul">
-                        <li><span class="d-lg-none">HARD DRIVE :</span>500 GB SATA</li>
-                        <li><span class="d-lg-none">RAM :</span>6 GB DDR-3</li>
-                        <li><span class="d-lg-none">OS :</span>Windows/Linux</li>
-                        <li><span class="d-lg-none">IP'S :</span>1 DEDICATED IP</li>
-                        <li><span class="d-lg-none">IP'S :</span>1 USABLE IP</li>
-                        <li><span class="d-lg-none">BANDWIDTH :</span>300GB</li>
-                      </ul>
-                      <!-- Order Button -->
-                      <a href="#" class="th-btn btn-fill-blue w-100">Order now</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- VPS -->
-        <div class="host-item" id="dedicated-y">
-          <!-- Host Item Head -->
-          <div class="item-head text-center">
-            <h3 class="mb-3">Dedicated Hosting</h3>
-            <p class="mb-0">When you want the ultimate in website performance, security, and control, this
-              is it.</p>
-          </div>
-          <!-- Cards -->
-          <div class="cards">
-            <!-- Content -->
-            <div class="content">
-              <div class="row justify-content-center">
-                <!-- Card Properties -->
-                <div class="col-lg-3 col-md-6 pr-0 d-lg-block d-none">
-                  <div class="card main-card">
-                    <div class="card-body">
-                      <ul class="fa-ul text-right">
-                        <li><span>HARD DRIVE</span></li>
-                        <li><span>RAM</span></li>
-                        <li><span>OS</span></li>
-                        <li><span>IP'S</span></li>
-                        <li><span>IP'S</span></li>
-                        <li><span>BANDWIDTH</span></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <!-- Card -->
-                <div class="col-lg-3 col-md-6 p-lg-0">
-                  <!-- Left Card -->
-                  <div class="card l-card">
-                    <!-- Card Body -->
-                    <div class="card-body">
-                      <!-- Title -->
-                      <h5 class="card-title text-muted text-uppercase text-center">GOLD</h5>
-                      <!-- Price -->
-                      <h6 class="card-price text-center">$170.00<span class="period">/year</span>
-                      </h6>
-                      <hr>
-                      <!-- Properties -->
-                      <ul>
-                        <li><span class="d-lg-none">HARD DRIVE :</span>100 GB SATA</li>
-                        <li><span class="d-lg-none">RAM :</span>3 GB DDR-3</li>
-                        <li><span class="d-lg-none">OS :</span>Windows/Linux</li>
-                        <li><span class="d-lg-none">IP'S :</span>1 DEDICATED IP</li>
-                        <li><span class="d-lg-none">IP'S :</span>1 USABLE IP</li>
-                        <li><span class="d-lg-none">BANDWIDTH :</span>300GB</li>
-                      </ul>
-                      <!-- Order Button -->
-                      <a href="#" class="th-btn btn-fill-blue w-100">Order now</a>
-                    </div>
-                  </div>
-                </div>
-                <!-- Card -->
-                <div class="col-lg-3 col-md-6 p-lg-0">
-                  <!-- Recommend Card -->
-                  <div class="card c-card recommend">
-                    <!-- Card Head -->
-                    <div class="card-head text-center">Recommended</div>
-                    <!-- Card Body -->
-                    <div class="card-body">
-                      <!-- Title -->
-                      <h5 class="card-title text-muted text-uppercase text-center">DIAMOND</h5>
-                      <!-- Price -->
-                      <h6 class="card-price text-center">$600.00<span class="period">/year</span>
-                      </h6>
-                      <hr>
-                      <!-- Properties -->
-                      <ul class="fa-ul">
-                        <li><span class="d-lg-none">HARD DRIVE :</span>270 GB SATA</li>
-                        <li><span class="d-lg-none">RAM :</span>6 GB DDR-3</li>
-                        <li><span class="d-lg-none">OS :</span>Windows/Linux</li>
-                        <li><span class="d-lg-none">IP'S :</span>1 DEDICATED IP</li>
-                        <li><span class="d-lg-none">IP'S :</span>1 USABLE IP</li>
-                        <li><span class="d-lg-none">BANDWIDTH :</span>300GB</li>
-                      </ul>
-                      <!-- Order Button -->
-                      <a href="#" class="th-btn btn-fill-blue w-100">Order now</a>
-                    </div>
-                  </div>
-                </div>
-                <!-- Card -->
-                <div class="col-lg-3 col-md-6 pl-lg-0">
-                  <!-- Right Card -->
-                  <div class="card r-card">
-                    <!-- Card Body -->
-                    <div class="card-body">
-                      <!-- Title -->
-                      <h5 class="card-title text-muted text-uppercase text-center">DIAMOND</h5>
-                      <!-- Price -->
-                      <h6 class="card-price text-center">$620.00<span class="period">/year</span>
-                      </h6>
-                      <hr>
-                      <!-- Properties -->
-                      <ul class="fa-ul">
-                        <li><span class="d-lg-none">HARD DRIVE :</span>1000 GB SATA</li>
-                        <li><span class="d-lg-none">RAM :</span>8 GB DDR-3</li>
-                        <li><span class="d-lg-none">OS :</span>Windows/Linux</li>
-                        <li><span class="d-lg-none">IP'S :</span>1 DEDICATED IP</li>
-                        <li><span class="d-lg-none">IP'S :</span>1 USABLE IP</li>
-                        <li><span class="d-lg-none">BANDWIDTH :</span>300GB</li>
-                      </ul>
-                      <!-- Order Button -->
-                      <a href="#" class="th-btn btn-fill-blue w-100">Order now</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- VPS -->
-        <div class="host-item" id="cloud-y">
-          <!-- Host Item Head -->
-          <div class="item-head text-center">
-            <h3 class="mb-3">Cloud Hosting</h3>
-            <p class="mb-0">Our new Cloud hosting solution is powerful, affordable, and easier than
-              ever.</p>
-          </div>
-          <!-- Cards -->
-          <div class="cards">
-            <!-- Content -->
-            <div class="content">
-              <div class="row justify-content-center">
-                <!-- Card Properties -->
-                <div class="col-lg-3 col-md-6 pr-0 d-lg-block d-none">
-                  <div class="card main-card">
-                    <div class="card-body">
-                      <ul class="fa-ul text-right">
-                        <li><span>HARD DRIVE</span></li>
-                        <li><span>RAM</span></li>
-                        <li><span>OS</span></li>
-                        <li><span>IP'S</span></li>
-                        <li><span>IP'S</span></li>
-                        <li><span>BANDWIDTH</span></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <!-- Card -->
-                <div class="col-lg-3 col-md-6 p-lg-0">
-                  <!-- Left Card -->
-                  <div class="card l-card">
-                    <!-- Card Body -->
-                    <div class="card-body">
-                      <!-- Title -->
-                      <h5 class="card-title text-muted text-uppercase text-center">GOLD</h5>
-                      <!-- Price -->
-                      <h6 class="card-price text-center">$410.00<span class="period">/year</span>
-                      </h6>
-                      <hr>
-                      <!-- Properties -->
-                      <ul>
-                        <li><span class="d-lg-none">HARD DRIVE :</span>500 GB SATA</li>
-                        <li><span class="d-lg-none">RAM :</span>12 GB DDR-3</li>
-                        <li><span class="d-lg-none">OS :</span>Windows/Linux</li>
-                        <li><span class="d-lg-none">IP'S :</span>1 DEDICATED IP</li>
-                        <li><span class="d-lg-none">IP'S :</span>1 USABLE IP</li>
-                        <li><span class="d-lg-none">BANDWIDTH :</span>300GB</li>
-                      </ul>
-                      <!-- Order Button -->
-                      <a href="#" class="th-btn btn-fill-blue w-100">Order now</a>
-                    </div>
-                  </div>
-                </div>
-                <!-- Card -->
-                <div class="col-lg-3 col-md-6 p-lg-0">
-                  <!-- Recommend Card -->
-                  <div class="card c-card recommend">
-                    <!-- Card Head -->
-                    <div class="card-head text-center">Recommended</div>
-                    <!-- Card Body -->
-                    <div class="card-body">
-                      <!-- Title -->
-                      <h5 class="card-title text-muted text-uppercase text-center">DIAMOND</h5>
-                      <!-- Price -->
-                      <h6 class="card-price text-center">$650.00<span class="period">/year</span>
-                      </h6>
-                      <hr>
-                      <!-- Properties -->
-                      <ul class="fa-ul">
-                        <li><span class="d-lg-none">HARD DRIVE :</span>270 GB SATA</li>
-                        <li><span class="d-lg-none">RAM :</span>8 GB DDR-3</li>
-                        <li><span class="d-lg-none">OS :</span>Windows/Linux</li>
-                        <li><span class="d-lg-none">IP'S :</span>1 DEDICATED IP</li>
-                        <li><span class="d-lg-none">IP'S :</span>1 USABLE IP</li>
-                        <li><span class="d-lg-none">BANDWIDTH :</span>300GB</li>
-                      </ul>
-                      <!-- Order Button -->
-                      <a href="#" class="th-btn btn-fill-blue w-100">Order now</a>
-                    </div>
-                  </div>
-                </div>
-                <!-- Card -->
-                <div class="col-lg-3 col-md-6 pl-lg-0">
-                  <!-- Right Card -->
-                  <div class="card r-card">
-                    <!-- Card Body -->
-                    <div class="card-body">
-                      <!-- Title -->
-                      <h5 class="card-title text-muted text-uppercase text-center">DIAMOND</h5>
-                      <!-- Price -->
-                      <h6 class="card-price text-center">$830.00<span class="period">/year</span>
-                      </h6>
-                      <hr>
-                      <!-- Properties -->
-                      <ul class="fa-ul">
-                        <li><span class="d-lg-none">HARD DRIVE :</span>1500 GB SATA</li>
-                        <li><span class="d-lg-none">RAM :</span>8 GB DDR-3</li>
-                        <li><span class="d-lg-none">OS :</span>Windows/Linux</li>
-                        <li><span class="d-lg-none">IP'S :</span>1 DEDICATED IP</li>
-                        <li><span class="d-lg-none">IP'S :</span>1 USABLE IP</li>
-                        <li><span class="d-lg-none">BANDWIDTH :</span>300GB</li>
-                      </ul>
-                      <!-- Order Button -->
-                      <a href="#" class="th-btn btn-fill-blue w-100">Order now</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
     </div>
   </div>
 
-  <!-- :: Wrapper -->
-  <div class="wrapper text-center bg-2">
-    <!-- boxes -->
-    <div class="boxes">
-      <!-- row -->
-      <div class="row mx-0">
-        <!-- col -->
-        <div class="col-xl-2 col-lg-4 col-6 px-0">
-          <!-- box -->
-          <div class="box border-left-0">
-            <img src="./../../../../assets/user/images/icons/blue/speedometer.svg" class="img-fluid mb-3" alt="image">
-            <h6 class="mb-2">Quick activation</h6>
-            <p class="mb-0">Almost instant activation after payment confirmation</p>
-          </div>
-        </div>
-        <!-- col -->
-        <div class="col-xl-2 col-lg-4 col-6 px-0">
-          <!-- box -->
-          <div class="box">
-            <img src="./../../../../assets/user/images/icons/blue/service.svg" class="img-fluid mb-3" alt="image">
-            <h6 class="mb-2">30 Days money back</h6>
-            <p class="mb-0">Almost instant activation after payment confirmation</p>
-          </div>
-        </div>
-        <!-- col -->
-        <div class="col-xl-2 col-lg-4 col-6 px-0">
-          <!-- box -->
-          <div class="box">
-            <img src="./../../../../assets/user/images/icons/blue/task-list.svg" class="img-fluid mb-3" alt="image">
-            <h6 class="mb-2">Access cPanel</h6>
-            <p class="mb-0">Almost instant activation after payment confirmation</p>
-          </div>
-        </div>
-        <!-- col -->
-        <div class="col-xl-2 col-lg-4 col-6 px-0">
-          <!-- box -->
-          <div class="box">
-            <img src="./../../../../assets/user/images/icons/blue/inbox.svg" class="img-fluid mb-3" alt="image">
-            <h6 class="mb-2">SSD Storage</h6>
-            <p class="mb-0">Almost instant activation after payment confirmation</p>
-          </div>
-        </div>
-        <!-- col -->
-        <div class="col-xl-2 col-lg-4 col-6 px-0">
-          <!-- box -->
-          <div class="box">
-            <img src="./../../../../assets/user/images/icons/blue/web.svg" class="img-fluid mb-3" alt="image">
-            <h6 class="mb-2">DDoS Protection</h6>
-            <p class="mb-0">Almost instant activation after payment confirmation</p>
-          </div>
-        </div>
-        <!-- col -->
-        <div class="col-xl-2 col-lg-4 col-6 px-0">
-          <!-- box -->
-          <div class="box">
-            <img src="./../../../../assets/user/images/icons/blue/badge.svg" class="img-fluid mb-3" alt="image">
-            <h6 class="mb-2">Uptime 99.99%</h6>
-            <p class="mb-0">Almost instant activation after payment confirmation</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- :: Features -->
   <div class="features p-80">
     <div class="container">
       <!-- Head -->
       <div class="section-head">
-        <h2>Advanced Plans and Add-Ons</h2>
+        <h2>VRocket Innovation</h2>
         <div class="lines">
           <span></span>
         </div>
-        <p>Upgrade your plan for advanced features or enhance your account with optional add-ons</p>
+        <p>We believe progress happens when people feel secure</p>
       </div>
       <!-- row -->
       <div class="row child-mb-30">
@@ -1245,10 +345,10 @@
             <img src="./../../../../assets/user/images/icons/blue/server.svg" class="img-fluid mr-4" alt="image">
             <!-- text contain -->
             <div class="t-c">
-              <h4 class="mb-3">Multi-Server Managment</h4>
-              <p class="mb-0">Need more than one account? Add shared, VPS, or even dedicated services to
-                your account
-                with ease. Simply log in once.</p>
+              <h4 class="mb-3">Building a truly inclusive workplace</h4>
+              <p class="mb-0">Our people are our most important asset, so we have created an environment where
+                creativity, inclusion and innovation have a real impact. In attracting top talent, and engaging and
+                retaining our employees, we strive to be a global employer of choice.</p>
             </div>
           </div>
         </div>
@@ -1259,10 +359,9 @@
             <img src="./../../../../assets/user/images/icons/blue/controls.svg" class="img-fluid mr-4" alt="image">
             <!-- text contain -->
             <div class="t-c">
-              <h4 class="mb-3">Access Control</h4>
-              <p class="mb-0">Create unique passwords restricting access to different areas of your
-                account. Generate
-                one for billing and ownership information.</p>
+              <h4 class="mb-3">Come work with us</h4>
+              <p class="mb-0">At VRocket, we believe that nurturing your individual passions can create an organization
+                unparalleled in its ability to meet the needs of our customers and the future.</p>
             </div>
           </div>
         </div>
@@ -1273,318 +372,20 @@
             <img src="./../../../../assets/user/images/icons/blue/delivery.svg" class="img-fluid mr-4" alt="image">
             <!-- text contain -->
             <div class="t-c">
-              <h4 class="mb-3">Content Delivery Network</h4>
-              <p class="mb-0">CloudFlare is built directly into your account. An advanced content delivery
-                network, it
-                automatically increases the performance of your site.</p>
-            </div>
-          </div>
-        </div>
-        <!-- col -->
-        <div class="col-xl-4 col-lg-6 col-12">
-          <!-- box -->
-          <div class="box d-flex align-items-start">
-            <img src="./../../../../assets/user/images/icons/blue/security.svg" class="img-fluid mr-4" alt="image">
-            <!-- text contain -->
-            <div class="t-c">
-              <h4 class="mb-3">Domain Privacy + Protection</h4>
-              <p class="mb-0">CloudFlare is built directly into your account. An advanced content delivery
-                network, it
-                automatically increases the performance of your site.</p>
-            </div>
-          </div>
-        </div>
-        <!-- col -->
-        <div class="col-xl-4 col-lg-6 col-12">
-          <!-- box -->
-          <div class="box d-flex align-items-start">
-            <img src="./../../../../assets/user/images/icons/blue/code.svg" class="img-fluid mr-4" alt="image">
-            <!-- text contain -->
-            <div class="t-c">
-              <h4 class="mb-3">CodeGuard</h4>
-              <p class="mb-0">Create unique passwords restricting access to different areas of your
-                account. Generate
-                one for billing and ownership information.</p>
-            </div>
-          </div>
-        </div>
-        <!-- col -->
-        <div class="col-xl-4 col-lg-6 col-12">
-          <!-- box -->
-          <div class="box d-flex align-items-start">
-            <img src="./../../../../assets/user/images/icons/blue/mail.svg" class="img-fluid mr-4" alt="image">
-            <!-- text contain -->
-            <div class="t-c">
-              <h4 class="mb-3">Spam Protection</h4>
-              <p class="mb-0">CloudFlare is built directly into your account. An advanced content delivery
-                network, it
-                automatically increases the performance of your site.</p>
+              <h4 class="mb-3">Corporate Sustainability</h4>
+              <p class="mb-0">At VRocket, we are committed to being Environmentally conscious and a force for
+                Social good, while operating with the highest standards of Governance (ESG). In our latest ESG review,
+                learn how we deliver on this commitment with examples and performance metrics from across the business.
+              </p>
             </div>
           </div>
         </div>
       </div>
-      <div class="collapse-items collapse" id="collapse-items">
-        <!-- row -->
-        <div class="row child-mb-30">
-          <!-- col -->
-          <div class="col-xl-4 col-lg-6 col-12">
-            <!-- box -->
-            <div class="box d-flex align-items-start">
-              <img src="./../../../../assets/user/images/icons/blue/folder.svg" class="img-fluid mr-4" alt="image">
-              <!-- text contain -->
-              <div class="t-c">
-                <h4 class="mb-3">Advanced Capabilities</h4>
-                <p class="mb-0">Need more than one account? Add shared, VPS, or even dedicated services
-                  to your account
-                  with ease. Simply log in once.</p>
-              </div>
-            </div>
-          </div>
-          <!-- col -->
-          <div class="col-xl-4 col-lg-6 col-12">
-            <!-- box -->
-            <div class="box d-flex align-items-start">
-              <img src="./../../../../assets/user/images/icons/blue/brain-process.svg" class="img-fluid mr-4"
-                alt="image">
-              <!-- text contain -->
-              <div class="t-c">
-                <h4 class="mb-3">Unique IPs</h4>
-                <p class="mb-0">Create unique passwords restricting access to different areas of your
-                  account. Generate
-                  one for billing and ownership information.</p>
-              </div>
-            </div>
-          </div>
-          <!-- col -->
-          <div class="col-xl-4 col-lg-6 col-12">
-            <!-- box -->
-            <div class="box d-flex align-items-start">
-              <img src="./../../../../assets/user/images/icons/blue/security.svg" class="img-fluid mr-4" alt="image">
-              <!-- text contain -->
-              <div class="t-c">
-                <h4 class="mb-3">Domain Privacy + Protection</h4>
-                <p class="mb-0">CloudFlare is built directly into your account. An advanced content
-                  delivery network, it
-                  automatically increases the performance of your site.</p>
-              </div>
-            </div>
-          </div>
-          <!-- col -->
-          <div class="col-xl-4 col-lg-6 col-12">
-            <!-- box -->
-            <div class="box d-flex align-items-start">
-              <img src="./../../../../assets/user/images/icons/blue/lock.svg" class="img-fluid mr-4" alt="image">
-              <!-- text contain -->
-              <div class="t-c">
-                <h4 class="mb-3">SiteLock</h4>
-                <p class="mb-0">Need more than one account? Add shared, VPS, or even dedicated services
-                  to your account
-                  with ease. Simply log in once.</p>
-              </div>
-            </div>
-          </div>
-          <!-- col -->
-          <div class="col-xl-4 col-lg-6 col-12">
-            <!-- box -->
-            <div class="box d-flex align-items-start">
-              <img src="./../../../../assets/user/images/icons/blue/code.svg" class="img-fluid mr-4" alt="image">
-              <!-- text contain -->
-              <div class="t-c">
-                <h4 class="mb-3">CodeGuard</h4>
-                <p class="mb-0">Create unique passwords restricting access to different areas of your
-                  account. Generate
-                  one for billing and ownership information.</p>
-              </div>
-            </div>
-          </div>
-          <!-- col -->
-          <div class="col-xl-4 col-lg-6 col-12">
-            <!-- box -->
-            <div class="box d-flex align-items-start">
-              <img src="./../../../../assets/user/images/icons/blue/mail.svg" class="img-fluid mr-4" alt="image">
-              <!-- text contain -->
-              <div class="t-c">
-                <h4 class="mb-3">Spam Protection</h4>
-                <p class="mb-0">CloudFlare is built directly into your account. An advanced content
-                  delivery network, it
-                  automatically increases the performance of your site.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- button contain -->
-      <div class="btn-c text-center">
-        <button class="btn-outline" data-toggle="collapse" data-target="#collapse-items">See All Features
-        </button>
-      </div>
+
+
     </div>
   </div>
 
-  <!-- :: Compare Section -->
-  <div class="compare p-80 bg-2">
-    <div class="container">
-      <!-- Head -->
-      <div class="section-head">
-        <h2>Let us show you a complete comparison of all our plans</h2>
-        <div class="lines">
-          <span></span>
-        </div>
-        <p>Our virtual private servers are built from the ground using all SSD storage. Enjoy increased power,
-          flexibility, and control for your websites.</p>
-      </div>
-      <!-- Compare Table -->
-      <div class="c-table table-responsive-md">
-        <!-- H Table -->
-        <table class="w-100 h-table">
-          <thead>
-            <tr>
-              <th class="d-lg-table d-none"></th>
-              <td>Shared</td>
-              <td>VPS</td>
-              <td>Dedicated</td>
-              <td>Cloud</td>
-            </tr>
-          </thead>
-        </table>
-        <table class="table table-bordered">
-          <!-- Table Head -->
-          <thead>
-            <tr>
-              <th class="p-0 d-lg-table d-none"></th>
-              <td class="p-0"></td>
-              <td class="p-0"></td>
-              <td class="p-0"></td>
-              <td class="p-0"></td>
-            </tr>
-          </thead>
-          <!-- Table Body -->
-          <tbody>
-            <tr class="bg-gray d-lg-none">
-              <td class="title" colspan="4">Free domain with annual plan</td>
-            </tr>
-            <tr class="bg-gray">
-              <th class="d-lg-table-cell d-none">Free domain with annual plan</th>
-              <td><i class="fa fa-check"></i></td>
-              <td><i class="fa fa-check"></i></td>
-              <td><i class="fa fa-check"></i></td>
-              <td><i class="fa fa-check"></i></td>
-            </tr>
-            <tr class="d-lg-none">
-              <td class="title" colspan="4">Websites</td>
-            </tr>
-            <tr>
-              <th class="d-lg-table-cell d-none">Websites</th>
-              <td>1</td>
-              <td>Unlimited</td>
-              <td>Unlimited</td>
-              <td>Unlimited</td>
-            </tr>
-            <tr class="bg-gray d-lg-none">
-              <td class="title" colspan="4">Disk space</td>
-            </tr>
-            <tr class="bg-gray">
-              <th class="d-lg-table-cell d-none">Disk space</th>
-              <td>100 GB</td>
-              <td>Unlimited</td>
-              <td>Unlimited</td>
-              <td>Unlimited</td>
-            </tr>
-            <tr class="d-lg-none">
-              <td class="title" colspan="4">Monthly bandwidth</td>
-            </tr>
-            <tr>
-              <th class="d-lg-table-cell d-none">Monthly bandwidth</th>
-              <td>Unlimited</td>
-              <td>Unlimited</td>
-              <td>Unlimited</td>
-              <td>Unlimited</td>
-            </tr>
-            <tr class="bg-gray d-lg-none">
-              <td class="title" colspan="4">Input/output (I/O)</td>
-            </tr>
-            <tr class="bg-gray">
-              <th class="d-lg-table-cell d-none">Input/output (I/O)</th>
-              <td>1024</td>
-              <td>2048</td>
-              <td>2048</td>
-              <td>2048</td>
-            </tr>
-            <tr class="d-lg-none">
-              <td class="title" colspan="4">FTP users</td>
-            </tr>
-            <tr>
-              <th class="d-lg-table-cell d-none">FTP users</th>
-              <td>60</td>
-              <td>60</td>
-              <td>60</td>
-              <td>Unlimited</td>
-            </tr>
-            <tr class="bg-gray d-lg-none">
-              <td class="title" colspan="4">MySQL databases</td>
-            </tr>
-            <tr class="bg-gray">
-              <th class="d-lg-table-cell d-none">MySQL databases</th>
-              <td>10 x 1 GB</td>
-              <td>25 x 1 GB</td>
-              <td>50 x 3 GB</td>
-              <td>Unlimited<br> x 2 GB</td>
-            </tr>
-            <tr class="d-lg-none">
-              <td class="title" colspan="4">Database backup/restore</td>
-            </tr>
-            <tr>
-              <th class="d-lg-table-cell d-none">Database backup/restore</th>
-              <td><i class="fa fa-check"></i></td>
-              <td><i class="fa fa-check"></i></td>
-              <td><i class="fa fa-check"></i></td>
-              <td><i class="fa fa-check"></i></td>
-            </tr>
-            <tr class="bg-gray d-lg-none">
-              <td class="title" colspan="4">Direct database access</td>
-            </tr>
-            <tr class="bg-gray">
-              <th class="d-lg-table-cell d-none">Direct database access</th>
-              <td><i class="fa fa-check"></i></td>
-              <td><i class="fa fa-check"></i></td>
-              <td><i class="fa fa-check"></i></td>
-              <td><i class="fa fa-check"></i></td>
-            </tr>
-            <tr class="d-lg-none">
-              <td class="title" colspan="4">DNS management</td>
-            </tr>
-            <tr>
-              <th class="d-lg-table-cell d-none">DNS management</th>
-              <td><i class="fa fa-check"></i></td>
-              <td><i class="fa fa-check"></i></td>
-              <td><i class="fa fa-check"></i></td>
-              <td>Unlimited</td>
-            </tr>
-            <tr class="bg-gray d-lg-none">
-              <td class="title" colspan="4">Auto-responder</td>
-            </tr>
-            <tr class="bg-gray">
-              <th class="d-lg-table-cell d-none">Auto-responder</th>
-              <td><i class="fa fa-check"></i></td>
-              <td><i class="fa fa-check"></i></td>
-              <td><i class="fa fa-check"></i></td>
-              <td><i class="fa fa-check"></i></td>
-            </tr>
-            <tr class="d-lg-none">
-              <td class="title" colspan="4">Total email storage</td>
-            </tr>
-            <tr>
-              <th class="d-lg-table-cell d-none">Total email storage</th>
-              <td>5 GB</td>
-              <td>5 GB</td>
-              <td>5 GB</td>
-              <td>Unlimited</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
 
   <!-- :: About Us -->
   <div class="about-us">
@@ -1599,416 +400,173 @@
             <p class="mb-4 cap">Because we know that even the best technology is only as good as the people
               behind it. That’s why we offer expert, 24/7 phone support, plus a lot more.</p>
             <p class="mb-5 comment">Call our technical support team at +123 4 567 8910.</p>
-            <a href="#" class="th-btn btn-fill-dar">Read More</a>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- :: Section IX -->
-  <div class="se-ix p-80">
-    <div class="container">
-      <!-- Head -->
-      <div class="section-head">
-        <h2>We Giving Best Services for Your Business</h2>
-        <div class="lines">
-          <span></span>
-        </div>
-        <p>Our virtual private servers are built from the ground using all SSD storage. Enjoy increased power,
-          flexibility, and control for your websites.</p>
-      </div>
-      <!-- Content -->
-      <div class="content">
-        <!-- Boxes Nav -->
-        <ul class="boxes-nav list-unstyled d-flex align-items-center justify-content-lg-center">
-          <li class="d-flex align-items-center justify-content-center active" data-box="#box-i">
-            <img src="./../../../../assets/user/images/icons/blue/email-marketing.svg" class="img-fluid" alt="image">
-            <span class="name d-inline-block text-capitalize">email marketing</span>
-          </li>
-          <li class="d-flex align-items-center justify-content-center" data-box="#box-ii">
-            <img src="./../../../../assets/user/images/icons/blue/advertising.svg" class="img-fluid" alt="image">
-            <span class="name d-inline-block text-capitalize">social marketing</span>
-          </li>
-          <li class="d-flex align-items-center justify-content-center" data-box="#box-iii">
-            <img src="./../../../../assets/user/images/icons/blue/video.svg" class="img-fluid" alt="image">
-            <span class="name d-inline-block text-capitalize">video marketing</span>
-          </li>
-          <li class="d-flex align-items-center justify-content-center" data-box="#box-iv">
-            <img src="./../../../../assets/user/images/icons/blue/budget.svg" class="img-fluid" alt="image">
-            <span class="name d-inline-block text-capitalize">market analysis</span>
-          </li>
-        </ul>
-        <!-- Boxes -->
-        <div class="boxes">
-
-          <!-- Box-I -->
-          <div class="box" id="box-i">
-            <!-- row -->
-            <div class="row align-items-start">
-              <!-- col -->
-              <div class="col-6 d-lg-block d-none text-center">
-                <img src="./../../../../assets/user/images/icons/svg/email.svg" class="img-fluid" alt="img">
-              </div>
-              <!-- col -->
-              <div class="col-lg-6">
-                <!-- text -->
-                <div class="text">
-                  <h4 class="mb-4"><b>Achieve your marketing goals with scalable</b>, personalized
-                    email automation.</h4>
-                  <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
-                    possimus nesciunt non consequuntur.</p>
-                  <p class="mb-0">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea
-                    accusamus iure nam, fuga earum nostrum? Tempora ullam laboriosam minima
-                    veritatis? Fuga nulla accusamus ab perspiciatis cum saepe porro voluptatem
-                    adipisci!</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Box-II -->
-          <div class="box" id="box-ii">
-            <!-- row -->
-            <div class="row align-items-center">
-              <!-- col -->
-              <div class="col-6 d-lg-block d-none text-center">
-                <img src="./../../../../assets/user/images/icons/svg/social.svg" class="img-fluid" alt="img">
-              </div>
-              <!-- col -->
-              <div class="col-lg-6">
-                <!-- text -->
-                <div class="text">
-                  <h4 class="mb-4"><b>Product is what you are marketing everyday</b>, personalized
-                    email automation.</h4>
-                  <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
-                    possimus nesciunt non consequuntur.</p>
-                  <p class="mb-0">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea
-                    accusamus iure nam, fuga earum nostrum? Tempora ullam laboriosam minima
-                    veritatis? Fuga nulla accusamus ab perspiciatis cum saepe porro voluptatem
-                    adipisci!</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Box-III -->
-          <div class="box" id="box-iii">
-            <!-- row -->
-            <div class="row align-items-center">
-              <!-- col -->
-              <div class="col-6 d-lg-block d-none text-center">
-                <img src="./../../../../assets/user/images/icons/svg/video.svg" class="img-fluid" alt="img">
-              </div>
-              <!-- col -->
-              <div class="col-lg-6">
-                <!-- text -->
-                <div class="text">
-                  <h4 class="mb-4"><b>Highly Customizable Campaign Report Data</b>, personalized email
-                    automation.</h4>
-                  <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
-                    possimus nesciunt non consequuntur.</p>
-                  <p class="mb-0">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea
-                    accusamus iure nam, fuga earum nostrum? Tempora ullam laboriosam minima
-                    veritatis? Fuga nulla accusamus ab perspiciatis cum saepe porro voluptatem
-                    adipisci!</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Box-IV -->
-          <div class="box" id="box-iv">
-            <!-- row -->
-            <div class="row align-items-center">
-              <!-- col -->
-              <div class="col-6 d-lg-block d-none text-center">
-                <img src="./../../../../assets/user/images/icons/svg/analysis.svg" class="img-fluid" alt="img">
-              </div>
-              <!-- col -->
-              <div class="col-lg-6">
-                <!-- text -->
-                <div class="text">
-                  <h4 class="mb-4"><b>Get Actionable Insights. Purpose Built Trading Platform</b>,
-                    personalized email automation.</h4>
-                  <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
-                    possimus nesciunt non consequuntur.</p>
-                  <p class="mb-0">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea
-                    accusamus iure nam, fuga earum nostrum? Tempora ullam laboriosam minima
-                    veritatis? Fuga nulla accusamus ab perspiciatis cum saepe porro voluptatem
-                    adipisci!</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- :: Section X -->
-  <div class="se-x">
-    <div class="container">
-      <!-- row -->
-      <div class="row">
-        <!-- col -->
-        <div class="col-lg-4 col-12">
-          <!-- item -->
-          <div class="item align-items-start text-center">
-            <i class="fa fa-level-up mb-3 d-inline-flex align-items-center justify-content-center"></i>
-            <div class="text-center">
-              <h6 class="mb-lg-3 mb-2">Let's grow your App</h6>
-              <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
-                excepturi consectetur quod, nulla saepe.</p>
-              <a href="#" class="d-lg-flex d-inline-block align-items-center justify-content-center">
-                <span class="d-lg-none d-inline-block">Read More</span>
-                <i class="fa fa-arrow-right ml-lg-0 ml-1 d-lg-inline-flex"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <!-- col -->
-        <div class="col-lg-4 col-12">
-          <!-- item -->
-          <div class="item align-items-start text-center">
-            <i class="fa fa-amazon mb-3 d-inline-flex align-items-center justify-content-center"></i>
-            <div class="text-center">
-              <h6 class="mb-lg-3 mb-2">Amazon Servers</h6>
-              <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
-                excepturi consectetur quod, nulla saepe.</p>
-              <a href="#" class="d-lg-flex d-inline-block align-items-center justify-content-center">
-                <span class="d-lg-none d-inline-block">Read More</span>
-                <i class="fa fa-arrow-right ml-lg-0 ml-1 d-lg-inline-flex"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <!-- col -->
-        <div class="col-lg-4 col-12">
-          <!-- item -->
-          <div class="item align-items-start text-center">
-            <i class="fa fa-joomla mb-3 d-inline-flex align-items-center justify-content-center"></i>
-            <div class="text-center">
-              <h6 class="mb-lg-3 mb-2">CMS Support</h6>
-              <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
-                excepturi consectetur quod, nulla saepe.</p>
-              <a href="#" class="d-lg-flex d-inline-block align-items-center justify-content-center">
-                <span class="d-lg-none d-inline-block">Read More</span>
-                <i class="fa fa-arrow-right ml-lg-0 ml-1 d-lg-inline-flex"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- :: Section XI -->
-  <div class="se-xi p-80">
-    <div class="container">
-      <!-- Head -->
-      <div class="section-head">
-        <h2>Meet our team</h2>
-        <div class="lines">
-          <span></span>
-        </div>
-        <p>Our virtual private servers are built from the ground using all SSD storage. Enjoy increased power,
-          flexibility, and control for your websites.</p>
-      </div>
-
-      <!-- row -->
-      <div class="row justify-content-center">
-        <!-- col -->
-        <div class="col-lg-3 col-md-4 col-sm-6">
-          <!-- item -->
-          <div class="item text-center">
-            <img src="./../../../../assets/user/images/char/01.jpg" class="img-fluid mb-3" alt="image">
-            <h5 class="mb-1 text-uppercase">Osama Bakri</h5>
-            <h6 class="mb-0">Founder and CEO</h6>
-          </div>
-        </div>
-        <!-- col -->
-        <div class="col-lg-3 col-md-4 col-sm-6">
-          <!-- item -->
-          <div class="item text-center">
-            <img src="./../../../../assets/user/images/char/02.jpg" class="img-fluid mb-3" alt="image">
-            <h5 class="mb-1 text-uppercase">Jhone Dee</h5>
-            <h6 class="mb-0">Backend Developer</h6>
-          </div>
-        </div>
-        <!-- col -->
-        <div class="col-lg-3 col-md-4 col-sm-6">
-          <!-- item -->
-          <div class="item text-center">
-            <img src="./../../../../assets/user/images/char/03.jpg" class="img-fluid mb-3" alt="image">
-            <h5 class="mb-1 text-uppercase">Alex Gichuru</h5>
-            <h6 class="mb-0">VP Global Delivery</h6>
-          </div>
-        </div>
-        <!-- col -->
-        <div class="col-lg-3 col-md-4 col-sm-6">
-          <!-- item -->
-          <div class="item text-center">
-            <img src="./../../../../assets/user/images/char/04.jpg" class="img-fluid mb-3" alt="image">
-            <h5 class="mb-1 text-uppercase">Loic Juillard</h5>
-            <h6 class="mb-0">Director, Service Delivery</h6>
-          </div>
-        </div>
-        <!-- col -->
-        <div class="col-lg-3 col-md-4 col-sm-6">
-          <!-- item -->
-          <div class="item text-center">
-            <img src="./../../../../assets/user/images/char/05.jpg" class="img-fluid mb-3" alt="image">
-            <h5 class="mb-1 text-uppercase">Ken Wairagu</h5>
-            <h6 class="mb-0">Sr. Director of Finance</h6>
-          </div>
-        </div>
-        <!-- col -->
-        <div class="col-lg-3 col-md-4 col-sm-6">
-          <!-- item -->
-          <div class="item text-center">
-            <img src="./../../../../assets/user/images/char/06.jpg" class="img-fluid mb-3" alt="image">
-            <h5 class="mb-1 text-uppercase">Isaac Oates</h5>
-            <h6 class="mb-0">Chief People Officer</h6>
-          </div>
-        </div>
-        <!-- col -->
-        <div class="col-lg-3 col-md-4 col-sm-6">
-          <!-- item -->
-          <div class="item text-center">
-            <img src="./../../../../assets/user/images/char/07.jpg" class="img-fluid mb-3" alt="image">
-            <h5 class="mb-1 text-uppercase">Jason Whitman</h5>
-            <h6 class="mb-0">Vice President of Customer Success</h6>
-          </div>
-        </div>
-        <!-- col -->
-        <div class="col-lg-3 col-md-4 col-sm-6">
-          <!-- item -->
-          <div class="item text-center">
-            <img src="./../../../../assets/user/images/char/08.jpg" class="img-fluid mb-3" alt="image">
-            <h5 class="mb-1 text-uppercase">Matthew Tom-Wolverton</h5>
-            <h6 class="mb-0">Sr. Vice President of Marketing</h6>
-          </div>
-        </div>
-        <!-- col -->
-        <div class="col-lg-3 col-md-4 col-sm-6">
-          <!-- item -->
-          <div class="item text-center mb-sm-0">
-            <img src="./../../../../assets/user/images/char/09.jpg" class="img-fluid mb-3" alt="image">
-            <h5 class="mb-1 text-uppercase">David Feinberg</h5>
-            <h6 class="mb-0">Vice President of Engineering</h6>
-          </div>
-        </div>
-        <!-- col -->
-        <div class="col-lg-3 col-md-4 col-sm-6">
-          <!-- item -->
-          <div class="item text-center mb-0">
-            <img src="./../../../../assets/user/images/char/010.jpg" class="img-fluid mb-3" alt="image">
-            <h5 class="mb-1 text-uppercase">Mario Springer</h5>
-            <h6 class="mb-0">Vice President of Engineering</h6>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- :: FAQ Section -->
-  <div class="faqs p-80 bg-2">
-    <div class="container">
-      <!-- FAQs Head -->
-      <div class="section-head">
-        <h2>Frequently asked questions</h2>
-        <div class="lines">
-          <span></span>
-        </div>
-        <p>Get the answers to frequently asked questions about our hosting service.</p>
-      </div>
-      <!-- FAQs Content -->
-      <div class="faqs-content">
+    <!-- :: Section X -->
+    <div class="se-x">
+      <div class="container">
         <!-- row -->
         <div class="row">
           <!-- col -->
-          <div class="col-md-6">
+          <div class="col-lg-4 col-12">
             <!-- item -->
-            <div class="item">
-              <h5 class="mb-3">What are the different types of web hosting options VRocket offers?</h5>
-              <p class="mb-0">VRocket offers multiple website hosting options to fit the various needs and
-                budgets of our customers. Shared Hosting, Cloud Hosting, VPS Hosting, and Dedicated
-                Hosting are our standard options, however we also offer specialized hosting for specific
-                website building applications like WordPress and WooCommerce. Each platform is built on
-                reliable, high-performance servers and is supported by our 24/7 expert support teams.<a href="#">All
-                  domains</a></p>
-            </div>
-
-            <!-- item -->
-            <div class="item">
-              <h5 class="mb-3">What type of customer support does VRocket offer with their web
-                hosting?</h5>
-              <p class="mb-0">VRocket offers 24/7 professional customer support with all of our web
-                hosting plans for no additional cost. You can call or chat with us at any time and a
-                dedicated support rep will assist you with any inquiry or concern you may have. Our
-                support is available for all website hosting plan types, so no matter what platform you
-                need, know that we are here to help you every step of the way. For customers looking for
-                WordPress design or functionality support, we offer WP Live. This premium service starts
-                at $29 per month and gives you access to our WordPress technical support team. They can
-                assist with everything from selecting a theme, to design, to even plugin development
-                questions.</p>
-            </div>
-
-            <!-- item -->
-            <div class="item">
-              <h5 class="mb-3">Which domain sould i buy?</h5>
-              <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda cum quis
-                soluta voluptate, nam cupiditate corporis temporibus optio iure alias illum velit
-                officiis accusantium tempora dolores, incidunt itaque maxime. Neque.<a href="#">All
-                  domains</a></p>
+            <div class="item align-items-start text-center">
+              <i class="fa fa-level-up mb-3 d-inline-flex align-items-center justify-content-center"></i>
+              <div class="text-center">
+                <h6 class="mb-lg-3 mb-2">Life Insurance</h6>
+                <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+                  excepturi consectetur quod, nulla saepe.</p>
+                <a href="#" class="d-lg-flex d-inline-block align-items-center justify-content-center">
+                  <span class="d-lg-none d-inline-block">Read More</span>
+                  <i class="fa fa-arrow-right ml-lg-0 ml-1 d-lg-inline-flex"></i>
+                </a>
+              </div>
             </div>
           </div>
           <!-- col -->
-          <div class="col-md-6">
+          <div class="col-lg-4 col-12">
             <!-- item -->
-            <div class="item">
-              <h5 class="mb-3">What are the different types of web hosting options VRocket offers?</h5>
-              <p class="mb-0">VRocket offers multiple website hosting options to fit the various needs and
-                budgets of our customers. Shared Hosting, Cloud Hosting, VPS Hosting, and Dedicated
-                Hosting are our standard options, however we also offer specialized hosting for specific
-                website building applications like WordPress and WooCommerce. Each platform is built on
-                reliable, high-performance servers and is supported by our 24/7 expert support teams.<a href="#">All
-                  domains</a></p>
+            <div class="item align-items-start text-center">
+              <i class="fa fa-amazon mb-3 d-inline-flex align-items-center justify-content-center"></i>
+              <div class="text-center">
+                <h6 class="mb-lg-3 mb-2">Home Insurance</h6>
+                <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+                  excepturi consectetur quod, nulla saepe.</p>
+                <a href="#" class="d-lg-flex d-inline-block align-items-center justify-content-center">
+                  <span class="d-lg-none d-inline-block">Read More</span>
+                  <i class="fa fa-arrow-right ml-lg-0 ml-1 d-lg-inline-flex"></i>
+                </a>
+              </div>
             </div>
-
+          </div>
+          <!-- col -->
+          <div class="col-lg-4 col-12">
             <!-- item -->
-            <div class="item">
-              <h5 class="mb-3">What type of customer support does VRocket offer with their web
-                hosting?</h5>
-              <p class="mb-0">VRocket offers 24/7 professional customer support with all of our web
-                hosting plans for no additional cost. You can call or chat with us at any time and a
-                dedicated support rep will assist you with any inquiry or concern you may have. Our
-                support is available for all website hosting plan types, so no matter what platform you
-                need, know that we are here to help you every step of the way. For customers looking for
-                WordPress design or functionality support, we offer WP Live. This premium service starts
-                at $29 per month and gives you access to our WordPress technical support team. They can
-                assist with everything from selecting a theme, to design, to even plugin development
-                questions.</p>
+            <div class="item align-items-start text-center">
+              <i class="fa fa-joomla mb-3 d-inline-flex align-items-center justify-content-center"></i>
+              <div class="text-center">
+                <h6 class="mb-lg-3 mb-2">Medical Insurance</h6>
+                <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+                  excepturi consectetur quod, nulla saepe.</p>
+                <a href="#" class="d-lg-flex d-inline-block align-items-center justify-content-center">
+                  <span class="d-lg-none d-inline-block">Read More</span>
+                  <i class="fa fa-arrow-right ml-lg-0 ml-1 d-lg-inline-flex"></i>
+                </a>
+              </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <!-- :: Section XI -->
+    <div class="se-xi p-80">
+      <div class="container">
+        <!-- Head -->
+        <div class="section-head">
+          <h2>Meet our team</h2>
+          <div class="lines">
+            <span></span>
+          </div>
+
+        </div>
+
+        <!-- row -->
+        <div class="row justify-content-center">
+          <!-- col -->
+          <div class="col-lg-3 col-md-4 col-sm-6">
             <!-- item -->
-            <div class="item">
-              <h5 class="mb-3">Which domain sould i buy?</h5>
-              <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda cum quis
-                soluta voluptate, nam cupiditate corporis temporibus optio iure alias illum velit
-                officiis accusantium tempora dolores, incidunt itaque maxime. Neque.<a href="#">All
-                  domains</a></p>
+            <div class="item text-center">
+              <img src="./../../../../assets/user/images/char/01.jpg" class="img-fluid mb-3" alt="image">
+              <h5 class="mb-1 text-uppercase">Osama Bakri</h5>
+              <h6 class="mb-0">Founder and CEO</h6>
+            </div>
+          </div>
+          <!-- col -->
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <!-- item -->
+            <div class="item text-center">
+              <img src="./../../../../assets/user/images/char/02.jpg" class="img-fluid mb-3" alt="image">
+              <h5 class="mb-1 text-uppercase">Jhone Dee</h5>
+              <h6 class="mb-0">Backend Developer</h6>
+            </div>
+          </div>
+          <!-- col -->
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <!-- item -->
+            <div class="item text-center">
+              <img src="./../../../../assets/user/images/char/03.jpg" class="img-fluid mb-3" alt="image">
+              <h5 class="mb-1 text-uppercase">Alex Gichuru</h5>
+              <h6 class="mb-0">VP Global Delivery</h6>
+            </div>
+          </div>
+          <!-- col -->
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <!-- item -->
+            <div class="item text-center">
+              <img src="./../../../../assets/user/images/char/04.jpg" class="img-fluid mb-3" alt="image">
+              <h5 class="mb-1 text-uppercase">Loic Juillard</h5>
+              <h6 class="mb-0">Director, Service Delivery</h6>
+            </div>
+          </div>
+          <!-- col -->
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <!-- item -->
+            <div class="item text-center">
+              <img src="./../../../../assets/user/images/char/05.jpg" class="img-fluid mb-3" alt="image">
+              <h5 class="mb-1 text-uppercase">Ken Wairagu</h5>
+              <h6 class="mb-0">Sr. Director of Finance</h6>
+            </div>
+          </div>
+          <!-- col -->
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <!-- item -->
+            <div class="item text-center">
+              <img src="./../../../../assets/user/images/char/06.jpg" class="img-fluid mb-3" alt="image">
+              <h5 class="mb-1 text-uppercase">Isaac Oates</h5>
+              <h6 class="mb-0">Chief People Officer</h6>
+            </div>
+          </div>
+          <!-- col -->
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <!-- item -->
+            <div class="item text-center">
+              <img src="./../../../../assets/user/images/char/07.jpg" class="img-fluid mb-3" alt="image">
+              <h5 class="mb-1 text-uppercase">Jason Whitman</h5>
+              <h6 class="mb-0">Vice President of Customer Success</h6>
+            </div>
+          </div>
+          <!-- col -->
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <!-- item -->
+            <div class="item text-center">
+              <img src="./../../../../assets/user/images/char/08.jpg" class="img-fluid mb-3" alt="image">
+              <h5 class="mb-1 text-uppercase">Matthew Tom-Wolverton</h5>
+              <h6 class="mb-0">Sr. Vice President of Marketing</h6>
+            </div>
+          </div>
+          <!-- col -->
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <!-- item -->
+            <div class="item text-center mb-sm-0">
+              <img src="./../../../../assets/user/images/char/09.jpg" class="img-fluid mb-3" alt="image">
+              <h5 class="mb-1 text-uppercase">David Feinberg</h5>
+              <h6 class="mb-0">Vice President of Engineering</h6>
+            </div>
+          </div>
+          <!-- col -->
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <!-- item -->
+            <div class="item text-center mb-0">
+              <img src="./../../../../assets/user/images/char/010.jpg" class="img-fluid mb-3" alt="image">
+              <h5 class="mb-1 text-uppercase">Mario Springer</h5>
+              <h6 class="mb-0">Vice President of Engineering</h6>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-
-  <!-- :: Newsletter Bar -->
-  <newsletter-bar></newsletter-bar>
-
-
-</div>
